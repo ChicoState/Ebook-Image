@@ -1,5 +1,5 @@
 
-
+from calibre_plugins.ebook_image.process import GrayScale
 from calibre.gui2.actions import InterfaceAction
 from calibre.customize import InterfaceActionBase
 from PyQt5.Qt import QToolButton, QPixmap, QMenu,QIcon
@@ -25,6 +25,11 @@ class box(QDialog):
             title = book.get('title')
             self.book_list_widget.addItem(title)
 
+    def accept(self):
+        # Retrieve the selected book when the user accepts the dialog
+        db = self.gui.current_db.new_api
+        GrayScale(db, self.book_list_widget.currentItem().text(), self)
+        
     def __init__(self, gui, icon, do_user_config):
         QDialog.__init__(self, gui)
         self.gui = gui
