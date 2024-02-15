@@ -8,8 +8,9 @@ from pathlib import Path
 import os
 import shutil
 import tempfile
-def GrayScale(db, book_title,QDialog):
-    #this is probably suboptimal, but it works for now
+
+def GrayScale_Epub(db, book_title,QDialog):
+    #this is can probably be done more efficiently by passing the ID directly from main
     all_books = db.all_book_ids(list)    
     ID = 0  
     for book_id in all_books:
@@ -25,7 +26,7 @@ def GrayScale(db, book_title,QDialog):
     #this seems clunky so if a workaround could be found that would be nice
     temp = tempfile.TemporaryDirectory()
     epub = zipfile.ZipFile(content)
-    epub_title = os.path.basename(content)
+    epub_title = os.path.abspath(content)
     epub.extractall(temp.name)
     for item in epub.infolist():
         if item.filename.endswith('.jpg'):
@@ -35,6 +36,7 @@ def GrayScale(db, book_title,QDialog):
                 image = Image.open(page)
                 image = image.convert('L')
                 image.save(path)
+    #saving the modified files to a new epub that will replace the old epub
     with zipfile.ZipFile(epub_title, 'w') as new_epub:
         for root, sub, files in os.walk(temp.name):
             for i in range(len(sub)):
