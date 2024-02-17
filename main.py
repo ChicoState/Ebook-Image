@@ -6,7 +6,7 @@ from PyQt5.Qt import QToolButton, QPixmap, QMenu,QIcon
 import calibre.customize
 import calibre_plugins.ebook_image
 from calibre.library import db
-from PyQt5.QtWidgets import QDialog, QPushButton, QVBoxLayout, QLabel, QMessageBox, QListWidget, QDialogButtonBox
+from PyQt5.QtWidgets import QDialog, QPushButton, QVBoxLayout, QLabel, QMessageBox, QListWidget, QDialogButtonBox, QComboBox
 
 class box(QDialog):
     def about(self):
@@ -28,8 +28,10 @@ class box(QDialog):
     def accept(self):
         #Call the grayscale function from process.py
         db = self.gui.current_db.new_api
-        GrayScale_Epub(db, self.book_list_widget.currentItem().text(), self)
-        
+        size = int(self.size_button.currentText().replace('%', ''))
+        GrayScale_Epub(db, self.book_list_widget.currentItem().text(), size, self)
+    
+
     def __init__(self, gui, icon, do_user_config):
         QDialog.__init__(self, gui)
         self.gui = gui
@@ -49,6 +51,15 @@ class box(QDialog):
         self.book_list_widget = QListWidget(self)
         self.book_list_widget.itemDoubleClicked.connect(self.accept)
         self.layout.addWidget(self.book_list_widget)
+
+        self.size_label = QLabel("Image Quality:")
+        self.layout.addWidget(self.size_label)
+        self.size_button = QComboBox()
+        self.size_button.addItem("100%")
+        self.size_button.addItem("75%")
+        self.size_button.addItem("50%")
+        self.size_button.addItem("25%")
+        self.layout.addWidget(self.size_button)
 
         self.populate_book_list()
 

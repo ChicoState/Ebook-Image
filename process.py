@@ -9,8 +9,9 @@ import os
 import shutil
 import tempfile
 
-def GrayScale_Epub(db, book_title,QDialog):
-    #this is can probably be done more efficiently by passing the ID directly from main
+def GrayScale_Epub(db, book_title, size, QDialog):
+    print(size)
+    #this can probably be done more efficiently by passing the ID directly from main
     all_books = db.all_book_ids(list)    
     ID = 0  
     for book_id in all_books:
@@ -35,7 +36,7 @@ def GrayScale_Epub(db, book_title,QDialog):
                 #using pillow to convert the image to greyscale
                 image = Image.open(page)
                 image = image.convert('L')
-                image.save(path)
+                image.save(path, quality=size)
     #saving the modified files to a new epub that will replace the old epub
     with zipfile.ZipFile(epub_title, 'w') as new_epub:
         for root, sub, files in os.walk(temp.name):
