@@ -30,12 +30,13 @@ def GrayScale_Epub(db, book_title, size, QDialog):
     epub_title = os.path.abspath(content)
     epub.extractall(temp.name)
     for item in epub.infolist():
-        if item.filename.endswith('.jpg'):
+        if item.filename.endswith('.jpg') or item.filename.endswith('.png'):
             with epub.open(item.filename) as page:
                 path = os.path.join(temp.name, item.filename)
                 #using pillow to convert the image to greyscale
                 image = Image.open(page)
                 image = image.convert('L')
+                #now saves images to the specified quality
                 image.save(path, quality=size)
     #saving the modified files to a new epub that will replace the old epub
     with zipfile.ZipFile(epub_title, 'w') as new_epub:
