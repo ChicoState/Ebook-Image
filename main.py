@@ -7,8 +7,8 @@ import calibre.customize
 import calibre_plugins.ebook_image
 from calibre.library import db
 from PyQt5.QtWidgets import (QDialog, QPushButton, QVBoxLayout, QLabel, QMessageBox, 
-QListWidget, QDialogButtonBox, QComboBox,QProgressBar)
-
+QListWidget, QDialogButtonBox, QComboBox,QProgressBar, QApplication)
+from time import sleep
 class bar(QDialog):
     def __init__(self):
         super().__init__()
@@ -23,6 +23,7 @@ class bar(QDialog):
         layout.addWidget(self.progress)
         layout.addWidget(self.done_button)
         self.setLayout(layout)
+        self.setWindowTitle('Working')
     def done(self):
         self.hide()
 
@@ -44,19 +45,30 @@ class box(QDialog):
             self.book_list_widget.addItem(title)
 
     def accept(self):
-        #Call the grayscale function from process.py
+        #handles the case where no book is selected
+        if self.book_list_widget.selectedItems() == []:
+            return
         db = self.gui.current_db.new_api
         #get selected image quality, reduce 100 to 95
         size = int(self.size_button.currentText().replace('%', ''))
         if size == 100:
             size = 95
         #now handles multiple book selection
-        
+        self.bar.progress.setValue(0)
+        self.bar.show()
+        #fixes progress bar delay
+        QApplication.processEvents()
+        comp = 0
         selected_books = self.book_list_widget.selectedItems()
         for books in selected_books:
-            print(books.text())
-            GrayScale_Epub(db, books.text(), size, len(selected_books), self)
-
+            #calls grayscale function from process.py
+            comp = GrayScale_Epub(db, books.text(), size, len(selected_books), comp, self)
+        #accounts for rounding issues
+        if self.bar.progress.value() != 100:
+            self.bar.progress.setValue(100)
+        #enables the done button once the process is complete
+        self.bar.done_button.setEnabled(True)
+        self.book_list_widget.clearSelection()
     def __init__(self, gui, icon, do_user_config):
         self.bar = bar()
         QDialog.__init__(self, gui)
