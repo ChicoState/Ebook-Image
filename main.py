@@ -6,13 +6,25 @@ from PyQt5.Qt import QToolButton, QPixmap, QMenu,QIcon
 import calibre.customize
 import calibre_plugins.ebook_image
 from calibre.library import db
-from PyQt5.QtWidgets import QDialog, QPushButton, QVBoxLayout, QLabel, QMessageBox, QListWidget, QDialogButtonBox, QComboBox
-#making the book list this class removes the double click select
-class widgetoverride(QListWidget):
+from PyQt5.QtWidgets import (QDialog, QPushButton, QVBoxLayout, QLabel, QMessageBox, 
+QListWidget, QDialogButtonBox, QComboBox,QProgressBar)
+
+class bar(QDialog):
     def __init__(self):
         super().__init__()
-    def mouseDoubleClickEvent(self, event):
-        pass
+        layout = QVBoxLayout()
+        self.progress = QProgressBar()
+        self.progress.show()
+        self.setGeometry(350, 500, 250, 50)
+        self.done_button = QPushButton('Done', self)
+        #disables the done button until the process is complete
+        self.done_button.setEnabled(False)
+        self.done_button.clicked.connect(self.done)
+        layout.addWidget(self.progress)
+        layout.addWidget(self.done_button)
+        self.setLayout(layout)
+    def done(self):
+        self.hide()
 
 class box(QDialog):
     def about(self):
@@ -34,18 +46,19 @@ class box(QDialog):
     def accept(self):
         #Call the grayscale function from process.py
         db = self.gui.current_db.new_api
-        #get selected image quality reduce 100 to 95
+        #get selected image quality, reduce 100 to 95
         size = int(self.size_button.currentText().replace('%', ''))
         if size == 100:
             size = 95
         #now handles multiple book selection
+        
         selected_books = self.book_list_widget.selectedItems()
         for books in selected_books:
             print(books.text())
-            GrayScale_Epub(db, books.text(), size, self)
-    
+            GrayScale_Epub(db, books.text(), size, len(selected_books), self)
 
     def __init__(self, gui, icon, do_user_config):
+        self.bar = bar()
         QDialog.__init__(self, gui)
         self.gui = gui
         self.setWindowTitle('Select Book')
@@ -61,10 +74,10 @@ class box(QDialog):
         button_box.rejected.connect(self.reject)
         self.layout.addWidget(button_box)
 
-        self.book_list_widget = widgetoverride()
+        self.book_list_widget = QListWidget()
         #added support for multiple book selection
         self.book_list_widget.setSelectionMode(QListWidget.MultiSelection)
-        self.book_list_widget.itemDoubleClicked.connect(self.accept)
+
         self.layout.addWidget(self.book_list_widget)
 
         self.size_label = QLabel("Image Quality:")
@@ -104,5 +117,6 @@ class GrayScaleAction(InterfaceAction):
 
         i = box(self.gui, self.qaction.icon(), do_user_config)
         i.show()
+
 
    

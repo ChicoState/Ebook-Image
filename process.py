@@ -8,9 +8,10 @@ from pathlib import Path
 import os
 import shutil
 import tempfile
-
-def GrayScale_Epub(db, book_title, size, QDialog):
+def GrayScale_Epub(db, book_title, size, numbooks, QDialog):
     print(size)
+    QDialog.bar.show()
+    QDialog.bar.progress.setValue(0)
     #this can probably be done more efficiently by passing the ID directly from main
     all_books = db.all_book_ids(list)    
     ID = 0  
@@ -29,7 +30,11 @@ def GrayScale_Epub(db, book_title, size, QDialog):
     epub = zipfile.ZipFile(content)
     epub_title = os.path.abspath(content)
     epub.extractall(temp.name)
+    comp = 7
     for item in epub.infolist():
+        #incrementing the progress bar
+        comp += 100//numbooks//len(epub.infolist())+1
+        QDialog.bar.progress.setValue(comp)
         if item.filename.endswith('.jpg') or item.filename.endswith('.png'):
             with epub.open(item.filename) as page:
                 path = os.path.join(temp.name, item.filename)
@@ -53,3 +58,6 @@ def GrayScale_Epub(db, book_title, size, QDialog):
                     path = os.path.join(root, file)
                 new_epub.write(str(path), file)
     temp.cleanup()
+    QDialog.bar.done_button.setEnabled(True)
+
+
