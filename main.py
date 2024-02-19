@@ -47,6 +47,11 @@ class box(QDialog):
     def accept(self):
         #handles the case where no book is selected
         if self.book_list_widget.selectedItems() == []:
+            msgBox = QMessageBox()
+            msgBox.setText("Please select an Ebook to grayscale/compress.")
+            msgBox.setWindowTitle("ERROR: NO SELECTION")
+            msgBox.setStandardButtons(QMessageBox.Ok)
+            msgBox.exec()
             return
         db = self.gui.current_db.new_api
         #get selected image quality, reduce 100 to 95
