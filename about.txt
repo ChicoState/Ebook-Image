@@ -1,1 +1,1 @@
-This plugin is designed to allow you to grayscale your ebooks
+This plugin is designed to allow you to grayscale your Ebooks. Additionally, you may compress your Ebook by turning down the "Image Quality" slider.
