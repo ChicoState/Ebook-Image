@@ -8,9 +8,8 @@ from pathlib import Path
 import os
 import shutil
 import tempfile
-
-def GrayScale_Epub(db, book_title,QDialog):
-    #this is can probably be done more efficiently by passing the ID directly from main
+def GrayScale_Epub(db, book_title, size, numbooks, comp, QDialog):
+    #this can probably be done more efficiently by passing the ID directly from main
     all_books = db.all_book_ids(list)    
     ID = 0  
     for book_id in all_books:
@@ -29,13 +28,17 @@ def GrayScale_Epub(db, book_title,QDialog):
     epub_title = os.path.abspath(content)
     epub.extractall(temp.name)
     for item in epub.infolist():
-        if item.filename.endswith('.jpg'):
+        #incrementing the progress bar
+        comp += (100//numbooks//len(epub.infolist()))+1
+        QDialog.bar.progress.setValue(comp)
+        if item.filename.endswith('.jpg') or item.filename.endswith('.png'):
             with epub.open(item.filename) as page:
                 path = os.path.join(temp.name, item.filename)
                 #using pillow to convert the image to greyscale
                 image = Image.open(page)
                 image = image.convert('L')
-                image.save(path)
+                #now saves images to the specified quality
+                image.save(path, quality=size)
     #saving the modified files to a new epub that will replace the old epub
     with zipfile.ZipFile(epub_title, 'w') as new_epub:
         for root, sub, files in os.walk(temp.name):
@@ -51,3 +54,6 @@ def GrayScale_Epub(db, book_title,QDialog):
                     path = os.path.join(root, file)
                 new_epub.write(str(path), file)
     temp.cleanup()
+    return comp
+
+
