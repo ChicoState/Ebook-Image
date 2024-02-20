@@ -64,10 +64,27 @@ class box(QDialog):
         #fixes progress bar delay
         QApplication.processEvents()
         comp = 0
+        all_books = db.all_book_ids(list)  
         selected_books = self.book_list_widget.selectedItems()
         for books in selected_books:
-            #calls grayscale function from process.py
-            comp = GrayScale_Epub(db, books.text(), size, len(selected_books), comp, self)
+            ID = 0  
+            for book_id in all_books:
+                meta = db.get_metadata(book_id)
+                title = meta.get('title')
+                if title == books.text():
+                    ID = book_id
+                    format = db.formats(ID)
+                    print(format)
+                    break
+            #Switch out the Grayscale for the appropriate function
+            match format:
+                case 'EPUB':
+                    comp = GrayScale_Epub(db, ID, size, len(selected_books), comp, self)
+                case 'AZW3':
+                    comp = GrayScale_Epub(db, ID, size, len(selected_books), comp, self)
+                case 'PDF':
+                    comp = GrayScale_Epub(db, ID, size, len(selected_books), comp, self)
+
         #accounts for rounding issues
         if self.bar.progress.value() != 100:
             self.bar.progress.setValue(100)
