@@ -1,3 +1,5 @@
+import sys
+sys.path.append("C:/Users/Droge/AppData/Local/Packages/PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0/LocalCache/local-packages/Python311/Scripts")
 from calibre.gui2 import error_dialog
 import calibre_plugins.ebook_image
 from PyQt5.Qt import QDialog, QVBoxLayout, QTextEdit, QPushButton
@@ -8,6 +10,7 @@ from pathlib import Path
 import os
 import shutil
 import tempfile
+import img2pdf
 def GrayScale_Epub(db, book_title, size, numbooks, comp, QDialog):
     #this can probably be done more efficiently by passing the ID directly from main
     all_books = db.all_book_ids(list)    
