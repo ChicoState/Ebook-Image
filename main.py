@@ -75,14 +75,15 @@ class box(QDialog):
                     ID = book_id
                     format = db.formats(ID)
                     print(format)
+                    print(type(format))
                     break
             #Switch out the Grayscale for the appropriate function
             match format:
-                case 'EPUB':
+                case ('EPUB',):
                     comp = GrayScale_Epub(db, ID, size, len(selected_books), comp, self)
-                case 'AZW3':
+                case ('AZW3',):
                     comp = GrayScale_Epub(db, ID, size, len(selected_books), comp, self)
-                case 'PDF':
+                case ('PDF',):
                     comp = GrayScale_Epub(db, ID, size, len(selected_books), comp, self)
 
         #accounts for rounding issues
