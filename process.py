@@ -3,11 +3,7 @@ import calibre_plugins.ebook_image
 # import calibre_plugins.ebook_image.PyMuPDF  #PyMuPDF for PDF manipulation
 # import calibre_plugins.ebook_image.fitz  #PyMuPDF in fitz for PDF manipulation
 
-try:
-    import calibre_plugins.ebook_image.fitz
-except ImportError:
-    import fitz
-
+import calibre_plugins.ebook_image.fitz
 from PyQt5.Qt import QDialog, QVBoxLayout, QTextEdit, QPushButton
 from PyQt5.QtWidgets import (QDialog, QPushButton, QVBoxLayout, QLabel, QMessageBox, QListWidget, QDialogButtonBox, QComboBox,QProgressBar, QApplication)
 from bs4 import BeautifulSoup
