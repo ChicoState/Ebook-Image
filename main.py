@@ -1,5 +1,5 @@
 
-from calibre_plugins.ebook_image.process import GrayScale_Epub
+from calibre_plugins.ebook_image.process import GrayScale_Epub, GrayScale_PDF
 from calibre.gui2.actions import InterfaceAction
 from calibre.customize import InterfaceActionBase
 from PyQt5.Qt import QToolButton, QPixmap, QMenu,QIcon
@@ -84,7 +84,7 @@ class box(QDialog):
                 case ('AZW3',):
                     comp = GrayScale_Epub(db, ID, size, len(selected_books), comp, self)
                 case ('PDF',):
-                    comp = GrayScale_Epub(db, ID, size, len(selected_books), comp, self)
+                    comp = GrayScale_PDF(db, ID, size, len(selected_books), comp, self)
 
         #accounts for rounding issues
         if self.bar.progress.value() != 100:

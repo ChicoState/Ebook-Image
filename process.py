@@ -1,6 +1,15 @@
 from calibre.gui2 import error_dialog
 import calibre_plugins.ebook_image
+# import calibre_plugins.ebook_image.PyMuPDF  #PyMuPDF for PDF manipulation
+# import calibre_plugins.ebook_image.fitz  #PyMuPDF in fitz for PDF manipulation
+
+try:
+    import calibre_plugins.ebook_image.fitz
+except ImportError:
+    import fitz
+
 from PyQt5.Qt import QDialog, QVBoxLayout, QTextEdit, QPushButton
+from PyQt5.QtWidgets import (QDialog, QPushButton, QVBoxLayout, QLabel, QMessageBox, QListWidget, QDialogButtonBox, QComboBox,QProgressBar, QApplication)
 from bs4 import BeautifulSoup
 import zipfile
 from PIL import Image
@@ -8,6 +17,55 @@ from pathlib import Path
 import os
 import shutil
 import tempfile
+
+def GrayScale_PDF(db, ID, size, numbooks, comp, QDialog):
+    '''
+    pdf_path = db.format_abspath(ID, 'PDF') 
+    pdf_title = os.path.splitext(os.path.basename(pdf_path))[0]  
+
+    with tempfile.TemporaryDirectory() as temp_dir:
+        output_path = os.path.join(temp_dir, f"{pdf_title}_grayscale.pdf")
+
+        try:
+            with fitz.open(pdf_path) as doc:
+                for page_num in range(len(doc)):
+                    comp += (100 // numbooks // len(doc))  #Update progress bar
+                    QDialog.bar.progress.setValue(comp) 
+
+                    page = doc.load_page(page_num)  #Load the current page
+
+                    #Create a grayscale pixmap using PyMuPDF's native grayscale filter
+                    pixmap = page.get_pixmap(matrix=fitz.Matrix(600 / page.mediabox.width))
+                    grayscale_pixmap = pixmap.apply_filter("grayscale")
+
+                    #Create a new page in the output PDF and place the grayscale pixmap
+                    output_doc = fitz.open()
+                    output_page = output_doc.new_page(matrix=pixmap.matrix)
+                    output_page.insert_pixmap(pixmaps=[grayscale_pixmap])
+
+                    output_doc.save(output_path)
+
+            #replaces the original PDF with the grayscale version
+            shutil.move(output_path, pdf_path)
+
+            error_dialog(
+                "Success",
+                f"PDF converted to grayscale and saved as '{pdf_title}_grayscale.pdf'.",
+                show=True,
+            )
+        except Exception as e:
+            error_dialog(
+                "Error", f"Failed to convert PDF to grayscale: {e}", show=True
+            )
+
+    return comp + 1'''
+    msgBox = QMessageBox()
+    msgBox.setText("You are in the grayscale pdf function")
+    msgBox.setWindowTitle("DEBUG")
+    msgBox.setStandardButtons(QMessageBox.Ok)
+    msgBox.exec()
+    return comp
+
 def GrayScale_Epub(db, ID, size, numbooks, comp, QDialog):
     #this can probably be done more efficiently by passing the ID directly from main
 
@@ -48,5 +106,6 @@ def GrayScale_Epub(db, ID, size, numbooks, comp, QDialog):
                 new_epub.write(str(path), file)
     temp.cleanup()
     return comp
+
 
 
