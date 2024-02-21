@@ -1,5 +1,15 @@
 # Ebook-Image
 
+## Testing
+
+To test using Calibre:
+- Open in directory with the change with the plugin
+- run the following commands
+```
+calibre-customize -b .
+calibre-debug -g .
+```
+
 ## Resources
 Documentation
 - Calibre
@@ -9,3 +19,6 @@ Documentation
 
 - Qt
 	- Qt Documentation: https://doc.qt.io/qtforpython-6/
+
+- Pillow (Pil)
+	- Pillow Documentation: https://pillow.readthedocs.io/en/stable/
