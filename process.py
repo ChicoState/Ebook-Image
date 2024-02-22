@@ -15,7 +15,7 @@ import shutil
 import tempfile
 
 def GrayScale_PDF(db, ID, size, numbooks, comp, QDialog):
-    '''
+    
     pdf_path = db.format_abspath(ID, 'PDF') 
     pdf_title = os.path.splitext(os.path.basename(pdf_path))[0]  
 
@@ -27,7 +27,7 @@ def GrayScale_PDF(db, ID, size, numbooks, comp, QDialog):
                 for page_num in range(len(doc)):
                     comp += (100 // numbooks // len(doc))  #Update progress bar
                     QDialog.bar.progress.setValue(comp) 
-
+                    
                     page = doc.load_page(page_num)  #Load the current page
 
                     #Create a grayscale pixmap using PyMuPDF's native grayscale filter
@@ -38,23 +38,14 @@ def GrayScale_PDF(db, ID, size, numbooks, comp, QDialog):
                     output_doc = fitz.open()
                     output_page = output_doc.new_page(matrix=pixmap.matrix)
                     output_page.insert_pixmap(pixmaps=[grayscale_pixmap])
-
                     output_doc.save(output_path)
 
             #replaces the original PDF with the grayscale version
             shutil.move(output_path, pdf_path)
-
-            error_dialog(
-                "Success",
-                f"PDF converted to grayscale and saved as '{pdf_title}_grayscale.pdf'.",
-                show=True,
-            )
         except Exception as e:
-            error_dialog(
-                "Error", f"Failed to convert PDF to grayscale: {e}", show=True
-            )
+            print(e)
 
-    return comp + 1'''
+    return comp + 1
     msgBox = QMessageBox()
     msgBox.setText("You are in the grayscale pdf function")
     msgBox.setWindowTitle("DEBUG")
@@ -87,21 +78,33 @@ def GrayScale_Epub(db, ID, size, numbooks, comp, QDialog):
                 #now saves images to the specified quality
                 image.save(path, quality=size)
     #saving the modified files to a new epub that will replace the old epub
+    #now accounts for singularly nested directories
+    dir = [""]
     with zipfile.ZipFile(epub_title, 'w') as new_epub:
         for root, sub, files in os.walk(temp.name):
             for i in range(len(sub)):
-                new_epub.mkdir(sub[i])
-                Meta = sub[0]
-                OEBPS = sub[1]
+                dir.append(sub[i])
             for file in files:
-                if os.path.basename(root) == 'OEBPS' or os.path.basename(root) == 'META-INF':
-                    path = os.path.join(root, file)
-                    file = os.path.join(os.path.basename(root), os.path.basename(file))
-                else:
-                    path = os.path.join(root, file)
-                new_epub.write(str(path), file)
+                found = False
+                base = root
+                path = file
+                for i in range (len(dir)):
+                    if os.path.basename(base) == dir[i]:
+                        found = True
+                    while found:
+                        path = os.path.join(os.path.basename(base), path)
+                        old = base
+                        base = os.path.basename(os.path.dirname(base))
+                        found = False
+                        for j in range (len(dir)):
+                            if base == dir[j] and old != base:
+                                print(dir[i])
+                                found = True
+                file = os.path.join(root, os.path.basename(file))
+                new_epub.write(str(file), path)
+                            
+    
     temp.cleanup()
     return comp
-
 
 
