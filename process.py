@@ -33,19 +33,32 @@ def GrayScale_Epub(db, ID, size, numbooks, comp, QDialog):
                 #now saves images to the specified quality
                 image.save(path, quality=size)
     #saving the modified files to a new epub that will replace the old epub
+    #now accounts for singularly nested directories
+    dir = [""]
     with zipfile.ZipFile(epub_title, 'w') as new_epub:
         for root, sub, files in os.walk(temp.name):
             for i in range(len(sub)):
-                new_epub.mkdir(sub[i])
-                Meta = sub[0]
-                OEBPS = sub[1]
+                dir.append(sub[i])
             for file in files:
-                if os.path.basename(root) == 'OEBPS' or os.path.basename(root) == 'META-INF':
-                    path = os.path.join(root, file)
-                    file = os.path.join(os.path.basename(root), os.path.basename(file))
-                else:
-                    path = os.path.join(root, file)
-                new_epub.write(str(path), file)
+                found = False
+                base = root
+                path = file
+                for i in range (len(dir)):
+                    if os.path.basename(base) == dir[i]:
+                        found = True
+                    while found:
+                        path = os.path.join(os.path.basename(base), path)
+                        old = base
+                        base = os.path.basename(os.path.dirname(base))
+                        found = False
+                        for j in range (len(dir)):
+                            if base == dir[j] and old != base:
+                                print(dir[i])
+                                found = True
+                file = os.path.join(root, os.path.basename(file))
+                new_epub.write(str(file), path)
+                            
+    
     temp.cleanup()
     return comp
 
