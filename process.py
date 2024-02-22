@@ -41,8 +41,6 @@ def GrayScale_Epub(db, book_title, size, numbooks, comp, QDialog):
                 image.save(path, quality=size)
     #saving the modified files to a new epub that will replace the old epub
     #now accounts for singularly nested directories
-    #will still break if there are doubly nested directories
-    #but this will work for now
     dir = [""]
     with zipfile.ZipFile(epub_title, 'w') as new_epub:
         for root, sub, files in os.walk(temp.name):
