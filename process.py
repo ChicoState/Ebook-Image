@@ -1,5 +1,3 @@
-import sys
-sys.path.append("C:/Users/Droge/AppData/Local/Packages/PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0/LocalCache/local-packages/Python311/Scripts")
 from calibre.gui2 import error_dialog
 import calibre_plugins.ebook_image
 from PyQt5.Qt import QDialog, QVBoxLayout, QTextEdit, QPushButton
@@ -10,7 +8,6 @@ from pathlib import Path
 import os
 import shutil
 import tempfile
-import img2pdf
 def GrayScale_Epub(db, book_title, size, numbooks, comp, QDialog):
     #this can probably be done more efficiently by passing the ID directly from main
     all_books = db.all_book_ids(list)    
@@ -51,26 +48,26 @@ def GrayScale_Epub(db, book_title, size, numbooks, comp, QDialog):
         for root, sub, files in os.walk(temp.name):
             for i in range(len(sub)):
                 dir.append(sub[i])
-            print("divide")
             for file in files:
                 found = False
+                base = root
+                path = file
                 for i in range (len(dir)):
-                    if os.path.basename(root) == dir[i]:
-                        print("enters")
+                    if os.path.basename(base) == dir[i]:
                         found = True
-                        path = os.path.join(root, file)
-                        file = os.path.join(os.path.basename(root), os.path.basename(file))
-                        print(os.path.basename(os.path.dirname(root)))
+                    while found:
+                        path = os.path.join(os.path.basename(base), path)
+                        old = base
+                        base = os.path.basename(os.path.dirname(base))
+                        found = False
                         for j in range (len(dir)):
-                            if os.path.basename(os.path.dirname(root)) == dir[j]:
-                                print("gets")
-                                file = os.path.join(os.path.basename(os.path.basename(root)), os.path.basename(file))
-                                file = os.path.join(os.path.basename(os.path.dirname(root)), file)
-                if not found:
-                    path = os.path.join(root, file)
-                print(path)
-                print (file)
-                new_epub.write(str(path), file)
+                            if base == dir[j] and old != base:
+                                print(dir[i])
+                                found = True
+                file = os.path.join(root, os.path.basename(file))
+                new_epub.write(str(file), path)
+                            
+    
     temp.cleanup()
     return comp
 
