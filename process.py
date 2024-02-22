@@ -8,16 +8,9 @@ from pathlib import Path
 import os
 import shutil
 import tempfile
-def GrayScale_Epub(db, book_title, size, numbooks, comp, QDialog):
+def GrayScale_Epub(db, ID, size, numbooks, comp, QDialog):
     #this can probably be done more efficiently by passing the ID directly from main
-    all_books = db.all_book_ids(list)    
-    ID = 0  
-    for book_id in all_books:
-        book = db.get_metadata(book_id)
-        title = book.get('title')
-        if title == book_title:
-            ID = book_id
-            break
+
     #documentation recommends using copy_format_to instead but no idea where that is defined
     content = db.format_abspath(ID, 'EPUB')
     #using zipfile to load the epub
