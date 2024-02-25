@@ -54,6 +54,9 @@ class box(QDialog):
             msgBox.exec()
             return
         db = self.gui.current_db.new_api
+        #Image format specified by the user to be converted to
+        image_type = '.'+self.image_type_button.currentText().lower()
+
         #get selected image quality, reduce 100 to 95
         size = int(self.size_button.currentText().replace('%', ''))
         if size == 100:
@@ -66,8 +69,30 @@ class box(QDialog):
         comp = 0
         selected_books = self.book_list_widget.selectedItems()
         for books in selected_books:
+<<<<<<< Updated upstream
             #calls grayscale function from process.py
             comp = GrayScale_Epub(db, books.text(), size, len(selected_books), comp, self)
+=======
+            ID = 0  
+            for book_id in all_books:
+                meta = db.get_metadata(book_id)
+                title = meta.get('title')
+                if title == books.text():
+                    ID = book_id
+                    format = db.formats(ID)
+                    print(format)
+                    print(type(format))
+                    break
+            #Switch out the Grayscale for the appropriate function
+            match format:
+                case ('EPUB',):
+                    comp = GrayScale_Epub(db, ID, size, len(selected_books), comp, self, image_type)
+                case ('AZW3',):
+                    comp = GrayScale_Epub(db, ID, size, len(selected_books), comp, self, image_type)
+                case ('PDF',):
+                    comp = GrayScale_Epub(db, ID, size, len(selected_books), comp, self, image_type)
+
+>>>>>>> Stashed changes
         #accounts for rounding issues
         if self.bar.progress.value() != 100:
             self.bar.progress.setValue(100)
@@ -105,6 +130,13 @@ class box(QDialog):
         self.size_button.addItem("50%")
         self.size_button.addItem("25%")
         self.layout.addWidget(self.size_button)
+
+        self.image_type_label = QLabel("Image Type:")
+        self.layout.addWidget(self.image_type_label)
+        self.image_type_button = QComboBox()
+        self.image_type_button.addItem("PNG")
+        self.image_type_button.addItem("JPG")
+        self.layout.addWidget(self.image_type_button)
 
         self.populate_book_list()
 
