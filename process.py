@@ -26,13 +26,13 @@ def GrayScale_Epub(db, ID, size, numbooks, comp, QDialog, image_type):
         QDialog.bar.progress.setValue(comp)
         if item.filename.endswith('.jpg') or item.filename.endswith('.png'):
             with epub.open(item.filename) as page:
-                path = os.path.join(temp.name, item.filename)+image_type
+                path = os.path.join(temp.name, item.filename)
                 print(type(path))
                 #using pillow to convert the image to greyscale
                 image = Image.open(page)
                 image = image.convert('L')
                 #now saves images to the specified quality
-                image.save(path, quality=size)
+                image.save(path, quality=size, format=image_type)
     #saving the modified files to a new epub that will replace the old epub
     #now accounts for singularly nested directories
     dir = [""]

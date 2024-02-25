@@ -55,7 +55,7 @@ class box(QDialog):
             return
         db = self.gui.current_db.new_api
         #Image format specified by the user to be converted to
-        image_type = '.'+self.image_type_button.currentText().lower()
+        image_type = self.image_type_button.currentText()
 
         #get selected image quality, reduce 100 to 95
         size = int(self.size_button.currentText().replace('%', ''))
@@ -131,7 +131,7 @@ class box(QDialog):
         self.layout.addWidget(self.image_type_label)
         self.image_type_button = QComboBox()
         self.image_type_button.addItem("PNG")
-        self.image_type_button.addItem("JPG")
+        self.image_type_button.addItem("JPEG")
         self.layout.addWidget(self.image_type_button)
 
         self.populate_book_list()
