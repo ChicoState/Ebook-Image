@@ -8,11 +8,7 @@ from pathlib import Path
 import os
 import shutil
 import tempfile
-<<<<<<< Updated upstream
-def GrayScale_Epub(db, book_title, size, numbooks, comp, QDialog):
-=======
 def GrayScale_Epub(db, ID, size, numbooks, comp, QDialog, image_type):
->>>>>>> Stashed changes
     #this can probably be done more efficiently by passing the ID directly from main
     all_books = db.all_book_ids(list)    
     ID = 0  
