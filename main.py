@@ -69,10 +69,6 @@ class box(QDialog):
         comp = 0
         selected_books = self.book_list_widget.selectedItems()
         for books in selected_books:
-<<<<<<< Updated upstream
-            #calls grayscale function from process.py
-            comp = GrayScale_Epub(db, books.text(), size, len(selected_books), comp, self)
-=======
             ID = 0  
             for book_id in all_books:
                 meta = db.get_metadata(book_id)
@@ -92,7 +88,6 @@ class box(QDialog):
                 case ('PDF',):
                     comp = GrayScale_Epub(db, ID, size, len(selected_books), comp, self, image_type)
 
->>>>>>> Stashed changes
         #accounts for rounding issues
         if self.bar.progress.value() != 100:
             self.bar.progress.setValue(100)
