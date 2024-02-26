@@ -24,6 +24,7 @@ class Grayscale(Tool):
     def ask_user(self):
         container = self.current_container
         self.convert_images_to_grayscale(container)
+        self.boss.apply_container_update_to_gui()
 
     def convert_images_to_grayscale(self, container):
         for name, media_type in container.mime_map.items():
