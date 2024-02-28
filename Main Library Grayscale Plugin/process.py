@@ -35,7 +35,6 @@ def GrayScale_Epub(db, ID, size, numbooks, comp, QDialog):
                 new_width = int(new_height / image.height * image.width)
                 new_image  = image.resize((new_width, new_height))
                 new_image.save(path)
-                #image.save(path, quality=size) # Older
     #saving the modified files to a new epub that will replace the old epub
     #now accounts for singularly nested directories
     dir = [""]

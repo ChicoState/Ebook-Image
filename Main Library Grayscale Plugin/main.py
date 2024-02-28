@@ -55,9 +55,7 @@ class box(QDialog):
             return
         db = self.gui.current_db.new_api
         #get selected image quality, reduce 100 to 95
-        size = int(self.size_button.currentText().replace('',''))
-        #if size == 100:
-        #    size = 95
+        size = int(self.size_button.currentText())
         #now handles multiple book selection
         self.bar.progress.setValue(0)
         self.bar.show()
@@ -118,10 +116,6 @@ class box(QDialog):
         self.size_label = QLabel("Resolution:")
         self.layout.addWidget(self.size_label)
         self.size_button = QComboBox()
-        #self.size_button.addItem("100%")
-        #self.size_button.addItem("75%")
-        #self.size_button.addItem("50%")
-        #self.size_button.addItem("25%")
         self.size_button.addItem("1080")
         self.size_button.addItem("720")
         self.size_button.addItem("480")
