@@ -8,7 +8,7 @@ from pathlib import Path
 import os
 import shutil
 import tempfile
-def GrayScale_Epub(db, ID, size, numbooks, comp, QDialog):
+def GrayScale_Epub(db, ID, size, numbooks, comp, QDialog, image_type):
     #this can probably be done more efficiently by passing the ID directly from main
 
     #documentation recommends using copy_format_to instead but no idea where that is defined
@@ -26,7 +26,9 @@ def GrayScale_Epub(db, ID, size, numbooks, comp, QDialog):
         QDialog.bar.progress.setValue(comp)
         if item.filename.endswith('.jpg') or item.filename.endswith('.png'):
             with epub.open(item.filename) as page:
-                path = os.path.join(temp.name, item.filename)
+                path = os.path.join(temp.name, item.filename) #saving the path to the image as a variable
+                os.remove(path) #deleting the image, just to make sure there is no duplicat copy
+                path= path[:-4]+image_type
                 #using pillow to convert the image to greyscale
                 image = Image.open(page)
                 image = image.convert('L')
@@ -61,5 +63,4 @@ def GrayScale_Epub(db, ID, size, numbooks, comp, QDialog):
     
     temp.cleanup()
     return comp
-
 
