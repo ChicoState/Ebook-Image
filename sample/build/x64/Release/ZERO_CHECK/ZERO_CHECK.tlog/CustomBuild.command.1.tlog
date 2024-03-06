@@ -1,0 +1,10 @@
+^C:\USERS\DROGE\SOURCE\430_REPOS\EBOOK-IMAGE\SAMPLE\BUILD\CMAKEFILES\7550D141A67DA285570E65D6F9E64F84\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Droge/source/430_repos/Ebook-Image/sample -BC:/Users/Droge/source/430_repos/Ebook-Image/sample/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/Droge/source/430_repos/Ebook-Image/sample/build/Samples.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

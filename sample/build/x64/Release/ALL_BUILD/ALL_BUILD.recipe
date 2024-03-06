@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project>
+  <ProjectOutputs>
+    <ProjectOutput>
+      <FullPath>C:\Users\Droge\source\430_repos\Ebook-Image\sample\build\x64\Release\ZERO_CHECK</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>C:\Users\Droge\source\430_repos\Ebook-Image\sample\build\samples\Sample 1 - Render to PNG\Release\Sample1.exe</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>C:\Users\Droge\source\430_repos\Ebook-Image\sample\build\samples\Sample 2 - Basic App\Release\Sample2.exe</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>C:\Users\Droge\source\430_repos\Ebook-Image\sample\build\samples\Sample 3 - Resizable App\Release\Sample3.exe</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>C:\Users\Droge\source\430_repos\Ebook-Image\sample\build\samples\Sample 4 - JavaScript\Release\Sample4.exe</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>C:\Users\Droge\source\430_repos\Ebook-Image\sample\build\samples\Sample 5 - File Loading\Release\Sample5.exe</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>C:\Users\Droge\source\430_repos\Ebook-Image\sample\build\samples\Sample 6 - Intro to C API\Release\Sample6.exe</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>C:\Users\Droge\source\430_repos\Ebook-Image\sample\build\samples\Sample 7 - OpenGL Integration\Release\Sample7.exe</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>C:\Users\Droge\source\430_repos\Ebook-Image\sample\build\samples\Sample 8 - Web Browser\Release\Sample8.exe</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>C:\Users\Droge\source\430_repos\Ebook-Image\sample\build\samples\Sample 9 - Multi Window\Release\Sample9.exe</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>C:\Users\Droge\source\430_repos\Ebook-Image\sample\build\x64\Release\ALL_BUILD</FullPath>
+    </ProjectOutput>
+  </ProjectOutputs>
+  <ContentFiles />
+  <SatelliteDlls />
+  <NonRecipeFileRefs />
+</Project>
