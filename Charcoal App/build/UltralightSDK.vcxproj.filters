@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\CMakeFiles\2fc041390eb9ac452910990e83e80aa8\UltralightSDK-mkdir.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\CMakeFiles\2fc041390eb9ac452910990e83e80aa8\UltralightSDK-download.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\CMakeFiles\2fc041390eb9ac452910990e83e80aa8\UltralightSDK-update.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\CMakeFiles\2fc041390eb9ac452910990e83e80aa8\UltralightSDK-patch.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\CMakeFiles\2fc041390eb9ac452910990e83e80aa8\UltralightSDK-configure.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\CMakeFiles\2fc041390eb9ac452910990e83e80aa8\UltralightSDK-build.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\CMakeFiles\2fc041390eb9ac452910990e83e80aa8\UltralightSDK-install.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\CMakeFiles\e0dad732b59f4a55311829e3233b0ebb\UltralightSDK-complete.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\CMakeFiles\b6bb529dcba78cef911999908ba66c7a\UltralightSDK.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\CMakeFiles\UltralightSDK" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{3B5224A0-5C51-3176-B163-60AD2D95B89E}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

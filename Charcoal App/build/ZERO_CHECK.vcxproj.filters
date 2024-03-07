@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\CMakeFiles\b6bb529dcba78cef911999908ba66c7a\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{3B5224A0-5C51-3176-B163-60AD2D95B89E}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

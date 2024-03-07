@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\src\MyApp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\src\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\src\MyApp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{9D6ABA2A-6FFD-3032-BEB8-968823DFCFBD}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{8C8B387F-0FC9-3F81-B8D8-BE7EB19FB3BF}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
