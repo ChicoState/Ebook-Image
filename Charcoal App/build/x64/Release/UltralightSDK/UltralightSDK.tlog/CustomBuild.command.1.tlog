@@ -1,8 +1,8 @@
-^C:\USERS\DROGE\SOURCE\430_REPOS\EBOOK-IMAGE\ULTRALIGHT-QUICK-START\BUILD\CMAKEFILES\2FC041390EB9AC452910990E83E80AA8\ULTRALIGHTSDK-MKDIR.RULE
+^C:\USERS\DROGE\SOURCE\430_REPOS\EBOOK-IMAGE\CHARCOAL APP\BUILD\CMAKEFILES\9A8C8DC71C856B67AEC0C6FDEE963BDE\ULTRALIGHTSDK-MKDIR.RULE
 setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -Dcfgdir=/Release -P C:/Users/Droge/source/430_repos/Ebook-Image/ultralight-quick-start/build/UltralightSDK-prefix/tmp/UltralightSDK-mkdirs.cmake
+"C:\Program Files\CMake\bin\cmake.exe" -Dcfgdir=/Release -P "C:/Users/Droge/source/430_repos/Ebook-Image/Charcoal App/build/UltralightSDK-prefix/tmp/UltralightSDK-mkdirs.cmake"
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/Droge/source/430_repos/Ebook-Image/ultralight-quick-start/build/UltralightSDK-prefix/src/UltralightSDK-stamp/Release/UltralightSDK-mkdir
+"C:\Program Files\CMake\bin\cmake.exe" -E touch "C:/Users/Droge/source/430_repos/Ebook-Image/Charcoal App/build/UltralightSDK-prefix/src/UltralightSDK-stamp/Release/UltralightSDK-mkdir"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
@@ -10,19 +10,19 @@ endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
-^C:\USERS\DROGE\SOURCE\430_REPOS\EBOOK-IMAGE\ULTRALIGHT-QUICK-START\BUILD\CMAKEFILES\2FC041390EB9AC452910990E83E80AA8\ULTRALIGHTSDK-DOWNLOAD.RULE
+^C:\USERS\DROGE\SOURCE\430_REPOS\EBOOK-IMAGE\CHARCOAL APP\BUILD\CMAKEFILES\9A8C8DC71C856B67AEC0C6FDEE963BDE\ULTRALIGHTSDK-DOWNLOAD.RULE
 setlocal
-cd C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build
+cd "C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build"
 if %errorlevel% neq 0 goto :cmEnd
 C:
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -P C:/Users/Droge/source/430_repos/Ebook-Image/ultralight-quick-start/build/UltralightSDK-prefix/src/UltralightSDK-stamp/download-UltralightSDK.cmake
+"C:\Program Files\CMake\bin\cmake.exe" -P "C:/Users/Droge/source/430_repos/Ebook-Image/Charcoal App/build/UltralightSDK-prefix/src/UltralightSDK-stamp/download-UltralightSDK.cmake"
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -P C:/Users/Droge/source/430_repos/Ebook-Image/ultralight-quick-start/build/UltralightSDK-prefix/src/UltralightSDK-stamp/verify-UltralightSDK.cmake
+"C:\Program Files\CMake\bin\cmake.exe" -P "C:/Users/Droge/source/430_repos/Ebook-Image/Charcoal App/build/UltralightSDK-prefix/src/UltralightSDK-stamp/verify-UltralightSDK.cmake"
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -P C:/Users/Droge/source/430_repos/Ebook-Image/ultralight-quick-start/build/UltralightSDK-prefix/src/UltralightSDK-stamp/extract-UltralightSDK.cmake
+"C:\Program Files\CMake\bin\cmake.exe" -P "C:/Users/Droge/source/430_repos/Ebook-Image/Charcoal App/build/UltralightSDK-prefix/src/UltralightSDK-stamp/extract-UltralightSDK.cmake"
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/Droge/source/430_repos/Ebook-Image/ultralight-quick-start/build/UltralightSDK-prefix/src/UltralightSDK-stamp/Release/UltralightSDK-download
+"C:\Program Files\CMake\bin\cmake.exe" -E touch "C:/Users/Droge/source/430_repos/Ebook-Image/Charcoal App/build/UltralightSDK-prefix/src/UltralightSDK-stamp/Release/UltralightSDK-download"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
@@ -30,11 +30,11 @@ endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
-^C:\USERS\DROGE\SOURCE\430_REPOS\EBOOK-IMAGE\ULTRALIGHT-QUICK-START\BUILD\CMAKEFILES\2FC041390EB9AC452910990E83E80AA8\ULTRALIGHTSDK-UPDATE.RULE
+^C:\USERS\DROGE\SOURCE\430_REPOS\EBOOK-IMAGE\CHARCOAL APP\BUILD\CMAKEFILES\9A8C8DC71C856B67AEC0C6FDEE963BDE\ULTRALIGHTSDK-UPDATE.RULE
 setlocal
 "C:\Program Files\CMake\bin\cmake.exe" -E echo_append
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/Droge/source/430_repos/Ebook-Image/ultralight-quick-start/build/UltralightSDK-prefix/src/UltralightSDK-stamp/Release/UltralightSDK-update
+"C:\Program Files\CMake\bin\cmake.exe" -E touch "C:/Users/Droge/source/430_repos/Ebook-Image/Charcoal App/build/UltralightSDK-prefix/src/UltralightSDK-stamp/Release/UltralightSDK-update"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
@@ -42,11 +42,11 @@ endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
-^C:\USERS\DROGE\SOURCE\430_REPOS\EBOOK-IMAGE\ULTRALIGHT-QUICK-START\BUILD\CMAKEFILES\2FC041390EB9AC452910990E83E80AA8\ULTRALIGHTSDK-PATCH.RULE
+^C:\USERS\DROGE\SOURCE\430_REPOS\EBOOK-IMAGE\CHARCOAL APP\BUILD\CMAKEFILES\9A8C8DC71C856B67AEC0C6FDEE963BDE\ULTRALIGHTSDK-PATCH.RULE
 setlocal
 "C:\Program Files\CMake\bin\cmake.exe" -E echo_append
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/Droge/source/430_repos/Ebook-Image/ultralight-quick-start/build/UltralightSDK-prefix/src/UltralightSDK-stamp/Release/UltralightSDK-patch
+"C:\Program Files\CMake\bin\cmake.exe" -E touch "C:/Users/Droge/source/430_repos/Ebook-Image/Charcoal App/build/UltralightSDK-prefix/src/UltralightSDK-stamp/Release/UltralightSDK-patch"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
@@ -54,31 +54,15 @@ endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
-^C:\USERS\DROGE\SOURCE\430_REPOS\EBOOK-IMAGE\ULTRALIGHT-QUICK-START\BUILD\CMAKEFILES\2FC041390EB9AC452910990E83E80AA8\ULTRALIGHTSDK-CONFIGURE.RULE
+^C:\USERS\DROGE\SOURCE\430_REPOS\EBOOK-IMAGE\CHARCOAL APP\BUILD\CMAKEFILES\9A8C8DC71C856B67AEC0C6FDEE963BDE\ULTRALIGHTSDK-CONFIGURE.RULE
 setlocal
-cd C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\SDK
-if %errorlevel% neq 0 goto :cmEnd
-C:
-if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
-if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/Droge/source/430_repos/Ebook-Image/ultralight-quick-start/build/UltralightSDK-prefix/src/UltralightSDK-stamp/Release/UltralightSDK-configure
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd
-^C:\USERS\DROGE\SOURCE\430_REPOS\EBOOK-IMAGE\ULTRALIGHT-QUICK-START\BUILD\CMAKEFILES\2FC041390EB9AC452910990E83E80AA8\ULTRALIGHTSDK-BUILD.RULE
-setlocal
-cd C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\SDK
+cd "C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\SDK"
 if %errorlevel% neq 0 goto :cmEnd
 C:
 if %errorlevel% neq 0 goto :cmEnd
 "C:\Program Files\CMake\bin\cmake.exe" -E echo_append
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/Droge/source/430_repos/Ebook-Image/ultralight-quick-start/build/UltralightSDK-prefix/src/UltralightSDK-stamp/Release/UltralightSDK-build
+"C:\Program Files\CMake\bin\cmake.exe" -E touch "C:/Users/Droge/source/430_repos/Ebook-Image/Charcoal App/build/UltralightSDK-prefix/src/UltralightSDK-stamp/Release/UltralightSDK-configure"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
@@ -86,15 +70,15 @@ endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
-^C:\USERS\DROGE\SOURCE\430_REPOS\EBOOK-IMAGE\ULTRALIGHT-QUICK-START\BUILD\CMAKEFILES\2FC041390EB9AC452910990E83E80AA8\ULTRALIGHTSDK-INSTALL.RULE
+^C:\USERS\DROGE\SOURCE\430_REPOS\EBOOK-IMAGE\CHARCOAL APP\BUILD\CMAKEFILES\9A8C8DC71C856B67AEC0C6FDEE963BDE\ULTRALIGHTSDK-BUILD.RULE
 setlocal
-cd C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\SDK
+cd "C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\SDK"
 if %errorlevel% neq 0 goto :cmEnd
 C:
 if %errorlevel% neq 0 goto :cmEnd
 "C:\Program Files\CMake\bin\cmake.exe" -E echo_append
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/Droge/source/430_repos/Ebook-Image/ultralight-quick-start/build/UltralightSDK-prefix/src/UltralightSDK-stamp/Release/UltralightSDK-install
+"C:\Program Files\CMake\bin\cmake.exe" -E touch "C:/Users/Droge/source/430_repos/Ebook-Image/Charcoal App/build/UltralightSDK-prefix/src/UltralightSDK-stamp/Release/UltralightSDK-build"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
@@ -102,13 +86,15 @@ endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
-^C:\USERS\DROGE\SOURCE\430_REPOS\EBOOK-IMAGE\ULTRALIGHT-QUICK-START\BUILD\CMAKEFILES\E0DAD732B59F4A55311829E3233B0EBB\ULTRALIGHTSDK-COMPLETE.RULE
+^C:\USERS\DROGE\SOURCE\430_REPOS\EBOOK-IMAGE\CHARCOAL APP\BUILD\CMAKEFILES\9A8C8DC71C856B67AEC0C6FDEE963BDE\ULTRALIGHTSDK-INSTALL.RULE
 setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -E make_directory C:/Users/Droge/source/430_repos/Ebook-Image/ultralight-quick-start/build/CMakeFiles/Release
+cd "C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\SDK"
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/Droge/source/430_repos/Ebook-Image/ultralight-quick-start/build/CMakeFiles/Release/UltralightSDK-complete
+C:
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/Droge/source/430_repos/Ebook-Image/ultralight-quick-start/build/UltralightSDK-prefix/src/UltralightSDK-stamp/Release/UltralightSDK-done
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch "C:/Users/Droge/source/430_repos/Ebook-Image/Charcoal App/build/UltralightSDK-prefix/src/UltralightSDK-stamp/Release/UltralightSDK-install"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
@@ -116,7 +102,21 @@ endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
-^C:\USERS\DROGE\SOURCE\430_REPOS\EBOOK-IMAGE\ULTRALIGHT-QUICK-START\BUILD\CMAKEFILES\B6BB529DCBA78CEF911999908BA66C7A\ULTRALIGHTSDK.RULE
+^C:\USERS\DROGE\SOURCE\430_REPOS\EBOOK-IMAGE\CHARCOAL APP\BUILD\CMAKEFILES\13B7942715139B80912D975739D3C75D\ULTRALIGHTSDK-COMPLETE.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E make_directory "C:/Users/Droge/source/430_repos/Ebook-Image/Charcoal App/build/CMakeFiles/Release"
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch "C:/Users/Droge/source/430_repos/Ebook-Image/Charcoal App/build/CMakeFiles/Release/UltralightSDK-complete"
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch "C:/Users/Droge/source/430_repos/Ebook-Image/Charcoal App/build/UltralightSDK-prefix/src/UltralightSDK-stamp/Release/UltralightSDK-done"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\DROGE\SOURCE\430_REPOS\EBOOK-IMAGE\CHARCOAL APP\BUILD\CMAKEFILES\DE9F05546FA672ACEE2B1DDCBF4001D4\ULTRALIGHTSDK.RULE
 setlocal
 :cmEnd
 endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
@@ -124,9 +124,9 @@ endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd
-^C:\USERS\DROGE\SOURCE\430_REPOS\EBOOK-IMAGE\ULTRALIGHT-QUICK-START\CMAKELISTS.TXT
+^C:\USERS\DROGE\SOURCE\430_REPOS\EBOOK-IMAGE\CHARCOAL APP\CMAKELISTS.TXT
 setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Droge/source/430_repos/Ebook-Image/ultralight-quick-start -BC:/Users/Droge/source/430_repos/Ebook-Image/ultralight-quick-start/build --check-stamp-file C:/Users/Droge/source/430_repos/Ebook-Image/ultralight-quick-start/build/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Users/Droge/source/430_repos/Ebook-Image/Charcoal App" "-BC:/Users/Droge/source/430_repos/Ebook-Image/Charcoal App/build" --check-stamp-file "C:/Users/Droge/source/430_repos/Ebook-Image/Charcoal App/build/CMakeFiles/generate.stamp"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone

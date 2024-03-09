@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/Droge/source/430_repos/Ebook-Image/ultralight-quick-start
+# Install script for directory: C:/Users/Droge/source/430_repos/Ebook-Image/Charcoal App
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/Droge/source/430_repos/Ebook-Image/ultralight-quick-start/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Users/Droge/source/430_repos/Ebook-Image/Charcoal App/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

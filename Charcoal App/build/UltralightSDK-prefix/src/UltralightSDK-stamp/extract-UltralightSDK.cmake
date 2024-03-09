@@ -5,8 +5,8 @@ cmake_minimum_required(VERSION 3.5)
 
 # Make file names absolute:
 #
-get_filename_component(filename "C:/Users/Droge/source/430_repos/Ebook-Image/ultralight-quick-start/build/UltralightSDK-prefix/src/ultralight-sdk-1.3.0-win-x64.7z" ABSOLUTE)
-get_filename_component(directory "C:/Users/Droge/source/430_repos/Ebook-Image/ultralight-quick-start/build/SDK" ABSOLUTE)
+get_filename_component(filename "C:/Users/Droge/source/430_repos/Ebook-Image/Charcoal App/build/UltralightSDK-prefix/src/ultralight-sdk-1.3.0-win-x64.7z" ABSOLUTE)
+get_filename_component(directory "C:/Users/Droge/source/430_repos/Ebook-Image/Charcoal App/build/SDK" ABSOLUTE)
 
 message(STATUS "extracting...
      src='${filename}'

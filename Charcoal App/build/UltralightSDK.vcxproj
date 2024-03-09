@@ -22,7 +22,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{F6EB929E-799C-3397-9519-E0653A0557F1}</ProjectGuid>
+    <ProjectGuid>{C07B2195-4B96-3545-8C2C-97357839B82D}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
     <Platform>x64</Platform>
@@ -66,7 +66,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\SDK\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\SDK\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -76,7 +76,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\SDK\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\SDK\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -86,7 +86,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\SDK\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\SDK\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -96,7 +96,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\SDK\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\SDK\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -105,12 +105,12 @@
     </Midl>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\CMakeFiles\2fc041390eb9ac452910990e83e80aa8\UltralightSDK-mkdir.rule">
+    <CustomBuild Include="C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\CMakeFiles\9a8c8dc71c856b67aec0c6fdee963bde\UltralightSDK-mkdir.rule">
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Creating directories for 'UltralightSDK'</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -Dcfgdir=/Debug -P C:/Users/Droge/source/430_repos/Ebook-Image/ultralight-quick-start/build/UltralightSDK-prefix/tmp/UltralightSDK-mkdirs.cmake
+"C:\Program Files\CMake\bin\cmake.exe" -Dcfgdir=/Debug -P "C:/Users/Droge/source/430_repos/Ebook-Image/Charcoal App/build/UltralightSDK-prefix/tmp/UltralightSDK-mkdirs.cmake"
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/Droge/source/430_repos/Ebook-Image/ultralight-quick-start/build/UltralightSDK-prefix/src/UltralightSDK-stamp/Debug/UltralightSDK-mkdir
+"C:\Program Files\CMake\bin\cmake.exe" -E touch "C:/Users/Droge/source/430_repos/Ebook-Image/Charcoal App/build/UltralightSDK-prefix/src/UltralightSDK-stamp/Debug/UltralightSDK-mkdir"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -119,13 +119,13 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\UltralightSDK-prefix\src\UltralightSDK-stamp\Debug\UltralightSDK-mkdir</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\UltralightSDK-prefix\src\UltralightSDK-stamp\Debug\UltralightSDK-mkdir</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Creating directories for 'UltralightSDK'</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -Dcfgdir=/Release -P C:/Users/Droge/source/430_repos/Ebook-Image/ultralight-quick-start/build/UltralightSDK-prefix/tmp/UltralightSDK-mkdirs.cmake
+"C:\Program Files\CMake\bin\cmake.exe" -Dcfgdir=/Release -P "C:/Users/Droge/source/430_repos/Ebook-Image/Charcoal App/build/UltralightSDK-prefix/tmp/UltralightSDK-mkdirs.cmake"
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/Droge/source/430_repos/Ebook-Image/ultralight-quick-start/build/UltralightSDK-prefix/src/UltralightSDK-stamp/Release/UltralightSDK-mkdir
+"C:\Program Files\CMake\bin\cmake.exe" -E touch "C:/Users/Droge/source/430_repos/Ebook-Image/Charcoal App/build/UltralightSDK-prefix/src/UltralightSDK-stamp/Release/UltralightSDK-mkdir"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -134,13 +134,13 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\UltralightSDK-prefix\src\UltralightSDK-stamp\Release\UltralightSDK-mkdir</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\UltralightSDK-prefix\src\UltralightSDK-stamp\Release\UltralightSDK-mkdir</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Creating directories for 'UltralightSDK'</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -Dcfgdir=/MinSizeRel -P C:/Users/Droge/source/430_repos/Ebook-Image/ultralight-quick-start/build/UltralightSDK-prefix/tmp/UltralightSDK-mkdirs.cmake
+"C:\Program Files\CMake\bin\cmake.exe" -Dcfgdir=/MinSizeRel -P "C:/Users/Droge/source/430_repos/Ebook-Image/Charcoal App/build/UltralightSDK-prefix/tmp/UltralightSDK-mkdirs.cmake"
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/Droge/source/430_repos/Ebook-Image/ultralight-quick-start/build/UltralightSDK-prefix/src/UltralightSDK-stamp/MinSizeRel/UltralightSDK-mkdir
+"C:\Program Files\CMake\bin\cmake.exe" -E touch "C:/Users/Droge/source/430_repos/Ebook-Image/Charcoal App/build/UltralightSDK-prefix/src/UltralightSDK-stamp/MinSizeRel/UltralightSDK-mkdir"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -149,13 +149,13 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\UltralightSDK-prefix\src\UltralightSDK-stamp\MinSizeRel\UltralightSDK-mkdir</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\UltralightSDK-prefix\src\UltralightSDK-stamp\MinSizeRel\UltralightSDK-mkdir</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Creating directories for 'UltralightSDK'</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -Dcfgdir=/RelWithDebInfo -P C:/Users/Droge/source/430_repos/Ebook-Image/ultralight-quick-start/build/UltralightSDK-prefix/tmp/UltralightSDK-mkdirs.cmake
+"C:\Program Files\CMake\bin\cmake.exe" -Dcfgdir=/RelWithDebInfo -P "C:/Users/Droge/source/430_repos/Ebook-Image/Charcoal App/build/UltralightSDK-prefix/tmp/UltralightSDK-mkdirs.cmake"
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/Droge/source/430_repos/Ebook-Image/ultralight-quick-start/build/UltralightSDK-prefix/src/UltralightSDK-stamp/RelWithDebInfo/UltralightSDK-mkdir
+"C:\Program Files\CMake\bin\cmake.exe" -E touch "C:/Users/Droge/source/430_repos/Ebook-Image/Charcoal App/build/UltralightSDK-prefix/src/UltralightSDK-stamp/RelWithDebInfo/UltralightSDK-mkdir"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -164,25 +164,25 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\UltralightSDK-prefix\src\UltralightSDK-stamp\RelWithDebInfo\UltralightSDK-mkdir</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\UltralightSDK-prefix\src\UltralightSDK-stamp\RelWithDebInfo\UltralightSDK-mkdir</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\CMakeFiles\2fc041390eb9ac452910990e83e80aa8\UltralightSDK-download.rule">
+    <CustomBuild Include="C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\CMakeFiles\9a8c8dc71c856b67aec0c6fdee963bde\UltralightSDK-download.rule">
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Performing download step (download, verify and extract) for 'UltralightSDK'</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-cd C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build
+cd "C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build"
 if %errorlevel% neq 0 goto :cmEnd
 C:
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -P C:/Users/Droge/source/430_repos/Ebook-Image/ultralight-quick-start/build/UltralightSDK-prefix/src/UltralightSDK-stamp/download-UltralightSDK.cmake
+"C:\Program Files\CMake\bin\cmake.exe" -P "C:/Users/Droge/source/430_repos/Ebook-Image/Charcoal App/build/UltralightSDK-prefix/src/UltralightSDK-stamp/download-UltralightSDK.cmake"
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -P C:/Users/Droge/source/430_repos/Ebook-Image/ultralight-quick-start/build/UltralightSDK-prefix/src/UltralightSDK-stamp/verify-UltralightSDK.cmake
+"C:\Program Files\CMake\bin\cmake.exe" -P "C:/Users/Droge/source/430_repos/Ebook-Image/Charcoal App/build/UltralightSDK-prefix/src/UltralightSDK-stamp/verify-UltralightSDK.cmake"
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -P C:/Users/Droge/source/430_repos/Ebook-Image/ultralight-quick-start/build/UltralightSDK-prefix/src/UltralightSDK-stamp/extract-UltralightSDK.cmake
+"C:\Program Files\CMake\bin\cmake.exe" -P "C:/Users/Droge/source/430_repos/Ebook-Image/Charcoal App/build/UltralightSDK-prefix/src/UltralightSDK-stamp/extract-UltralightSDK.cmake"
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/Droge/source/430_repos/Ebook-Image/ultralight-quick-start/build/UltralightSDK-prefix/src/UltralightSDK-stamp/Debug/UltralightSDK-download
+"C:\Program Files\CMake\bin\cmake.exe" -E touch "C:/Users/Droge/source/430_repos/Ebook-Image/Charcoal App/build/UltralightSDK-prefix/src/UltralightSDK-stamp/Debug/UltralightSDK-download"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -190,22 +190,22 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\UltralightSDK-prefix\src\UltralightSDK-stamp\download-UltralightSDK.cmake;C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\UltralightSDK-prefix\src\UltralightSDK-stamp\UltralightSDK-urlinfo.txt;C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\UltralightSDK-prefix\src\UltralightSDK-stamp\Debug\UltralightSDK-mkdir;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\UltralightSDK-prefix\src\UltralightSDK-stamp\Debug\UltralightSDK-download</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\UltralightSDK-prefix\src\UltralightSDK-stamp\download-UltralightSDK.cmake;C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\UltralightSDK-prefix\src\UltralightSDK-stamp\UltralightSDK-urlinfo.txt;C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\UltralightSDK-prefix\src\UltralightSDK-stamp\Debug\UltralightSDK-mkdir;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\UltralightSDK-prefix\src\UltralightSDK-stamp\Debug\UltralightSDK-download</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Performing download step (download, verify and extract) for 'UltralightSDK'</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-cd C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build
+cd "C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build"
 if %errorlevel% neq 0 goto :cmEnd
 C:
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -P C:/Users/Droge/source/430_repos/Ebook-Image/ultralight-quick-start/build/UltralightSDK-prefix/src/UltralightSDK-stamp/download-UltralightSDK.cmake
+"C:\Program Files\CMake\bin\cmake.exe" -P "C:/Users/Droge/source/430_repos/Ebook-Image/Charcoal App/build/UltralightSDK-prefix/src/UltralightSDK-stamp/download-UltralightSDK.cmake"
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -P C:/Users/Droge/source/430_repos/Ebook-Image/ultralight-quick-start/build/UltralightSDK-prefix/src/UltralightSDK-stamp/verify-UltralightSDK.cmake
+"C:\Program Files\CMake\bin\cmake.exe" -P "C:/Users/Droge/source/430_repos/Ebook-Image/Charcoal App/build/UltralightSDK-prefix/src/UltralightSDK-stamp/verify-UltralightSDK.cmake"
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -P C:/Users/Droge/source/430_repos/Ebook-Image/ultralight-quick-start/build/UltralightSDK-prefix/src/UltralightSDK-stamp/extract-UltralightSDK.cmake
+"C:\Program Files\CMake\bin\cmake.exe" -P "C:/Users/Droge/source/430_repos/Ebook-Image/Charcoal App/build/UltralightSDK-prefix/src/UltralightSDK-stamp/extract-UltralightSDK.cmake"
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/Droge/source/430_repos/Ebook-Image/ultralight-quick-start/build/UltralightSDK-prefix/src/UltralightSDK-stamp/Release/UltralightSDK-download
+"C:\Program Files\CMake\bin\cmake.exe" -E touch "C:/Users/Droge/source/430_repos/Ebook-Image/Charcoal App/build/UltralightSDK-prefix/src/UltralightSDK-stamp/Release/UltralightSDK-download"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -213,22 +213,22 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\UltralightSDK-prefix\src\UltralightSDK-stamp\download-UltralightSDK.cmake;C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\UltralightSDK-prefix\src\UltralightSDK-stamp\UltralightSDK-urlinfo.txt;C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\UltralightSDK-prefix\src\UltralightSDK-stamp\Release\UltralightSDK-mkdir;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\UltralightSDK-prefix\src\UltralightSDK-stamp\Release\UltralightSDK-download</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\UltralightSDK-prefix\src\UltralightSDK-stamp\download-UltralightSDK.cmake;C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\UltralightSDK-prefix\src\UltralightSDK-stamp\UltralightSDK-urlinfo.txt;C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\UltralightSDK-prefix\src\UltralightSDK-stamp\Release\UltralightSDK-mkdir;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\UltralightSDK-prefix\src\UltralightSDK-stamp\Release\UltralightSDK-download</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Performing download step (download, verify and extract) for 'UltralightSDK'</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
-cd C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build
+cd "C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build"
 if %errorlevel% neq 0 goto :cmEnd
 C:
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -P C:/Users/Droge/source/430_repos/Ebook-Image/ultralight-quick-start/build/UltralightSDK-prefix/src/UltralightSDK-stamp/download-UltralightSDK.cmake
+"C:\Program Files\CMake\bin\cmake.exe" -P "C:/Users/Droge/source/430_repos/Ebook-Image/Charcoal App/build/UltralightSDK-prefix/src/UltralightSDK-stamp/download-UltralightSDK.cmake"
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -P C:/Users/Droge/source/430_repos/Ebook-Image/ultralight-quick-start/build/UltralightSDK-prefix/src/UltralightSDK-stamp/verify-UltralightSDK.cmake
+"C:\Program Files\CMake\bin\cmake.exe" -P "C:/Users/Droge/source/430_repos/Ebook-Image/Charcoal App/build/UltralightSDK-prefix/src/UltralightSDK-stamp/verify-UltralightSDK.cmake"
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -P C:/Users/Droge/source/430_repos/Ebook-Image/ultralight-quick-start/build/UltralightSDK-prefix/src/UltralightSDK-stamp/extract-UltralightSDK.cmake
+"C:\Program Files\CMake\bin\cmake.exe" -P "C:/Users/Droge/source/430_repos/Ebook-Image/Charcoal App/build/UltralightSDK-prefix/src/UltralightSDK-stamp/extract-UltralightSDK.cmake"
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/Droge/source/430_repos/Ebook-Image/ultralight-quick-start/build/UltralightSDK-prefix/src/UltralightSDK-stamp/MinSizeRel/UltralightSDK-download
+"C:\Program Files\CMake\bin\cmake.exe" -E touch "C:/Users/Droge/source/430_repos/Ebook-Image/Charcoal App/build/UltralightSDK-prefix/src/UltralightSDK-stamp/MinSizeRel/UltralightSDK-download"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -236,22 +236,22 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\UltralightSDK-prefix\src\UltralightSDK-stamp\download-UltralightSDK.cmake;C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\UltralightSDK-prefix\src\UltralightSDK-stamp\UltralightSDK-urlinfo.txt;C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\UltralightSDK-prefix\src\UltralightSDK-stamp\MinSizeRel\UltralightSDK-mkdir;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\UltralightSDK-prefix\src\UltralightSDK-stamp\MinSizeRel\UltralightSDK-download</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\UltralightSDK-prefix\src\UltralightSDK-stamp\download-UltralightSDK.cmake;C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\UltralightSDK-prefix\src\UltralightSDK-stamp\UltralightSDK-urlinfo.txt;C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\UltralightSDK-prefix\src\UltralightSDK-stamp\MinSizeRel\UltralightSDK-mkdir;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\UltralightSDK-prefix\src\UltralightSDK-stamp\MinSizeRel\UltralightSDK-download</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Performing download step (download, verify and extract) for 'UltralightSDK'</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
-cd C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build
+cd "C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build"
 if %errorlevel% neq 0 goto :cmEnd
 C:
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -P C:/Users/Droge/source/430_repos/Ebook-Image/ultralight-quick-start/build/UltralightSDK-prefix/src/UltralightSDK-stamp/download-UltralightSDK.cmake
+"C:\Program Files\CMake\bin\cmake.exe" -P "C:/Users/Droge/source/430_repos/Ebook-Image/Charcoal App/build/UltralightSDK-prefix/src/UltralightSDK-stamp/download-UltralightSDK.cmake"
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -P C:/Users/Droge/source/430_repos/Ebook-Image/ultralight-quick-start/build/UltralightSDK-prefix/src/UltralightSDK-stamp/verify-UltralightSDK.cmake
+"C:\Program Files\CMake\bin\cmake.exe" -P "C:/Users/Droge/source/430_repos/Ebook-Image/Charcoal App/build/UltralightSDK-prefix/src/UltralightSDK-stamp/verify-UltralightSDK.cmake"
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -P C:/Users/Droge/source/430_repos/Ebook-Image/ultralight-quick-start/build/UltralightSDK-prefix/src/UltralightSDK-stamp/extract-UltralightSDK.cmake
+"C:\Program Files\CMake\bin\cmake.exe" -P "C:/Users/Droge/source/430_repos/Ebook-Image/Charcoal App/build/UltralightSDK-prefix/src/UltralightSDK-stamp/extract-UltralightSDK.cmake"
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/Droge/source/430_repos/Ebook-Image/ultralight-quick-start/build/UltralightSDK-prefix/src/UltralightSDK-stamp/RelWithDebInfo/UltralightSDK-download
+"C:\Program Files\CMake\bin\cmake.exe" -E touch "C:/Users/Droge/source/430_repos/Ebook-Image/Charcoal App/build/UltralightSDK-prefix/src/UltralightSDK-stamp/RelWithDebInfo/UltralightSDK-download"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -259,18 +259,18 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\UltralightSDK-prefix\src\UltralightSDK-stamp\download-UltralightSDK.cmake;C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\UltralightSDK-prefix\src\UltralightSDK-stamp\UltralightSDK-urlinfo.txt;C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\UltralightSDK-prefix\src\UltralightSDK-stamp\RelWithDebInfo\UltralightSDK-mkdir;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\UltralightSDK-prefix\src\UltralightSDK-stamp\RelWithDebInfo\UltralightSDK-download</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\UltralightSDK-prefix\src\UltralightSDK-stamp\download-UltralightSDK.cmake;C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\UltralightSDK-prefix\src\UltralightSDK-stamp\UltralightSDK-urlinfo.txt;C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\UltralightSDK-prefix\src\UltralightSDK-stamp\RelWithDebInfo\UltralightSDK-mkdir;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\UltralightSDK-prefix\src\UltralightSDK-stamp\RelWithDebInfo\UltralightSDK-download</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\CMakeFiles\2fc041390eb9ac452910990e83e80aa8\UltralightSDK-update.rule">
+    <CustomBuild Include="C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\CMakeFiles\9a8c8dc71c856b67aec0c6fdee963bde\UltralightSDK-update.rule">
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">No update step for 'UltralightSDK'</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
 "C:\Program Files\CMake\bin\cmake.exe" -E echo_append
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/Droge/source/430_repos/Ebook-Image/ultralight-quick-start/build/UltralightSDK-prefix/src/UltralightSDK-stamp/Debug/UltralightSDK-update
+"C:\Program Files\CMake\bin\cmake.exe" -E touch "C:/Users/Droge/source/430_repos/Ebook-Image/Charcoal App/build/UltralightSDK-prefix/src/UltralightSDK-stamp/Debug/UltralightSDK-update"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -278,14 +278,14 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\UltralightSDK-prefix\src\UltralightSDK-stamp\UltralightSDK-update-info.txt;C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\UltralightSDK-prefix\src\UltralightSDK-stamp\Debug\UltralightSDK-download;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\UltralightSDK-prefix\src\UltralightSDK-stamp\Debug\UltralightSDK-update</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\UltralightSDK-prefix\src\UltralightSDK-stamp\UltralightSDK-update-info.txt;C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\UltralightSDK-prefix\src\UltralightSDK-stamp\Debug\UltralightSDK-download;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\UltralightSDK-prefix\src\UltralightSDK-stamp\Debug\UltralightSDK-update</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">No update step for 'UltralightSDK'</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
 "C:\Program Files\CMake\bin\cmake.exe" -E echo_append
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/Droge/source/430_repos/Ebook-Image/ultralight-quick-start/build/UltralightSDK-prefix/src/UltralightSDK-stamp/Release/UltralightSDK-update
+"C:\Program Files\CMake\bin\cmake.exe" -E touch "C:/Users/Droge/source/430_repos/Ebook-Image/Charcoal App/build/UltralightSDK-prefix/src/UltralightSDK-stamp/Release/UltralightSDK-update"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -293,14 +293,14 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\UltralightSDK-prefix\src\UltralightSDK-stamp\UltralightSDK-update-info.txt;C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\UltralightSDK-prefix\src\UltralightSDK-stamp\Release\UltralightSDK-download;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\UltralightSDK-prefix\src\UltralightSDK-stamp\Release\UltralightSDK-update</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\UltralightSDK-prefix\src\UltralightSDK-stamp\UltralightSDK-update-info.txt;C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\UltralightSDK-prefix\src\UltralightSDK-stamp\Release\UltralightSDK-download;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\UltralightSDK-prefix\src\UltralightSDK-stamp\Release\UltralightSDK-update</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">No update step for 'UltralightSDK'</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
 "C:\Program Files\CMake\bin\cmake.exe" -E echo_append
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/Droge/source/430_repos/Ebook-Image/ultralight-quick-start/build/UltralightSDK-prefix/src/UltralightSDK-stamp/MinSizeRel/UltralightSDK-update
+"C:\Program Files\CMake\bin\cmake.exe" -E touch "C:/Users/Droge/source/430_repos/Ebook-Image/Charcoal App/build/UltralightSDK-prefix/src/UltralightSDK-stamp/MinSizeRel/UltralightSDK-update"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -308,14 +308,14 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\UltralightSDK-prefix\src\UltralightSDK-stamp\UltralightSDK-update-info.txt;C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\UltralightSDK-prefix\src\UltralightSDK-stamp\MinSizeRel\UltralightSDK-download;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\UltralightSDK-prefix\src\UltralightSDK-stamp\MinSizeRel\UltralightSDK-update</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\UltralightSDK-prefix\src\UltralightSDK-stamp\UltralightSDK-update-info.txt;C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\UltralightSDK-prefix\src\UltralightSDK-stamp\MinSizeRel\UltralightSDK-download;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\UltralightSDK-prefix\src\UltralightSDK-stamp\MinSizeRel\UltralightSDK-update</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">No update step for 'UltralightSDK'</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
 "C:\Program Files\CMake\bin\cmake.exe" -E echo_append
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/Droge/source/430_repos/Ebook-Image/ultralight-quick-start/build/UltralightSDK-prefix/src/UltralightSDK-stamp/RelWithDebInfo/UltralightSDK-update
+"C:\Program Files\CMake\bin\cmake.exe" -E touch "C:/Users/Droge/source/430_repos/Ebook-Image/Charcoal App/build/UltralightSDK-prefix/src/UltralightSDK-stamp/RelWithDebInfo/UltralightSDK-update"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -323,18 +323,18 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\UltralightSDK-prefix\src\UltralightSDK-stamp\UltralightSDK-update-info.txt;C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\UltralightSDK-prefix\src\UltralightSDK-stamp\RelWithDebInfo\UltralightSDK-download;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\UltralightSDK-prefix\src\UltralightSDK-stamp\RelWithDebInfo\UltralightSDK-update</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\UltralightSDK-prefix\src\UltralightSDK-stamp\UltralightSDK-update-info.txt;C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\UltralightSDK-prefix\src\UltralightSDK-stamp\RelWithDebInfo\UltralightSDK-download;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\UltralightSDK-prefix\src\UltralightSDK-stamp\RelWithDebInfo\UltralightSDK-update</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\CMakeFiles\2fc041390eb9ac452910990e83e80aa8\UltralightSDK-patch.rule">
+    <CustomBuild Include="C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\CMakeFiles\9a8c8dc71c856b67aec0c6fdee963bde\UltralightSDK-patch.rule">
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">No patch step for 'UltralightSDK'</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
 "C:\Program Files\CMake\bin\cmake.exe" -E echo_append
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/Droge/source/430_repos/Ebook-Image/ultralight-quick-start/build/UltralightSDK-prefix/src/UltralightSDK-stamp/Debug/UltralightSDK-patch
+"C:\Program Files\CMake\bin\cmake.exe" -E touch "C:/Users/Droge/source/430_repos/Ebook-Image/Charcoal App/build/UltralightSDK-prefix/src/UltralightSDK-stamp/Debug/UltralightSDK-patch"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -342,14 +342,14 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\UltralightSDK-prefix\src\UltralightSDK-stamp\UltralightSDK-patch-info.txt;C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\UltralightSDK-prefix\src\UltralightSDK-stamp\Debug\UltralightSDK-update;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\UltralightSDK-prefix\src\UltralightSDK-stamp\Debug\UltralightSDK-patch</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\UltralightSDK-prefix\src\UltralightSDK-stamp\UltralightSDK-patch-info.txt;C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\UltralightSDK-prefix\src\UltralightSDK-stamp\Debug\UltralightSDK-update;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\UltralightSDK-prefix\src\UltralightSDK-stamp\Debug\UltralightSDK-patch</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">No patch step for 'UltralightSDK'</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
 "C:\Program Files\CMake\bin\cmake.exe" -E echo_append
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/Droge/source/430_repos/Ebook-Image/ultralight-quick-start/build/UltralightSDK-prefix/src/UltralightSDK-stamp/Release/UltralightSDK-patch
+"C:\Program Files\CMake\bin\cmake.exe" -E touch "C:/Users/Droge/source/430_repos/Ebook-Image/Charcoal App/build/UltralightSDK-prefix/src/UltralightSDK-stamp/Release/UltralightSDK-patch"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -357,14 +357,14 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\UltralightSDK-prefix\src\UltralightSDK-stamp\UltralightSDK-patch-info.txt;C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\UltralightSDK-prefix\src\UltralightSDK-stamp\Release\UltralightSDK-update;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\UltralightSDK-prefix\src\UltralightSDK-stamp\Release\UltralightSDK-patch</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\UltralightSDK-prefix\src\UltralightSDK-stamp\UltralightSDK-patch-info.txt;C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\UltralightSDK-prefix\src\UltralightSDK-stamp\Release\UltralightSDK-update;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\UltralightSDK-prefix\src\UltralightSDK-stamp\Release\UltralightSDK-patch</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">No patch step for 'UltralightSDK'</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
 "C:\Program Files\CMake\bin\cmake.exe" -E echo_append
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/Droge/source/430_repos/Ebook-Image/ultralight-quick-start/build/UltralightSDK-prefix/src/UltralightSDK-stamp/MinSizeRel/UltralightSDK-patch
+"C:\Program Files\CMake\bin\cmake.exe" -E touch "C:/Users/Droge/source/430_repos/Ebook-Image/Charcoal App/build/UltralightSDK-prefix/src/UltralightSDK-stamp/MinSizeRel/UltralightSDK-patch"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -372,14 +372,14 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\UltralightSDK-prefix\src\UltralightSDK-stamp\UltralightSDK-patch-info.txt;C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\UltralightSDK-prefix\src\UltralightSDK-stamp\MinSizeRel\UltralightSDK-update;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\UltralightSDK-prefix\src\UltralightSDK-stamp\MinSizeRel\UltralightSDK-patch</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\UltralightSDK-prefix\src\UltralightSDK-stamp\UltralightSDK-patch-info.txt;C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\UltralightSDK-prefix\src\UltralightSDK-stamp\MinSizeRel\UltralightSDK-update;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\UltralightSDK-prefix\src\UltralightSDK-stamp\MinSizeRel\UltralightSDK-patch</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">No patch step for 'UltralightSDK'</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
 "C:\Program Files\CMake\bin\cmake.exe" -E echo_append
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/Droge/source/430_repos/Ebook-Image/ultralight-quick-start/build/UltralightSDK-prefix/src/UltralightSDK-stamp/RelWithDebInfo/UltralightSDK-patch
+"C:\Program Files\CMake\bin\cmake.exe" -E touch "C:/Users/Droge/source/430_repos/Ebook-Image/Charcoal App/build/UltralightSDK-prefix/src/UltralightSDK-stamp/RelWithDebInfo/UltralightSDK-patch"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -387,22 +387,22 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\UltralightSDK-prefix\src\UltralightSDK-stamp\UltralightSDK-patch-info.txt;C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\UltralightSDK-prefix\src\UltralightSDK-stamp\RelWithDebInfo\UltralightSDK-update;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\UltralightSDK-prefix\src\UltralightSDK-stamp\RelWithDebInfo\UltralightSDK-patch</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\UltralightSDK-prefix\src\UltralightSDK-stamp\UltralightSDK-patch-info.txt;C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\UltralightSDK-prefix\src\UltralightSDK-stamp\RelWithDebInfo\UltralightSDK-update;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\UltralightSDK-prefix\src\UltralightSDK-stamp\RelWithDebInfo\UltralightSDK-patch</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\CMakeFiles\2fc041390eb9ac452910990e83e80aa8\UltralightSDK-configure.rule">
+    <CustomBuild Include="C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\CMakeFiles\9a8c8dc71c856b67aec0c6fdee963bde\UltralightSDK-configure.rule">
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">No configure step for 'UltralightSDK'</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-cd C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\SDK
+cd "C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\SDK"
 if %errorlevel% neq 0 goto :cmEnd
 C:
 if %errorlevel% neq 0 goto :cmEnd
 "C:\Program Files\CMake\bin\cmake.exe" -E echo_append
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/Droge/source/430_repos/Ebook-Image/ultralight-quick-start/build/UltralightSDK-prefix/src/UltralightSDK-stamp/Debug/UltralightSDK-configure
+"C:\Program Files\CMake\bin\cmake.exe" -E touch "C:/Users/Droge/source/430_repos/Ebook-Image/Charcoal App/build/UltralightSDK-prefix/src/UltralightSDK-stamp/Debug/UltralightSDK-configure"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -410,18 +410,18 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\UltralightSDK-prefix\tmp\UltralightSDK-cfgcmd.txt;C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\UltralightSDK-prefix\src\UltralightSDK-stamp\Debug\UltralightSDK-patch;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\UltralightSDK-prefix\src\UltralightSDK-stamp\Debug\UltralightSDK-configure</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\UltralightSDK-prefix\tmp\UltralightSDK-cfgcmd.txt;C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\UltralightSDK-prefix\src\UltralightSDK-stamp\Debug\UltralightSDK-patch;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\UltralightSDK-prefix\src\UltralightSDK-stamp\Debug\UltralightSDK-configure</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">No configure step for 'UltralightSDK'</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-cd C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\SDK
+cd "C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\SDK"
 if %errorlevel% neq 0 goto :cmEnd
 C:
 if %errorlevel% neq 0 goto :cmEnd
 "C:\Program Files\CMake\bin\cmake.exe" -E echo_append
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/Droge/source/430_repos/Ebook-Image/ultralight-quick-start/build/UltralightSDK-prefix/src/UltralightSDK-stamp/Release/UltralightSDK-configure
+"C:\Program Files\CMake\bin\cmake.exe" -E touch "C:/Users/Droge/source/430_repos/Ebook-Image/Charcoal App/build/UltralightSDK-prefix/src/UltralightSDK-stamp/Release/UltralightSDK-configure"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -429,18 +429,18 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\UltralightSDK-prefix\tmp\UltralightSDK-cfgcmd.txt;C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\UltralightSDK-prefix\src\UltralightSDK-stamp\Release\UltralightSDK-patch;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\UltralightSDK-prefix\src\UltralightSDK-stamp\Release\UltralightSDK-configure</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\UltralightSDK-prefix\tmp\UltralightSDK-cfgcmd.txt;C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\UltralightSDK-prefix\src\UltralightSDK-stamp\Release\UltralightSDK-patch;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\UltralightSDK-prefix\src\UltralightSDK-stamp\Release\UltralightSDK-configure</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">No configure step for 'UltralightSDK'</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
-cd C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\SDK
+cd "C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\SDK"
 if %errorlevel% neq 0 goto :cmEnd
 C:
 if %errorlevel% neq 0 goto :cmEnd
 "C:\Program Files\CMake\bin\cmake.exe" -E echo_append
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/Droge/source/430_repos/Ebook-Image/ultralight-quick-start/build/UltralightSDK-prefix/src/UltralightSDK-stamp/MinSizeRel/UltralightSDK-configure
+"C:\Program Files\CMake\bin\cmake.exe" -E touch "C:/Users/Droge/source/430_repos/Ebook-Image/Charcoal App/build/UltralightSDK-prefix/src/UltralightSDK-stamp/MinSizeRel/UltralightSDK-configure"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -448,18 +448,18 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\UltralightSDK-prefix\tmp\UltralightSDK-cfgcmd.txt;C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\UltralightSDK-prefix\src\UltralightSDK-stamp\MinSizeRel\UltralightSDK-patch;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\UltralightSDK-prefix\src\UltralightSDK-stamp\MinSizeRel\UltralightSDK-configure</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\UltralightSDK-prefix\tmp\UltralightSDK-cfgcmd.txt;C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\UltralightSDK-prefix\src\UltralightSDK-stamp\MinSizeRel\UltralightSDK-patch;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\UltralightSDK-prefix\src\UltralightSDK-stamp\MinSizeRel\UltralightSDK-configure</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">No configure step for 'UltralightSDK'</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
-cd C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\SDK
+cd "C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\SDK"
 if %errorlevel% neq 0 goto :cmEnd
 C:
 if %errorlevel% neq 0 goto :cmEnd
 "C:\Program Files\CMake\bin\cmake.exe" -E echo_append
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/Droge/source/430_repos/Ebook-Image/ultralight-quick-start/build/UltralightSDK-prefix/src/UltralightSDK-stamp/RelWithDebInfo/UltralightSDK-configure
+"C:\Program Files\CMake\bin\cmake.exe" -E touch "C:/Users/Droge/source/430_repos/Ebook-Image/Charcoal App/build/UltralightSDK-prefix/src/UltralightSDK-stamp/RelWithDebInfo/UltralightSDK-configure"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -467,22 +467,22 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\UltralightSDK-prefix\tmp\UltralightSDK-cfgcmd.txt;C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\UltralightSDK-prefix\src\UltralightSDK-stamp\RelWithDebInfo\UltralightSDK-patch;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\UltralightSDK-prefix\src\UltralightSDK-stamp\RelWithDebInfo\UltralightSDK-configure</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\UltralightSDK-prefix\tmp\UltralightSDK-cfgcmd.txt;C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\UltralightSDK-prefix\src\UltralightSDK-stamp\RelWithDebInfo\UltralightSDK-patch;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\UltralightSDK-prefix\src\UltralightSDK-stamp\RelWithDebInfo\UltralightSDK-configure</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\CMakeFiles\2fc041390eb9ac452910990e83e80aa8\UltralightSDK-build.rule">
+    <CustomBuild Include="C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\CMakeFiles\9a8c8dc71c856b67aec0c6fdee963bde\UltralightSDK-build.rule">
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">No build step for 'UltralightSDK'</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-cd C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\SDK
+cd "C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\SDK"
 if %errorlevel% neq 0 goto :cmEnd
 C:
 if %errorlevel% neq 0 goto :cmEnd
 "C:\Program Files\CMake\bin\cmake.exe" -E echo_append
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/Droge/source/430_repos/Ebook-Image/ultralight-quick-start/build/UltralightSDK-prefix/src/UltralightSDK-stamp/Debug/UltralightSDK-build
+"C:\Program Files\CMake\bin\cmake.exe" -E touch "C:/Users/Droge/source/430_repos/Ebook-Image/Charcoal App/build/UltralightSDK-prefix/src/UltralightSDK-stamp/Debug/UltralightSDK-build"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -490,18 +490,18 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\UltralightSDK-prefix\src\UltralightSDK-stamp\Debug\UltralightSDK-configure;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\UltralightSDK-prefix\src\UltralightSDK-stamp\Debug\UltralightSDK-build</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\UltralightSDK-prefix\src\UltralightSDK-stamp\Debug\UltralightSDK-configure;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\UltralightSDK-prefix\src\UltralightSDK-stamp\Debug\UltralightSDK-build</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">No build step for 'UltralightSDK'</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-cd C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\SDK
+cd "C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\SDK"
 if %errorlevel% neq 0 goto :cmEnd
 C:
 if %errorlevel% neq 0 goto :cmEnd
 "C:\Program Files\CMake\bin\cmake.exe" -E echo_append
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/Droge/source/430_repos/Ebook-Image/ultralight-quick-start/build/UltralightSDK-prefix/src/UltralightSDK-stamp/Release/UltralightSDK-build
+"C:\Program Files\CMake\bin\cmake.exe" -E touch "C:/Users/Droge/source/430_repos/Ebook-Image/Charcoal App/build/UltralightSDK-prefix/src/UltralightSDK-stamp/Release/UltralightSDK-build"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -509,18 +509,18 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\UltralightSDK-prefix\src\UltralightSDK-stamp\Release\UltralightSDK-configure;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\UltralightSDK-prefix\src\UltralightSDK-stamp\Release\UltralightSDK-build</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\UltralightSDK-prefix\src\UltralightSDK-stamp\Release\UltralightSDK-configure;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\UltralightSDK-prefix\src\UltralightSDK-stamp\Release\UltralightSDK-build</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">No build step for 'UltralightSDK'</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
-cd C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\SDK
+cd "C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\SDK"
 if %errorlevel% neq 0 goto :cmEnd
 C:
 if %errorlevel% neq 0 goto :cmEnd
 "C:\Program Files\CMake\bin\cmake.exe" -E echo_append
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/Droge/source/430_repos/Ebook-Image/ultralight-quick-start/build/UltralightSDK-prefix/src/UltralightSDK-stamp/MinSizeRel/UltralightSDK-build
+"C:\Program Files\CMake\bin\cmake.exe" -E touch "C:/Users/Droge/source/430_repos/Ebook-Image/Charcoal App/build/UltralightSDK-prefix/src/UltralightSDK-stamp/MinSizeRel/UltralightSDK-build"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -528,18 +528,18 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\UltralightSDK-prefix\src\UltralightSDK-stamp\MinSizeRel\UltralightSDK-configure;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\UltralightSDK-prefix\src\UltralightSDK-stamp\MinSizeRel\UltralightSDK-build</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\UltralightSDK-prefix\src\UltralightSDK-stamp\MinSizeRel\UltralightSDK-configure;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\UltralightSDK-prefix\src\UltralightSDK-stamp\MinSizeRel\UltralightSDK-build</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">No build step for 'UltralightSDK'</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
-cd C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\SDK
+cd "C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\SDK"
 if %errorlevel% neq 0 goto :cmEnd
 C:
 if %errorlevel% neq 0 goto :cmEnd
 "C:\Program Files\CMake\bin\cmake.exe" -E echo_append
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/Droge/source/430_repos/Ebook-Image/ultralight-quick-start/build/UltralightSDK-prefix/src/UltralightSDK-stamp/RelWithDebInfo/UltralightSDK-build
+"C:\Program Files\CMake\bin\cmake.exe" -E touch "C:/Users/Droge/source/430_repos/Ebook-Image/Charcoal App/build/UltralightSDK-prefix/src/UltralightSDK-stamp/RelWithDebInfo/UltralightSDK-build"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -547,22 +547,22 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\UltralightSDK-prefix\src\UltralightSDK-stamp\RelWithDebInfo\UltralightSDK-configure;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\UltralightSDK-prefix\src\UltralightSDK-stamp\RelWithDebInfo\UltralightSDK-build</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\UltralightSDK-prefix\src\UltralightSDK-stamp\RelWithDebInfo\UltralightSDK-configure;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\UltralightSDK-prefix\src\UltralightSDK-stamp\RelWithDebInfo\UltralightSDK-build</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\CMakeFiles\2fc041390eb9ac452910990e83e80aa8\UltralightSDK-install.rule">
+    <CustomBuild Include="C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\CMakeFiles\9a8c8dc71c856b67aec0c6fdee963bde\UltralightSDK-install.rule">
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">No install step for 'UltralightSDK'</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-cd C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\SDK
+cd "C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\SDK"
 if %errorlevel% neq 0 goto :cmEnd
 C:
 if %errorlevel% neq 0 goto :cmEnd
 "C:\Program Files\CMake\bin\cmake.exe" -E echo_append
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/Droge/source/430_repos/Ebook-Image/ultralight-quick-start/build/UltralightSDK-prefix/src/UltralightSDK-stamp/Debug/UltralightSDK-install
+"C:\Program Files\CMake\bin\cmake.exe" -E touch "C:/Users/Droge/source/430_repos/Ebook-Image/Charcoal App/build/UltralightSDK-prefix/src/UltralightSDK-stamp/Debug/UltralightSDK-install"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -570,18 +570,18 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\UltralightSDK-prefix\src\UltralightSDK-stamp\Debug\UltralightSDK-build;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\UltralightSDK-prefix\src\UltralightSDK-stamp\Debug\UltralightSDK-install</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\UltralightSDK-prefix\src\UltralightSDK-stamp\Debug\UltralightSDK-build;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\UltralightSDK-prefix\src\UltralightSDK-stamp\Debug\UltralightSDK-install</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">No install step for 'UltralightSDK'</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-cd C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\SDK
+cd "C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\SDK"
 if %errorlevel% neq 0 goto :cmEnd
 C:
 if %errorlevel% neq 0 goto :cmEnd
 "C:\Program Files\CMake\bin\cmake.exe" -E echo_append
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/Droge/source/430_repos/Ebook-Image/ultralight-quick-start/build/UltralightSDK-prefix/src/UltralightSDK-stamp/Release/UltralightSDK-install
+"C:\Program Files\CMake\bin\cmake.exe" -E touch "C:/Users/Droge/source/430_repos/Ebook-Image/Charcoal App/build/UltralightSDK-prefix/src/UltralightSDK-stamp/Release/UltralightSDK-install"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -589,18 +589,18 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\UltralightSDK-prefix\src\UltralightSDK-stamp\Release\UltralightSDK-build;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\UltralightSDK-prefix\src\UltralightSDK-stamp\Release\UltralightSDK-install</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\UltralightSDK-prefix\src\UltralightSDK-stamp\Release\UltralightSDK-build;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\UltralightSDK-prefix\src\UltralightSDK-stamp\Release\UltralightSDK-install</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">No install step for 'UltralightSDK'</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
-cd C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\SDK
+cd "C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\SDK"
 if %errorlevel% neq 0 goto :cmEnd
 C:
 if %errorlevel% neq 0 goto :cmEnd
 "C:\Program Files\CMake\bin\cmake.exe" -E echo_append
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/Droge/source/430_repos/Ebook-Image/ultralight-quick-start/build/UltralightSDK-prefix/src/UltralightSDK-stamp/MinSizeRel/UltralightSDK-install
+"C:\Program Files\CMake\bin\cmake.exe" -E touch "C:/Users/Droge/source/430_repos/Ebook-Image/Charcoal App/build/UltralightSDK-prefix/src/UltralightSDK-stamp/MinSizeRel/UltralightSDK-install"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -608,18 +608,18 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\UltralightSDK-prefix\src\UltralightSDK-stamp\MinSizeRel\UltralightSDK-build;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\UltralightSDK-prefix\src\UltralightSDK-stamp\MinSizeRel\UltralightSDK-install</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\UltralightSDK-prefix\src\UltralightSDK-stamp\MinSizeRel\UltralightSDK-build;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\UltralightSDK-prefix\src\UltralightSDK-stamp\MinSizeRel\UltralightSDK-install</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">No install step for 'UltralightSDK'</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
-cd C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\SDK
+cd "C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\SDK"
 if %errorlevel% neq 0 goto :cmEnd
 C:
 if %errorlevel% neq 0 goto :cmEnd
 "C:\Program Files\CMake\bin\cmake.exe" -E echo_append
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/Droge/source/430_repos/Ebook-Image/ultralight-quick-start/build/UltralightSDK-prefix/src/UltralightSDK-stamp/RelWithDebInfo/UltralightSDK-install
+"C:\Program Files\CMake\bin\cmake.exe" -E touch "C:/Users/Droge/source/430_repos/Ebook-Image/Charcoal App/build/UltralightSDK-prefix/src/UltralightSDK-stamp/RelWithDebInfo/UltralightSDK-install"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -627,20 +627,20 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\UltralightSDK-prefix\src\UltralightSDK-stamp\RelWithDebInfo\UltralightSDK-build;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\UltralightSDK-prefix\src\UltralightSDK-stamp\RelWithDebInfo\UltralightSDK-install</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\UltralightSDK-prefix\src\UltralightSDK-stamp\RelWithDebInfo\UltralightSDK-build;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\UltralightSDK-prefix\src\UltralightSDK-stamp\RelWithDebInfo\UltralightSDK-install</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\CMakeFiles\e0dad732b59f4a55311829e3233b0ebb\UltralightSDK-complete.rule">
+    <CustomBuild Include="C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\CMakeFiles\13b7942715139b80912d975739d3c75d\UltralightSDK-complete.rule">
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Completed 'UltralightSDK'</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -E make_directory C:/Users/Droge/source/430_repos/Ebook-Image/ultralight-quick-start/build/CMakeFiles/Debug
+"C:\Program Files\CMake\bin\cmake.exe" -E make_directory "C:/Users/Droge/source/430_repos/Ebook-Image/Charcoal App/build/CMakeFiles/Debug"
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/Droge/source/430_repos/Ebook-Image/ultralight-quick-start/build/CMakeFiles/Debug/UltralightSDK-complete
+"C:\Program Files\CMake\bin\cmake.exe" -E touch "C:/Users/Droge/source/430_repos/Ebook-Image/Charcoal App/build/CMakeFiles/Debug/UltralightSDK-complete"
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/Droge/source/430_repos/Ebook-Image/ultralight-quick-start/build/UltralightSDK-prefix/src/UltralightSDK-stamp/Debug/UltralightSDK-done
+"C:\Program Files\CMake\bin\cmake.exe" -E touch "C:/Users/Droge/source/430_repos/Ebook-Image/Charcoal App/build/UltralightSDK-prefix/src/UltralightSDK-stamp/Debug/UltralightSDK-done"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -648,16 +648,16 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\UltralightSDK-prefix\src\UltralightSDK-stamp\Debug\UltralightSDK-install;C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\UltralightSDK-prefix\src\UltralightSDK-stamp\Debug\UltralightSDK-mkdir;C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\UltralightSDK-prefix\src\UltralightSDK-stamp\Debug\UltralightSDK-download;C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\UltralightSDK-prefix\src\UltralightSDK-stamp\Debug\UltralightSDK-update;C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\UltralightSDK-prefix\src\UltralightSDK-stamp\Debug\UltralightSDK-patch;C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\UltralightSDK-prefix\src\UltralightSDK-stamp\Debug\UltralightSDK-configure;C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\UltralightSDK-prefix\src\UltralightSDK-stamp\Debug\UltralightSDK-build;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\CMakeFiles\Debug\UltralightSDK-complete</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\UltralightSDK-prefix\src\UltralightSDK-stamp\Debug\UltralightSDK-install;C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\UltralightSDK-prefix\src\UltralightSDK-stamp\Debug\UltralightSDK-mkdir;C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\UltralightSDK-prefix\src\UltralightSDK-stamp\Debug\UltralightSDK-download;C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\UltralightSDK-prefix\src\UltralightSDK-stamp\Debug\UltralightSDK-update;C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\UltralightSDK-prefix\src\UltralightSDK-stamp\Debug\UltralightSDK-patch;C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\UltralightSDK-prefix\src\UltralightSDK-stamp\Debug\UltralightSDK-configure;C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\UltralightSDK-prefix\src\UltralightSDK-stamp\Debug\UltralightSDK-build;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\CMakeFiles\Debug\UltralightSDK-complete</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Completed 'UltralightSDK'</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -E make_directory C:/Users/Droge/source/430_repos/Ebook-Image/ultralight-quick-start/build/CMakeFiles/Release
+"C:\Program Files\CMake\bin\cmake.exe" -E make_directory "C:/Users/Droge/source/430_repos/Ebook-Image/Charcoal App/build/CMakeFiles/Release"
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/Droge/source/430_repos/Ebook-Image/ultralight-quick-start/build/CMakeFiles/Release/UltralightSDK-complete
+"C:\Program Files\CMake\bin\cmake.exe" -E touch "C:/Users/Droge/source/430_repos/Ebook-Image/Charcoal App/build/CMakeFiles/Release/UltralightSDK-complete"
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/Droge/source/430_repos/Ebook-Image/ultralight-quick-start/build/UltralightSDK-prefix/src/UltralightSDK-stamp/Release/UltralightSDK-done
+"C:\Program Files\CMake\bin\cmake.exe" -E touch "C:/Users/Droge/source/430_repos/Ebook-Image/Charcoal App/build/UltralightSDK-prefix/src/UltralightSDK-stamp/Release/UltralightSDK-done"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -665,16 +665,16 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\UltralightSDK-prefix\src\UltralightSDK-stamp\Release\UltralightSDK-install;C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\UltralightSDK-prefix\src\UltralightSDK-stamp\Release\UltralightSDK-mkdir;C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\UltralightSDK-prefix\src\UltralightSDK-stamp\Release\UltralightSDK-download;C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\UltralightSDK-prefix\src\UltralightSDK-stamp\Release\UltralightSDK-update;C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\UltralightSDK-prefix\src\UltralightSDK-stamp\Release\UltralightSDK-patch;C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\UltralightSDK-prefix\src\UltralightSDK-stamp\Release\UltralightSDK-configure;C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\UltralightSDK-prefix\src\UltralightSDK-stamp\Release\UltralightSDK-build;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\CMakeFiles\Release\UltralightSDK-complete</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\UltralightSDK-prefix\src\UltralightSDK-stamp\Release\UltralightSDK-install;C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\UltralightSDK-prefix\src\UltralightSDK-stamp\Release\UltralightSDK-mkdir;C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\UltralightSDK-prefix\src\UltralightSDK-stamp\Release\UltralightSDK-download;C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\UltralightSDK-prefix\src\UltralightSDK-stamp\Release\UltralightSDK-update;C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\UltralightSDK-prefix\src\UltralightSDK-stamp\Release\UltralightSDK-patch;C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\UltralightSDK-prefix\src\UltralightSDK-stamp\Release\UltralightSDK-configure;C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\UltralightSDK-prefix\src\UltralightSDK-stamp\Release\UltralightSDK-build;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\CMakeFiles\Release\UltralightSDK-complete</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Completed 'UltralightSDK'</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -E make_directory C:/Users/Droge/source/430_repos/Ebook-Image/ultralight-quick-start/build/CMakeFiles/MinSizeRel
+"C:\Program Files\CMake\bin\cmake.exe" -E make_directory "C:/Users/Droge/source/430_repos/Ebook-Image/Charcoal App/build/CMakeFiles/MinSizeRel"
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/Droge/source/430_repos/Ebook-Image/ultralight-quick-start/build/CMakeFiles/MinSizeRel/UltralightSDK-complete
+"C:\Program Files\CMake\bin\cmake.exe" -E touch "C:/Users/Droge/source/430_repos/Ebook-Image/Charcoal App/build/CMakeFiles/MinSizeRel/UltralightSDK-complete"
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/Droge/source/430_repos/Ebook-Image/ultralight-quick-start/build/UltralightSDK-prefix/src/UltralightSDK-stamp/MinSizeRel/UltralightSDK-done
+"C:\Program Files\CMake\bin\cmake.exe" -E touch "C:/Users/Droge/source/430_repos/Ebook-Image/Charcoal App/build/UltralightSDK-prefix/src/UltralightSDK-stamp/MinSizeRel/UltralightSDK-done"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -682,16 +682,16 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\UltralightSDK-prefix\src\UltralightSDK-stamp\MinSizeRel\UltralightSDK-install;C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\UltralightSDK-prefix\src\UltralightSDK-stamp\MinSizeRel\UltralightSDK-mkdir;C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\UltralightSDK-prefix\src\UltralightSDK-stamp\MinSizeRel\UltralightSDK-download;C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\UltralightSDK-prefix\src\UltralightSDK-stamp\MinSizeRel\UltralightSDK-update;C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\UltralightSDK-prefix\src\UltralightSDK-stamp\MinSizeRel\UltralightSDK-patch;C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\UltralightSDK-prefix\src\UltralightSDK-stamp\MinSizeRel\UltralightSDK-configure;C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\UltralightSDK-prefix\src\UltralightSDK-stamp\MinSizeRel\UltralightSDK-build;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\CMakeFiles\MinSizeRel\UltralightSDK-complete</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\UltralightSDK-prefix\src\UltralightSDK-stamp\MinSizeRel\UltralightSDK-install;C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\UltralightSDK-prefix\src\UltralightSDK-stamp\MinSizeRel\UltralightSDK-mkdir;C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\UltralightSDK-prefix\src\UltralightSDK-stamp\MinSizeRel\UltralightSDK-download;C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\UltralightSDK-prefix\src\UltralightSDK-stamp\MinSizeRel\UltralightSDK-update;C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\UltralightSDK-prefix\src\UltralightSDK-stamp\MinSizeRel\UltralightSDK-patch;C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\UltralightSDK-prefix\src\UltralightSDK-stamp\MinSizeRel\UltralightSDK-configure;C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\UltralightSDK-prefix\src\UltralightSDK-stamp\MinSizeRel\UltralightSDK-build;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\CMakeFiles\MinSizeRel\UltralightSDK-complete</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Completed 'UltralightSDK'</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -E make_directory C:/Users/Droge/source/430_repos/Ebook-Image/ultralight-quick-start/build/CMakeFiles/RelWithDebInfo
+"C:\Program Files\CMake\bin\cmake.exe" -E make_directory "C:/Users/Droge/source/430_repos/Ebook-Image/Charcoal App/build/CMakeFiles/RelWithDebInfo"
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/Droge/source/430_repos/Ebook-Image/ultralight-quick-start/build/CMakeFiles/RelWithDebInfo/UltralightSDK-complete
+"C:\Program Files\CMake\bin\cmake.exe" -E touch "C:/Users/Droge/source/430_repos/Ebook-Image/Charcoal App/build/CMakeFiles/RelWithDebInfo/UltralightSDK-complete"
 if %errorlevel% neq 0 goto :cmEnd
-"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/Droge/source/430_repos/Ebook-Image/ultralight-quick-start/build/UltralightSDK-prefix/src/UltralightSDK-stamp/RelWithDebInfo/UltralightSDK-done
+"C:\Program Files\CMake\bin\cmake.exe" -E touch "C:/Users/Droge/source/430_repos/Ebook-Image/Charcoal App/build/UltralightSDK-prefix/src/UltralightSDK-stamp/RelWithDebInfo/UltralightSDK-done"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -699,13 +699,13 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\UltralightSDK-prefix\src\UltralightSDK-stamp\RelWithDebInfo\UltralightSDK-install;C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\UltralightSDK-prefix\src\UltralightSDK-stamp\RelWithDebInfo\UltralightSDK-mkdir;C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\UltralightSDK-prefix\src\UltralightSDK-stamp\RelWithDebInfo\UltralightSDK-download;C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\UltralightSDK-prefix\src\UltralightSDK-stamp\RelWithDebInfo\UltralightSDK-update;C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\UltralightSDK-prefix\src\UltralightSDK-stamp\RelWithDebInfo\UltralightSDK-patch;C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\UltralightSDK-prefix\src\UltralightSDK-stamp\RelWithDebInfo\UltralightSDK-configure;C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\UltralightSDK-prefix\src\UltralightSDK-stamp\RelWithDebInfo\UltralightSDK-build;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\CMakeFiles\RelWithDebInfo\UltralightSDK-complete</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\UltralightSDK-prefix\src\UltralightSDK-stamp\RelWithDebInfo\UltralightSDK-install;C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\UltralightSDK-prefix\src\UltralightSDK-stamp\RelWithDebInfo\UltralightSDK-mkdir;C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\UltralightSDK-prefix\src\UltralightSDK-stamp\RelWithDebInfo\UltralightSDK-download;C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\UltralightSDK-prefix\src\UltralightSDK-stamp\RelWithDebInfo\UltralightSDK-update;C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\UltralightSDK-prefix\src\UltralightSDK-stamp\RelWithDebInfo\UltralightSDK-patch;C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\UltralightSDK-prefix\src\UltralightSDK-stamp\RelWithDebInfo\UltralightSDK-configure;C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\UltralightSDK-prefix\src\UltralightSDK-stamp\RelWithDebInfo\UltralightSDK-build;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\CMakeFiles\RelWithDebInfo\UltralightSDK-complete</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\CMakeFiles\b6bb529dcba78cef911999908ba66c7a\UltralightSDK.rule">
+    <CustomBuild Include="C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\CMakeFiles\de9f05546fa672acee2b1ddcbf4001d4\UltralightSDK.rule">
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'"></Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
 :cmEnd
@@ -714,8 +714,8 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\CMakeFiles\Debug\UltralightSDK-complete;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\CMakeFiles\UltralightSDK</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\CMakeFiles\Debug\UltralightSDK-complete;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\CMakeFiles\UltralightSDK</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
       <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</VerifyInputsAndOutputsExist>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'"></Message>
@@ -726,8 +726,8 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\CMakeFiles\Release\UltralightSDK-complete;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\CMakeFiles\UltralightSDK</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\CMakeFiles\Release\UltralightSDK-complete;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\CMakeFiles\UltralightSDK</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
       <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</VerifyInputsAndOutputsExist>
       <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'"></Message>
@@ -738,8 +738,8 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\CMakeFiles\MinSizeRel\UltralightSDK-complete;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\CMakeFiles\UltralightSDK</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\CMakeFiles\MinSizeRel\UltralightSDK-complete;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\CMakeFiles\UltralightSDK</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
       <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</VerifyInputsAndOutputsExist>
       <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'"></Message>
@@ -750,18 +750,18 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\CMakeFiles\RelWithDebInfo\UltralightSDK-complete;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\CMakeFiles\UltralightSDK</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\CMakeFiles\RelWithDebInfo\UltralightSDK-complete;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\CMakeFiles\UltralightSDK</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
       <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</VerifyInputsAndOutputsExist>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\CMakeLists.txt">
+    <CustomBuild Include="C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\CMakeLists.txt">
       <UseUtf8Encoding>Always</UseUtf8Encoding>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/Droge/source/430_repos/Ebook-Image/ultralight-quick-start/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/Droge/source/430_repos/Ebook-Image/Charcoal App/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Droge/source/430_repos/Ebook-Image/ultralight-quick-start -BC:/Users/Droge/source/430_repos/Ebook-Image/ultralight-quick-start/build --check-stamp-file C:/Users/Droge/source/430_repos/Ebook-Image/ultralight-quick-start/build/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Users/Droge/source/430_repos/Ebook-Image/Charcoal App" "-BC:/Users/Droge/source/430_repos/Ebook-Image/Charcoal App/build" --check-stamp-file "C:/Users/Droge/source/430_repos/Ebook-Image/Charcoal App/build/CMakeFiles/generate.stamp"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -769,12 +769,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeCCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeCCompilerABI.c;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeCXXCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeCXXCompilerABI.cpp;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeCompilerIdDetection.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeDetermineCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeDetermineCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeDetermineCompileFeatures.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeDetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeDetermineCompilerABI.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeDetermineCompilerId.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeDetermineRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeDetermineSystem.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeFindBinUtils.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeParseImplicitIncludeInfo.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeParseLibraryArchitecture.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeRCCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeSystem.cmake.in;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeTestCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeTestCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeTestCompilerCommon.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeTestRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\ADSP-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\ARMCC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\ARMClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\AppleClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\Borland-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\Bruce-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\Clang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\Compaq-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\Cray-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\CrayClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\FujitsuClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\GHS-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\GNU-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\GNU-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\HP-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\IAR-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\IBMClang-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\IBMClang-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\Intel-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\IntelLLVM-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\LCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\LCC-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\MSVC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\MSVC.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\NVHPC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\NVIDIA-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\OrangeC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\PGI-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\PathScale-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\SCO-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\SDCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\SunPro-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\TI-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\TIClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\Tasking-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\TinyCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\VisualAge-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\Watcom-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\XL-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\XLClang-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\XLClang-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\zOS-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CompilerId\VS-10.vcxproj.in;C:\Program Files\CMake\share\cmake-3.29\Modules\ExternalProject.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\ExternalProject\PatchInfo.txt.in;C:\Program Files\CMake\share\cmake-3.29\Modules\ExternalProject\RepositoryInfo.txt.in;C:\Program Files\CMake\share\cmake-3.29\Modules\ExternalProject\UpdateInfo.txt.in;C:\Program Files\CMake\share\cmake-3.29\Modules\ExternalProject\cfgcmd.txt.in;C:\Program Files\CMake\share\cmake-3.29\Modules\ExternalProject\download.cmake.in;C:\Program Files\CMake\share\cmake-3.29\Modules\ExternalProject\extractfile.cmake.in;C:\Program Files\CMake\share\cmake-3.29\Modules\ExternalProject\mkdirs.cmake.in;C:\Program Files\CMake\share\cmake-3.29\Modules\ExternalProject\shared_internal_commands.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Internal\CMakeDetermineLinkerId.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Internal\FeatureTesting.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\Windows-Determine-CXX.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\Windows-Initialize.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\WindowsPaths.cmake;C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\CMakeFiles\3.29.0-rc3\CMakeCCompiler.cmake;C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\CMakeFiles\3.29.0-rc3\CMakeCXXCompiler.cmake;C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\CMakeFiles\3.29.0-rc3\CMakeRCCompiler.cmake;C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\CMakeFiles\3.29.0-rc3\CMakeSystem.cmake;C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\UltralightSDK-prefix\tmp\UltralightSDK-mkdirs.cmake;C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\cmake\App.cmake;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\MSVC.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\ExternalProject.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\ExternalProject\PatchInfo.txt.in;C:\Program Files\CMake\share\cmake-3.29\Modules\ExternalProject\RepositoryInfo.txt.in;C:\Program Files\CMake\share\cmake-3.29\Modules\ExternalProject\UpdateInfo.txt.in;C:\Program Files\CMake\share\cmake-3.29\Modules\ExternalProject\cfgcmd.txt.in;C:\Program Files\CMake\share\cmake-3.29\Modules\ExternalProject\download.cmake.in;C:\Program Files\CMake\share\cmake-3.29\Modules\ExternalProject\extractfile.cmake.in;C:\Program Files\CMake\share\cmake-3.29\Modules\ExternalProject\mkdirs.cmake.in;C:\Program Files\CMake\share\cmake-3.29\Modules\ExternalProject\shared_internal_commands.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\Windows-Initialize.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\WindowsPaths.cmake;C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\CMakeFiles\3.29.0-rc3\CMakeCCompiler.cmake;C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\CMakeFiles\3.29.0-rc3\CMakeCXXCompiler.cmake;C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\CMakeFiles\3.29.0-rc3\CMakeRCCompiler.cmake;C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\CMakeFiles\3.29.0-rc3\CMakeSystem.cmake;C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\UltralightSDK-prefix\tmp\UltralightSDK-mkdirs.cmake;C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\cmake\App.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/Droge/source/430_repos/Ebook-Image/ultralight-quick-start/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/Droge/source/430_repos/Ebook-Image/Charcoal App/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Droge/source/430_repos/Ebook-Image/ultralight-quick-start -BC:/Users/Droge/source/430_repos/Ebook-Image/ultralight-quick-start/build --check-stamp-file C:/Users/Droge/source/430_repos/Ebook-Image/ultralight-quick-start/build/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Users/Droge/source/430_repos/Ebook-Image/Charcoal App" "-BC:/Users/Droge/source/430_repos/Ebook-Image/Charcoal App/build" --check-stamp-file "C:/Users/Droge/source/430_repos/Ebook-Image/Charcoal App/build/CMakeFiles/generate.stamp"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -782,12 +782,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeCCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeCCompilerABI.c;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeCXXCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeCXXCompilerABI.cpp;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeCompilerIdDetection.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeDetermineCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeDetermineCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeDetermineCompileFeatures.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeDetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeDetermineCompilerABI.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeDetermineCompilerId.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeDetermineRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeDetermineSystem.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeFindBinUtils.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeParseImplicitIncludeInfo.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeParseLibraryArchitecture.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeRCCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeSystem.cmake.in;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeTestCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeTestCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeTestCompilerCommon.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeTestRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\ADSP-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\ARMCC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\ARMClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\AppleClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\Borland-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\Bruce-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\Clang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\Compaq-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\Cray-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\CrayClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\FujitsuClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\GHS-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\GNU-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\GNU-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\HP-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\IAR-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\IBMClang-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\IBMClang-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\Intel-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\IntelLLVM-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\LCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\LCC-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\MSVC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\MSVC.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\NVHPC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\NVIDIA-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\OrangeC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\PGI-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\PathScale-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\SCO-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\SDCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\SunPro-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\TI-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\TIClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\Tasking-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\TinyCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\VisualAge-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\Watcom-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\XL-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\XLClang-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\XLClang-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\zOS-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CompilerId\VS-10.vcxproj.in;C:\Program Files\CMake\share\cmake-3.29\Modules\ExternalProject.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\ExternalProject\PatchInfo.txt.in;C:\Program Files\CMake\share\cmake-3.29\Modules\ExternalProject\RepositoryInfo.txt.in;C:\Program Files\CMake\share\cmake-3.29\Modules\ExternalProject\UpdateInfo.txt.in;C:\Program Files\CMake\share\cmake-3.29\Modules\ExternalProject\cfgcmd.txt.in;C:\Program Files\CMake\share\cmake-3.29\Modules\ExternalProject\download.cmake.in;C:\Program Files\CMake\share\cmake-3.29\Modules\ExternalProject\extractfile.cmake.in;C:\Program Files\CMake\share\cmake-3.29\Modules\ExternalProject\mkdirs.cmake.in;C:\Program Files\CMake\share\cmake-3.29\Modules\ExternalProject\shared_internal_commands.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Internal\CMakeDetermineLinkerId.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Internal\FeatureTesting.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\Windows-Determine-CXX.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\Windows-Initialize.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\WindowsPaths.cmake;C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\CMakeFiles\3.29.0-rc3\CMakeCCompiler.cmake;C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\CMakeFiles\3.29.0-rc3\CMakeCXXCompiler.cmake;C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\CMakeFiles\3.29.0-rc3\CMakeRCCompiler.cmake;C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\CMakeFiles\3.29.0-rc3\CMakeSystem.cmake;C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\UltralightSDK-prefix\tmp\UltralightSDK-mkdirs.cmake;C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\cmake\App.cmake;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\MSVC.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\ExternalProject.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\ExternalProject\PatchInfo.txt.in;C:\Program Files\CMake\share\cmake-3.29\Modules\ExternalProject\RepositoryInfo.txt.in;C:\Program Files\CMake\share\cmake-3.29\Modules\ExternalProject\UpdateInfo.txt.in;C:\Program Files\CMake\share\cmake-3.29\Modules\ExternalProject\cfgcmd.txt.in;C:\Program Files\CMake\share\cmake-3.29\Modules\ExternalProject\download.cmake.in;C:\Program Files\CMake\share\cmake-3.29\Modules\ExternalProject\extractfile.cmake.in;C:\Program Files\CMake\share\cmake-3.29\Modules\ExternalProject\mkdirs.cmake.in;C:\Program Files\CMake\share\cmake-3.29\Modules\ExternalProject\shared_internal_commands.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\Windows-Initialize.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\WindowsPaths.cmake;C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\CMakeFiles\3.29.0-rc3\CMakeCCompiler.cmake;C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\CMakeFiles\3.29.0-rc3\CMakeCXXCompiler.cmake;C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\CMakeFiles\3.29.0-rc3\CMakeRCCompiler.cmake;C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\CMakeFiles\3.29.0-rc3\CMakeSystem.cmake;C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\UltralightSDK-prefix\tmp\UltralightSDK-mkdirs.cmake;C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\cmake\App.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/Droge/source/430_repos/Ebook-Image/ultralight-quick-start/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/Droge/source/430_repos/Ebook-Image/Charcoal App/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Droge/source/430_repos/Ebook-Image/ultralight-quick-start -BC:/Users/Droge/source/430_repos/Ebook-Image/ultralight-quick-start/build --check-stamp-file C:/Users/Droge/source/430_repos/Ebook-Image/ultralight-quick-start/build/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Users/Droge/source/430_repos/Ebook-Image/Charcoal App" "-BC:/Users/Droge/source/430_repos/Ebook-Image/Charcoal App/build" --check-stamp-file "C:/Users/Droge/source/430_repos/Ebook-Image/Charcoal App/build/CMakeFiles/generate.stamp"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -795,12 +795,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeCCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeCCompilerABI.c;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeCXXCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeCXXCompilerABI.cpp;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeCompilerIdDetection.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeDetermineCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeDetermineCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeDetermineCompileFeatures.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeDetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeDetermineCompilerABI.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeDetermineCompilerId.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeDetermineRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeDetermineSystem.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeFindBinUtils.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeParseImplicitIncludeInfo.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeParseLibraryArchitecture.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeRCCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeSystem.cmake.in;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeTestCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeTestCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeTestCompilerCommon.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeTestRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\ADSP-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\ARMCC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\ARMClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\AppleClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\Borland-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\Bruce-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\Clang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\Compaq-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\Cray-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\CrayClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\FujitsuClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\GHS-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\GNU-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\GNU-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\HP-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\IAR-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\IBMClang-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\IBMClang-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\Intel-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\IntelLLVM-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\LCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\LCC-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\MSVC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\MSVC.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\NVHPC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\NVIDIA-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\OrangeC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\PGI-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\PathScale-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\SCO-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\SDCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\SunPro-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\TI-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\TIClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\Tasking-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\TinyCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\VisualAge-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\Watcom-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\XL-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\XLClang-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\XLClang-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\zOS-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CompilerId\VS-10.vcxproj.in;C:\Program Files\CMake\share\cmake-3.29\Modules\ExternalProject.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\ExternalProject\PatchInfo.txt.in;C:\Program Files\CMake\share\cmake-3.29\Modules\ExternalProject\RepositoryInfo.txt.in;C:\Program Files\CMake\share\cmake-3.29\Modules\ExternalProject\UpdateInfo.txt.in;C:\Program Files\CMake\share\cmake-3.29\Modules\ExternalProject\cfgcmd.txt.in;C:\Program Files\CMake\share\cmake-3.29\Modules\ExternalProject\download.cmake.in;C:\Program Files\CMake\share\cmake-3.29\Modules\ExternalProject\extractfile.cmake.in;C:\Program Files\CMake\share\cmake-3.29\Modules\ExternalProject\mkdirs.cmake.in;C:\Program Files\CMake\share\cmake-3.29\Modules\ExternalProject\shared_internal_commands.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Internal\CMakeDetermineLinkerId.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Internal\FeatureTesting.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\Windows-Determine-CXX.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\Windows-Initialize.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\WindowsPaths.cmake;C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\CMakeFiles\3.29.0-rc3\CMakeCCompiler.cmake;C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\CMakeFiles\3.29.0-rc3\CMakeCXXCompiler.cmake;C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\CMakeFiles\3.29.0-rc3\CMakeRCCompiler.cmake;C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\CMakeFiles\3.29.0-rc3\CMakeSystem.cmake;C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\UltralightSDK-prefix\tmp\UltralightSDK-mkdirs.cmake;C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\cmake\App.cmake;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\MSVC.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\ExternalProject.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\ExternalProject\PatchInfo.txt.in;C:\Program Files\CMake\share\cmake-3.29\Modules\ExternalProject\RepositoryInfo.txt.in;C:\Program Files\CMake\share\cmake-3.29\Modules\ExternalProject\UpdateInfo.txt.in;C:\Program Files\CMake\share\cmake-3.29\Modules\ExternalProject\cfgcmd.txt.in;C:\Program Files\CMake\share\cmake-3.29\Modules\ExternalProject\download.cmake.in;C:\Program Files\CMake\share\cmake-3.29\Modules\ExternalProject\extractfile.cmake.in;C:\Program Files\CMake\share\cmake-3.29\Modules\ExternalProject\mkdirs.cmake.in;C:\Program Files\CMake\share\cmake-3.29\Modules\ExternalProject\shared_internal_commands.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\Windows-Initialize.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\WindowsPaths.cmake;C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\CMakeFiles\3.29.0-rc3\CMakeCCompiler.cmake;C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\CMakeFiles\3.29.0-rc3\CMakeCXXCompiler.cmake;C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\CMakeFiles\3.29.0-rc3\CMakeRCCompiler.cmake;C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\CMakeFiles\3.29.0-rc3\CMakeSystem.cmake;C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\UltralightSDK-prefix\tmp\UltralightSDK-mkdirs.cmake;C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\cmake\App.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/Droge/source/430_repos/Ebook-Image/ultralight-quick-start/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/Droge/source/430_repos/Ebook-Image/Charcoal App/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Droge/source/430_repos/Ebook-Image/ultralight-quick-start -BC:/Users/Droge/source/430_repos/Ebook-Image/ultralight-quick-start/build --check-stamp-file C:/Users/Droge/source/430_repos/Ebook-Image/ultralight-quick-start/build/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Users/Droge/source/430_repos/Ebook-Image/Charcoal App" "-BC:/Users/Droge/source/430_repos/Ebook-Image/Charcoal App/build" --check-stamp-file "C:/Users/Droge/source/430_repos/Ebook-Image/Charcoal App/build/CMakeFiles/generate.stamp"
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -808,18 +808,18 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeCCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeCCompilerABI.c;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeCXXCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeCXXCompilerABI.cpp;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeCompilerIdDetection.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeDetermineCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeDetermineCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeDetermineCompileFeatures.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeDetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeDetermineCompilerABI.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeDetermineCompilerId.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeDetermineRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeDetermineSystem.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeFindBinUtils.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeParseImplicitIncludeInfo.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeParseLibraryArchitecture.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeRCCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeSystem.cmake.in;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeTestCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeTestCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeTestCompilerCommon.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeTestRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\ADSP-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\ARMCC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\ARMClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\AppleClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\Borland-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\Bruce-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\Clang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\Compaq-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\Cray-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\CrayClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\FujitsuClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\GHS-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\GNU-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\GNU-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\HP-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\IAR-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\IBMClang-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\IBMClang-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\Intel-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\IntelLLVM-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\LCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\LCC-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\MSVC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\MSVC.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\NVHPC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\NVIDIA-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\OrangeC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\PGI-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\PathScale-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\SCO-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\SDCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\SunPro-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\TI-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\TIClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\Tasking-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\TinyCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\VisualAge-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\Watcom-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\XL-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\XLClang-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\XLClang-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\zOS-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CompilerId\VS-10.vcxproj.in;C:\Program Files\CMake\share\cmake-3.29\Modules\ExternalProject.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\ExternalProject\PatchInfo.txt.in;C:\Program Files\CMake\share\cmake-3.29\Modules\ExternalProject\RepositoryInfo.txt.in;C:\Program Files\CMake\share\cmake-3.29\Modules\ExternalProject\UpdateInfo.txt.in;C:\Program Files\CMake\share\cmake-3.29\Modules\ExternalProject\cfgcmd.txt.in;C:\Program Files\CMake\share\cmake-3.29\Modules\ExternalProject\download.cmake.in;C:\Program Files\CMake\share\cmake-3.29\Modules\ExternalProject\extractfile.cmake.in;C:\Program Files\CMake\share\cmake-3.29\Modules\ExternalProject\mkdirs.cmake.in;C:\Program Files\CMake\share\cmake-3.29\Modules\ExternalProject\shared_internal_commands.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Internal\CMakeDetermineLinkerId.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Internal\FeatureTesting.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\Windows-Determine-CXX.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\Windows-Initialize.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\WindowsPaths.cmake;C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\CMakeFiles\3.29.0-rc3\CMakeCCompiler.cmake;C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\CMakeFiles\3.29.0-rc3\CMakeCXXCompiler.cmake;C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\CMakeFiles\3.29.0-rc3\CMakeRCCompiler.cmake;C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\CMakeFiles\3.29.0-rc3\CMakeSystem.cmake;C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\UltralightSDK-prefix\tmp\UltralightSDK-mkdirs.cmake;C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\cmake\App.cmake;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\MSVC.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\ExternalProject.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\ExternalProject\PatchInfo.txt.in;C:\Program Files\CMake\share\cmake-3.29\Modules\ExternalProject\RepositoryInfo.txt.in;C:\Program Files\CMake\share\cmake-3.29\Modules\ExternalProject\UpdateInfo.txt.in;C:\Program Files\CMake\share\cmake-3.29\Modules\ExternalProject\cfgcmd.txt.in;C:\Program Files\CMake\share\cmake-3.29\Modules\ExternalProject\download.cmake.in;C:\Program Files\CMake\share\cmake-3.29\Modules\ExternalProject\extractfile.cmake.in;C:\Program Files\CMake\share\cmake-3.29\Modules\ExternalProject\mkdirs.cmake.in;C:\Program Files\CMake\share\cmake-3.29\Modules\ExternalProject\shared_internal_commands.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\Windows-Initialize.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\WindowsPaths.cmake;C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\CMakeFiles\3.29.0-rc3\CMakeCCompiler.cmake;C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\CMakeFiles\3.29.0-rc3\CMakeCXXCompiler.cmake;C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\CMakeFiles\3.29.0-rc3\CMakeRCCompiler.cmake;C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\CMakeFiles\3.29.0-rc3\CMakeSystem.cmake;C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\UltralightSDK-prefix\tmp\UltralightSDK-mkdirs.cmake;C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\cmake\App.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <None Include="C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\CMakeFiles\UltralightSDK">
+    <None Include="C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\CMakeFiles\UltralightSDK">
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="C:\Users\Droge\source\430_repos\Ebook-Image\ultralight-quick-start\build\ZERO_CHECK.vcxproj">
-      <Project>{BBBCEAB3-5BF7-318D-BBE2-8FB8BF1C8C88}</Project>
+    <ProjectReference Include="C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal App\build\ZERO_CHECK.vcxproj">
+      <Project>{105C0B67-E331-3394-8015-0290712718C9}</Project>
       <Name>ZERO_CHECK</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
