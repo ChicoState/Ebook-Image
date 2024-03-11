@@ -1,4 +1,0 @@
-C:/Users/Droge/source/430_repos/Ebook-Image/Charcoal App/build/CMakeFiles/UltralightSDK.dir
-C:/Users/Droge/source/430_repos/Ebook-Image/Charcoal App/build/CMakeFiles/MyApp.dir
-C:/Users/Droge/source/430_repos/Ebook-Image/Charcoal App/build/CMakeFiles/ALL_BUILD.dir
-C:/Users/Droge/source/430_repos/Ebook-Image/Charcoal App/build/CMakeFiles/ZERO_CHECK.dir
