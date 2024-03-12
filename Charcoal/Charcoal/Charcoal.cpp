@@ -18,7 +18,7 @@
 using namespace ultralight;
 Library ebooks;
 
-MyApp::MyApp() {
+Charcoal::Charcoal() {
     ///
     /// Create our main App instance.
     ///
@@ -29,7 +29,7 @@ MyApp::MyApp() {
     /// kWindowFlags_Resizable.
     ///
     window_ = Window::Create(app_->main_monitor(), WINDOW_WIDTH, WINDOW_HEIGHT,
-        false, kWindowFlags_Titled | kWindowFlags_Resizable);
+        false, 2 | 4);
 
     window_->SetTitle("Charcoal Outline");
     ///
@@ -74,12 +74,12 @@ MyApp::MyApp() {
 }
 
 
-MyApp::~MyApp() {
+Charcoal::~Charcoal() {
 }
 
 
 
-void MyApp::OpenFile(const JSObject& thisObject, const JSArgs& args)
+void Charcoal::OpenFile(const JSObject& thisObject, const JSArgs& args)
 {
     PWSTR pszFilePath = NULL;
     IFileOpenDialog* pFileOpen;
@@ -112,23 +112,23 @@ void MyApp::OpenFile(const JSObject& thisObject, const JSArgs& args)
     return;
 }
 
-void MyApp::OnDOMReady(ultralight::View* caller,
+void Charcoal::OnDOMReady(ultralight::View* caller,
     uint64_t frame_id,
     bool is_main_frame,
     const String& url) {
     RefPtr<JSContext> context = caller->LockJSContext();
     SetJSContext(context->ctx());
     JSObject global = JSGlobalObject();
-    global["AddBook"] = BindJSCallback(&MyApp::OpenFile);
+    global["AddBook"] = BindJSCallback(&Charcoal::OpenFile);
 
 }
 
 
-void MyApp::Run() {
+void Charcoal::Run() {
     app_->Run();
 }
 
-void MyApp::OnUpdate() {
+void Charcoal::OnUpdate() {
     ///
     /// This is called repeatedly from the application's update loop.
     ///
@@ -136,11 +136,11 @@ void MyApp::OnUpdate() {
     ///
 }
 
-void MyApp::OnClose(ultralight::Window* window) {
+void Charcoal::OnClose(ultralight::Window* window) {
     app_->Quit();
 }
 
-void MyApp::OnResize(ultralight::Window* window, uint32_t width, uint32_t height) {
+void Charcoal::OnResize(ultralight::Window* window, uint32_t width, uint32_t height) {
     ///
     /// This is called whenever the window changes size (values in pixels).
     ///
@@ -149,7 +149,7 @@ void MyApp::OnResize(ultralight::Window* window, uint32_t width, uint32_t height
     overlay_->Resize(width, height);
 }
 
-void MyApp::OnFinishLoading(ultralight::View* caller,
+void Charcoal::OnFinishLoading(ultralight::View* caller,
     uint64_t frame_id,
     bool is_main_frame,
     const String& url) {
@@ -160,7 +160,7 @@ void MyApp::OnFinishLoading(ultralight::View* caller,
 
 
 
-void MyApp::OnChangeCursor(ultralight::View* caller,
+void Charcoal::OnChangeCursor(ultralight::View* caller,
     Cursor cursor) {
     ///
     /// This is called whenever the page requests to change the cursor.
@@ -170,7 +170,7 @@ void MyApp::OnChangeCursor(ultralight::View* caller,
     window_->SetCursor(cursor);
 }
 
-void MyApp::OnChangeTitle(ultralight::View* caller,
+void Charcoal::OnChangeTitle(ultralight::View* caller,
     const String& title) {
     ///
     /// This is called whenever the page requests to change the title.
