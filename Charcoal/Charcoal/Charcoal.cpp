@@ -81,6 +81,7 @@ Charcoal::~Charcoal() {
 
 void Charcoal::OpenFile(const JSObject& thisObject, const JSArgs& args)
 {
+    //dialog box for file select
     PWSTR pszFilePath = NULL;
     IFileOpenDialog* pFileOpen;
     HRESULT hr = CoCreateInstance(CLSID_FileOpenDialog, NULL, CLSCTX_ALL, IID_IFileOpenDialog, reinterpret_cast<void**>(&pFileOpen));
@@ -98,9 +99,7 @@ void Charcoal::OpenFile(const JSObject& thisObject, const JSArgs& args)
                 if (SUCCEEDED(hr))
                 {
                     // Your code here
-                    MessageBoxW(NULL,
-                        pszFilePath,
-                        L"File Path", MB_OK);
+                    
                     CoTaskMemFree(pszFilePath);
                 }
                 pItem->Release();
@@ -108,7 +107,9 @@ void Charcoal::OpenFile(const JSObject& thisObject, const JSArgs& args)
         }
         pFileOpen->Release();
     }
+    //add selected file to library
     ebooks.add(pszFilePath);
+    MessageBox(NULL, L"File added to library", L"File added", MB_OK);
     return;
 }
 

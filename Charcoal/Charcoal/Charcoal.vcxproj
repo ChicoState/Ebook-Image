@@ -76,7 +76,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal\Charcoal\ultralight-sdk\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal\Charcoal\ultralight-sdk\include;C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal\Charcoal\libepub-master\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -108,7 +108,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal\Charcoal\ultralight-sdk\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal\Charcoal\ultralight-sdk\include;C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal\Charcoal\libepub-master\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
