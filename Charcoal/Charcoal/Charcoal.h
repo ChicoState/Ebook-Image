@@ -1,19 +1,17 @@
 #pragma once
 #include <AppCore/AppCore.h>
-#include <AppCore/App.h>
-#include <AppCore/Window.h>
-#include <AppCore/Overlay.h>
-#include <AppCore/JSHelpers.h>
+#include <Ultralight/Ultralight.h>
+#include <JavaScriptCore/JavaScript.h>
 using namespace ultralight;
 
-class MyApp : public AppListener,
+class Charcoal : public AppListener,
     public WindowListener,
     public LoadListener,
     public ViewListener {
 public:
-    MyApp();
+    Charcoal();
 
-    virtual ~MyApp();
+    virtual ~Charcoal();
 
     // Start the run loop.
     virtual void Run();

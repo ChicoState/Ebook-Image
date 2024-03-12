@@ -4,9 +4,14 @@
 class book {
 public:
     int id;
-    std::string name;
+    std::string title;
     std::string author;
     std::string publisher;
+    std::string contributor;
+    std::string rights;
+    std::string format;
+    std::string date;
+
     PWSTR path;
 
 
@@ -19,7 +24,6 @@ public:
 protected:
     std::vector<book> collection;
 
-    void parsemetadata(PWSTR path);
 };
 
 

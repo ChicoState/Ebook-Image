@@ -76,10 +76,14 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal\Charcoal\ultralight-sdk\include;C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal\Charcoal\libepub-master\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <SubSystem>Console</SubSystem>
+      <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal\Charcoal\ultralight-sdk\lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>AppCore.lib;Ultralight.lib;UltralightCore.lib;WebCore.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <EntryPointSymbol>mainCRTStartup</EntryPointSymbol>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -104,12 +108,14 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\Droge\source\430_repos\Charcoal\Charcoal\ultralight-sdk/Include;C:\Users\Droge\source\430_repos\Charcoal\Charcoal\libepub-master\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal\Charcoal\ultralight-sdk\include;C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal\Charcoal\libepub-master\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <SubSystem>Console</SubSystem>
+      <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>C:\Users\Droge\source\430_repos\Charcoal\Charcoal\ultralight-sdk\lib\AppCore.lib;C:\Users\Droge\source\430_repos\Charcoal\Charcoal\ultralight-sdk\lib\Ultralight.lib;C:\Users\Droge\source\430_repos\Charcoal\Charcoal\ultralight-sdk\lib\UltralightCore.lib;C:\Users\Droge\source\430_repos\Charcoal\Charcoal\ultralight-sdk\lib\WebCore.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>AppCore.lib;Ultralight.lib;UltralightCore.lib;WebCore.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal\Charcoal\ultralight-sdk\lib</AdditionalLibraryDirectories>
+      <EntryPointSymbol>mainCRTStartup</EntryPointSymbol>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">

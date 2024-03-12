@@ -1,7 +1,7 @@
 #include "Charcoal.h"
 
 int main() {
-	MyApp app;
+	Charcoal app;
 	app.Run();
 
 	return 0;
