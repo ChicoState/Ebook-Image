@@ -12,8 +12,8 @@
 #include <Appcore/AppCore.h>
 #include <JavaScriptCore/JavaScript.h>
 #include "Library.h"
-#define WINDOW_WIDTH  600
-#define WINDOW_HEIGHT 400
+#define WINDOW_WIDTH  900
+#define WINDOW_HEIGHT 600
 
 using namespace ultralight;
 Library ebooks;
