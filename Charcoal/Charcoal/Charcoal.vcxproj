@@ -108,13 +108,13 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal\Charcoal\ultralight-sdk\include;C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal\Charcoal\libepub-master\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\ivoRo\source\repos\Ebook-Image\Charcoal\Charcoal\ultralight-sdk\include;C:\Users\ivoRo\source\repos\Ebook-Image\Charcoal\Charcoal\libepub-master\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>AppCore.lib;Ultralight.lib;UltralightCore.lib;WebCore.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal\Charcoal\ultralight-sdk\lib</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Users\ivoRo\source\repos\Ebook-Image\Charcoal\Charcoal\ultralight-sdk\lib</AdditionalLibraryDirectories>
       <EntryPointSymbol>mainCRTStartup</EntryPointSymbol>
     </Link>
   </ItemDefinitionGroup>

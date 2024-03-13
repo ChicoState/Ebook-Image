@@ -1,26 +1,78 @@
-<!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Charcoal</title>
-    <style>
-    body {
-      font-family: -apple-system, 'Segoe UI Light', Ubuntu, Arial, sans-serif;
-    }
+<head>
+    <style type="text/css">
+        * {
+            -webkit-user-select: none;
+        }
+
+        body {
+            padding: 0;
+            margin: 0;
+            background: linear-gradient(330deg, rgba(0,0,0,1) 0%, rgba(48,48,48,1) 49%, rgba(102,102,102,1) 100%);
+            color: #5b5b5b;
+            font-family: -apple-system, 'Segoe UI', Ubuntu, 'Open Sans', Arial, sans-serif;
+        }
+
+        #divider {
+            z-index: 100;
+            position: fixed;
+            width: 12px;
+            height: 100%;
+            left: 0;
+            top: 0;
+            background: linear-gradient(90deg, rgba(0,0,0,0.01), rgba(0, 0, 0, 0.00));
+        }
+
+        h3 {
+            margin-left: 10px;
+            margin-top: 32px;
+        }
+
+        #contents {
+        }
+
+        #message {
+            font-weight: 600;
+            margin-left: 10%;
+            border-radius: 15px;
+            background: lightgray;
+            text-align: center;
+            padding: 2em;
+            box-shadow: 0 8px 24px -6px #1f286540;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transition: top 0.15s ease-out, box-shadow 0.15s ease-out;
+            cursor: pointer;
+        }
+
+            #message:hover {
+                top: 49%;
+                box-shadow: 0 8px 24px -6px #1a225a72;
+            }
     </style>
-  </head>
-  <body>
-    <h1>Basic FrontEnd Buttons</h1>
+
+</head>
+<body>
+    <div class="sidebar">
+        <iframe src="sidebar.html" frameborder="0" style="width: 20%; height: 100%;"></iframe>
+    </div>
+    <div id="divider"></div>
+    <div id="contents">
+        <div id="message">
+            Welcome to Charcoal! Please select a service from the sidebar to begin.
+        </div>
+    </div>
     <button onclick="testbutton()">Add Book</button>
     <script>
-      function testbutton() {
-         AddBook();
-      }
+        function testbutton() {
+            AddBook();
+        }
     </script>
     <form action="/upload" method="post" enctype="multipart/form-data">
-      <input type="file" id="fileUpload" name="fileUpload">
-      <button type="submit">Upload</button>
+        <input type="file" id="fileUpload" name="fileUpload">
+        <button type="submit">Upload</button>
     </form>
-  </body>
+</body>
 </html>
