@@ -22,11 +22,7 @@ jobs:
         cd vcpkg
         ./bootstrap-vcpkg.sh
         ./vcpkg integrate install
-    - name: Install Dependencies
-      run: | 
-      vcpkg install tinyxml2
-      vcpkg install libzippp
-
-
+        ./vcpkg install tinyxml2
+        ./vcpkg install libzippp
     - name: Build Solution
       run: msbuild Charcoal.sln /p:Configuration=Release
