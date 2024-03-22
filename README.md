@@ -1,4 +1,4 @@
-[![Build C++](https://github.com/ChicoState/Ebook-Image/actions/workflows/CI.yml/badge.svg)](https://github.com/ChicoState/Ebook-Image/actions/workflows/CI.yml)
+[![Build C++](https://github.com/ChicoState/Ebook-Image/actions/workflows/CI.yml/badge.sv)](https://github.com/ChicoState/Ebook-Image/actions/workflows/CI.yml)
 # Ebook-Image
 
 ## Testing
