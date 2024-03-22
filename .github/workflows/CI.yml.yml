@@ -1,0 +1,32 @@
+name: Build C++
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+ build:
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Setup MSBuild
+      uses: microsoft/setup-msbuild@v1.0.2
+
+    - name: Install vcpkg
+      run: |
+        git clone https://github.com/microsoft/vcpkg.git
+        cd vcpkg
+        ./bootstrap-vcpkg.sh
+        ./vcpkg integrate install
+    - name: Install Dependencies
+      run: | 
+      vcpkg install tinyxml2
+      vcpkg install libzippp
+
+
+    - name: Build Solution
+      run: msbuild Charcoal.sln /p:Configuration=Release
