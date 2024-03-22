@@ -2,9 +2,6 @@ name: Build C++
 
 on:
   push:
-    branches: 
-      -main
-      -contint
   pull_request:
     branches: [ main ]
 
