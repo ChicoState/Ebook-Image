@@ -71,6 +71,7 @@ void Library::add(PWSTR path)
             curr.contributor = metadata->FirstChildElement("dc:contributor")->GetText();
             curr.publisher = metadata->FirstChildElement("dc:publisher")->GetText();
             collection.push_back(curr);
+            //test
             //adding book to the collection
         }
 
