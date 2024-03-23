@@ -26,4 +26,4 @@ jobs:
 
 
     - name: Build Solution
-      run: msbuild Charcoal.sln /p:Configuration=Release
+      run: msbuild Charcoal/Charcoal.sln /p:Configuration=Release
