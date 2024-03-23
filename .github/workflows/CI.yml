@@ -20,7 +20,7 @@ jobs:
         git clone https://github.com/microsoft/vcpkg.git
         cd vcpkg
         ./bootstrap-vcpkg.sh
-        ./vcpkg integrate install
+        ./vcpkg/vcpkg integrate install
         ./vcpkg/vcpkg install tinyxml2
         ./vcpkg/vcpkg install libzippp
 
