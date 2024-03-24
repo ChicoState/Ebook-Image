@@ -81,7 +81,7 @@
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal\Charcoal\ultralight-sdk\lib</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)Charcoal\ultralight-sdk\lib</AdditionalLibraryDirectories>
       <AdditionalDependencies>AppCore.lib;Ultralight.lib;UltralightCore.lib;WebCore.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <EntryPointSymbol>mainCRTStartup</EntryPointSymbol>
     </Link>
@@ -114,7 +114,7 @@
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>AppCore.lib;Ultralight.lib;UltralightCore.lib;WebCore.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal\Charcoal\ultralight-sdk\lib</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)Charcoal\ultralight-sdk\lib</AdditionalLibraryDirectories>
       <EntryPointSymbol>mainCRTStartup</EntryPointSymbol>
     </Link>
   </ItemDefinitionGroup>
