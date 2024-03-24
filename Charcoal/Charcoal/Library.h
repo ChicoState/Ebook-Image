@@ -11,6 +11,8 @@ public:
     std::string rights;
     std::string format;
     std::string date;
+    std::string language;
+    std::string description;
 
     PWSTR path;
 
@@ -20,7 +22,9 @@ public:
 class Library {
 public:
     void printall();
-    void add(PWSTR path);
+    std::string add(PWSTR path);
+    std::string getStringData(std::string name);
+    std::string wstrtostr(const std::wstring& wstr);
 protected:
     std::vector<book> collection;
 
