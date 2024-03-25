@@ -1,7 +1,7 @@
 
 Charcoal/.vs/
-Charcoal/Charcoal/Debug/*
-Charcoal/Debug/*
-Charcoal/x64/Debug/*
-.vs/*
+Charcoal/Charcoal/Debug/
+Charcoal/Debug/
+Charcoal/Charcoal/x64/Debug/
+.vs
 *.tlog
