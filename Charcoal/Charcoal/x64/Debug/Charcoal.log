@@ -1,3 +1,8 @@
-﻿  Charcoal.vcxproj -> C:\Users\ivoRo\source\repos\Ebook-Image\Charcoal\x64\Debug\Charcoal.exe
+﻿  Charcoal.cpp
+  Library.cpp
+C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal\Charcoal\Library.cpp(49,18): warning C4244: 'initializing': conversion from 'libzippp_uint64' to 'int', possible loss of data
+  main.cpp
+  Generating Code...
+  Charcoal.vcxproj -> C:\Users\Droge\source\430_repos\Ebook-Image\Charcoal\x64\Debug\Charcoal.exe
   'pwsh.exe' is not recognized as an internal or external command,
   operable program or batch file.
