@@ -108,8 +108,9 @@ void Charcoal::OpenFile(const JSObject& thisObject, const JSArgs& args)
         pFileOpen->Release();
     }
     //add selected file to library
-    ebooks.add(pszFilePath);
-    MessageBox(NULL, L"File added to library", L"File added", MB_OK);
+    std::string title = ebooks.add(pszFilePath);
+    std::string added = ebooks.getStringData(title);
+    MessageBoxA(NULL, added.c_str(), "Book Added", MB_OK);
     return;
 }
 
