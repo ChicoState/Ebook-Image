@@ -4,13 +4,6 @@
         * {
             -webkit-user-select: none;
         }
-        
-        img {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        
-        }
 
         body {
             background: lightgray;
@@ -63,7 +56,6 @@
 </head>
 <body>
     <!-- SVG Icons from https://www.flaticon.com/packs/basic-ui-4 -->
-
     <svg width="0" height="0" xmlns="http://www.w3.org/2000/svg">
         <symbol id="dashboard" viewBox="0 0 512 512">
             <path d="m197.332031 170.667969h-160c-20.585937 0-37.332031-16.746094-37.332031-37.335938v-96c0-20.585937
@@ -144,42 +136,13 @@
         8.316407-10.6875 15.101563v21.527344c0 8.832031-7.167969 16-16 16zm0 0" />
         </symbol>
     </svg>
-    <img src="charcoal.png" alt="Charcoal Logo" width="90" height="90">
-    
+    <h3>Dashboard!</h3>
     <ul>
-        <li id="homeTab" class="disabled"><a href="home.html" target="_parent" style="color: #323232; text-decoration: none;"><svg width="16" height="16"><use xlink:href="#dashboard" /></svg>Home</a></li>
-        <li id="favoritesTab" class="disabled"><a href="favorites.html" target="_parent" style="color: #323232; text-decoration: none;"><svg width="16" height="16"><use xlink:href="#favorites" /></svg>Favorites</a></li>
-        <li id="booksTab" class="disabled"><a href="books.html" target="_parent" style="color: #323232; text-decoration: none;"><svg width="16" height="16"><use xlink:href="#documents" /></svg>Books</a></li>
-        <li id="helpTab" class="disabled"><a href="help.html" target="_parent" style="color: #323232; text-decoration: none;"><svg width="16" height="16"><use xlink:href="#help" /></svg>Help</a></li>
+        <li class="active"><svg width="16" height="16"><a href="file:///app.html"></a><use xlink:href="#dashboard" /></svg>Dashboard</li>
+        <li class="disabled"><svg width="16" height="16"><use xlink:href="#profile" /></svg>Grayscale</li>
+        <li class="disabled"><svg width="16" height="16"><use xlink:href="#favorites" /></svg>Favorites</li>
+        <li class="disabled"><svg width="16" height="16"><use xlink:href="#documents" /></svg>Books</li>
+        <li class="disabled"><a href="file:///help.html"></a><svg width="16" height="16"><use xlink:href="#help" /></svg>Help</li>
     </ul>
-<script>
-    window.onload = function() {
-        //get the URL of the parent window (app.html)
-        var parentURL = document.referrer;
-
-        //extract the filename of the parent URL
-        var currentPage = parentURL.substring(parentURL.lastIndexOf('/') + 1);
-
-        //remove the ".html" extension from the filename
-        currentPage = currentPage.replace(".html", "");
-	console.log("Current page: ");
-	console.log(currentPage);
-
-        //remove the "active" class from all tabs
-        var tabs = document.querySelectorAll("ul li");
-        tabs.forEach(function(tab) {
-            tab.classList.remove("active");
-        });
-
-        //add the "active" class to the tab corresponding to the current page
-        var currentTab = document.getElementById(currentPage + "Tab");
-	console.log("Current tab: ");
-	console.log(currentTab);
-        if (currentTab) {
-            currentTab.classList.add("active");
-        }
-    };
-</script>
-
 </body>
 </html>
