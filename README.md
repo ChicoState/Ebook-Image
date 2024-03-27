@@ -1,3 +1,4 @@
+[![Charcoal Build](https://github.com/ChicoState/Ebook-Image/actions/workflows/CI.yml/badge.svg)](https://github.com/ChicoState/Ebook-Image/actions/workflows/CI.yml)
 # Ebook-Image
 
 ## Testing
