@@ -17,7 +17,6 @@
 
 using namespace ultralight;
 Library ebooks;
-
 Charcoal::Charcoal() {
     ///
     /// Create our main App instance.

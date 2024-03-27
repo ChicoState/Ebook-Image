@@ -135,13 +135,19 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="AZW3.h" />
     <ClInclude Include="Charcoal.h" />
+    <ClInclude Include="Epub.h" />
     <ClInclude Include="Library.h" />
+    <ClInclude Include="PDF.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="AZW3.cpp" />
     <ClCompile Include="Charcoal.cpp" />
+    <ClCompile Include="Epub.cpp" />
     <ClCompile Include="Library.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="PDF.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
