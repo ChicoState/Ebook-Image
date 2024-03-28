@@ -21,6 +21,15 @@
     <ClInclude Include="Library.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Epub.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AZW3.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PDF.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Charcoal.cpp">
@@ -30,6 +39,15 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Epub.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AZW3.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PDF.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
