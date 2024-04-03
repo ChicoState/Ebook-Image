@@ -87,13 +87,20 @@ std::string Library::add(PWSTR path)
         collection.push_back(curr);
         return curr.title;
 	}
-    else if (f == "AZW3" || f == "azw3")
+    else if (f == "mobi")
     {
-       /* AZW3 a;
+        mobi m;
+        book curr = m.add(path);
+        collection.push_back(curr);
+        return curr.title;
+	}
+    else if (f == "azw3" || f == "AZW3")
+    {
+        azw3 a;
         book curr = a.add(path);
         collection.push_back(curr);
-        return curr.title;*/
-	}
+        return curr.title;
+    }
     else if (f == "pdf" || f == "PDF")
     {
         /*PDF p;

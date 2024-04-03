@@ -108,13 +108,14 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)Charcoal\ultralight-sdk\include;$(SolutionDir)Charcoal\libepub-master\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Charcoal\opencv\build\include;$(SolutionDir)Charcoal\libmobi-public\msvc\packages\libxml2-vc140-static-32_64.2.9.4.1\lib\native\include\libxml;$(SolutionDir)Charcoal\stb-master;$(SolutionDir)Charcoal\libxml2\include\libxml;$(SolutionDir)Charcoal\libmobi-public\src;$(SolutionDir)Charcoal\ultralight-sdk\include;$(SolutionDir)Charcoal\libepub-master\include</AdditionalIncludeDirectories>
+      <LanguageStandard>Default</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>AppCore.lib;Ultralight.lib;UltralightCore.lib;WebCore.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>$(SolutionDir)Charcoal\ultralight-sdk\lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>AppCore.lib;Ultralight.lib;UltralightCore.lib;WebCore.lib;libmobi.lib;libxml2.lib;Ws2_32.lib;opencv_world490.lib;opencv_world490d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)Charcoal\opencv\build\x64\vc16\bin;$(SolutionDir)Charcoal\opencv\build\x64\vc16\lib;$(SolutionDir)Charcoal\libmobi-public\msvc\packages\libxml2-vc140-static-32_64.2.9.4.1\lib\native\libs\x64\static\Debug;$(SolutionDir)Charcoal\libmobi-public\msvc\x64\Debug;$(SolutionDir)Charcoal\stb-master;$(SolutionDir)Charcoal\ultralight-sdk\lib</AdditionalLibraryDirectories>
       <EntryPointSymbol>mainCRTStartup</EntryPointSymbol>
     </Link>
   </ItemDefinitionGroup>
