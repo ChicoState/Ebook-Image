@@ -106,19 +106,25 @@
     <div id="divider"></div>
     <div id="contents">
         <div id="message">
-            TODO: Display library of grayscale-able books?
             <button class="button-28" onclick="gscalebutton()">Grayscale</button>
             <script>
                 function gscalebutton() {
-                    //add grayscale function hook here
+                    nameToGrayscale();
                 }
             </script>
-            Here is a list of your books:
-            <ul>
-                <li>List</li>
-                <li>Stuff</li>
-                <li>Here</li>
-            </ul>
+            <p id="bookString">Your list of books will go here.</p>
+            <button class="button-28" onclick="listbooks()">List All Books</button>
+            <script>
+                function listbooks() {
+                    //supposed to call the listAllBooks function and get the JSString object, however it doesn't seem to get anything
+                    var bookString = listAllBooks();
+            
+                    //displays the book list string
+                    var bookElement = document.getElementById('bookString');
+                    bookElement.innerHTML = bookString.toString();
+                }
+            </script>
+            
             <button class="button-28" onclick="rmbooksbutton()">Remove Books</button>
             <script>
                 function rmbooksbutton() {

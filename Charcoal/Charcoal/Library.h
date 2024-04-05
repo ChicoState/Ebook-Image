@@ -22,7 +22,7 @@ public:
 
 class Library {
 public:
-    void printall();
+    std::string printall();
     std::string add(PWSTR path);
     std::string getStringData(std::string name);
     std::string wstrtostr(const std::wstring& wstr);
