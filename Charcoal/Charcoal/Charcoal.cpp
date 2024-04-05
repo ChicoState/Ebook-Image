@@ -76,16 +76,24 @@ Charcoal::Charcoal() {
 Charcoal::~Charcoal() {
 }
 
-JSString Charcoal::printAllBooks(const JSObject& thisObject, const JSArgs& args) {
-    std::string bookList = ebooks.printall();
-    MessageBoxA(NULL, bookList.c_str(), "Book List", MB_OK); //this confirms there is an actual booklist.
-    //create a JSString from the book list string
-    RefPtr<JSContext> context = GetJSContext(); //issues with this line and line 84
-    JSStringRef jsBookListRef = JSStringCreateWithUTF8CString(bookList.c_str());
-    JSString jsBookList(context->ctx(), jsBookListRef);
-    JSStringRelease(jsBookListRef);
+JSValue Charcoal::printAllBooks(const JSObject& thisObject, const JSArgs& args) {
 
-    return jsBookList;
+    std::string bookList = ebooks.printall();
+
+    MessageBoxA(NULL, bookList.c_str(), "Book List", MB_OK); //this confirms there is an actual booklist.
+
+    //convert the book list string to a JavaScript string
+
+    JSStringRef jsBookList = JSStringCreateWithUTF8CString(bookList.c_str());
+
+    JSValue jsValue = JSValue(jsBookList);
+
+    JSStringRelease(jsBookList);
+
+    //return the JSValue object
+
+    return jsValue;
+
 }
 void Charcoal::grayscaleName(const JSObject& thisObject, const JSArgs& args) { //at the moment just gets metadata, you will put your grayscale hooks here.
     //std::string added = ebooks.getStringData();
