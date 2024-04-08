@@ -86,6 +86,7 @@ std::string Library::add(PWSTR path)
     if (f == "epub")
     {
         Epub e;
+        e.grayscaleEpub(path);
         book curr = e.add(path);
         collection.push_back(curr);
         return curr.title;
