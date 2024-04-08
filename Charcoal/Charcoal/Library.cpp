@@ -84,6 +84,7 @@ std::string Library::add(PWSTR path)
     {
         Epub e;
         book curr = e.add(path);
+        e.remove_drm(path);
         collection.push_back(curr);
         return curr.title;
 	}

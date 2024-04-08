@@ -95,3 +95,23 @@ book Epub::add(PWSTR path)
     zf.close();
     return curr;
 }
+
+void Epub::remove_drm(PWSTR path)
+{
+    book curr;
+    std::string npath = wstrtostr(path);
+    using namespace libzippp;
+    ZipArchive zf(npath);
+    zf.open(ZipArchive::Write);
+    std::vector<ZipEntry> entries = zf.getEntries();
+    std::vector<ZipEntry>::iterator it;
+    for (it = entries.begin(); it != entries.end(); ++it) {
+        ZipEntry entry = *it;
+        std::string name = entry.getName();
+        //int size = entry.getSize();
+        if (getFileExtension(name) == "drm") {
+            zf.deleteEntry(name);
+        }
+    }
+    zf.close();
+}
