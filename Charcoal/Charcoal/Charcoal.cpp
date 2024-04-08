@@ -30,7 +30,7 @@ Charcoal::Charcoal() {
     window_ = Window::Create(app_->main_monitor(), WINDOW_WIDTH, WINDOW_HEIGHT,
         false, 2 | 4);
 
-    window_->SetTitle("Charcoal Outline");
+    window_->SetTitle("Charcoal");
     ///
     /// Create our HTML overlay-- we don't care about its initial size and
     /// position because it'll be calculated when we call OnResize() below.
@@ -76,6 +76,29 @@ Charcoal::Charcoal() {
 Charcoal::~Charcoal() {
 }
 
+JSValue Charcoal::printAllBooks(const JSObject& thisObject, const JSArgs& args) {
+
+    std::string bookList = ebooks.printall();
+
+    MessageBoxA(NULL, bookList.c_str(), "Book List", MB_OK); //this confirms there is an actual booklist.
+
+    //convert the book list string to a JavaScript string
+
+    JSStringRef jsBookList = JSStringCreateWithUTF8CString(bookList.c_str());
+
+    JSValue jsValue = JSValue(jsBookList);
+
+    JSStringRelease(jsBookList);
+
+    //return the JSValue object
+
+    return jsValue;
+
+}
+void Charcoal::grayscaleName(const JSObject& thisObject, const JSArgs& args) { //at the moment just gets metadata, you will put your grayscale hooks here.
+    //std::string added = ebooks.getStringData();
+    //MessageBoxA(NULL, added.c_str(), "Book Data", MB_OK);
+}
 
 
 void Charcoal::OpenFile(const JSObject& thisObject, const JSArgs& args)
@@ -121,6 +144,8 @@ void Charcoal::OnDOMReady(ultralight::View* caller,
     SetJSContext(context->ctx());
     JSObject global = JSGlobalObject();
     global["AddBook"] = BindJSCallback(&Charcoal::OpenFile);
+    global["listAllBooks"] = BindJSCallback(&Charcoal::printAllBooks);
+    global["nameToGrayscale"] = BindJSCallback(&Charcoal::grayscaleName);
 
 }
 

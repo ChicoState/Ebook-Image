@@ -32,6 +32,8 @@ public:
         uint64_t frame_id,
         bool is_main_frame,
         const String& url) override;
+    virtual JSValue printAllBooks(const JSObject& thisObject, const JSArgs& args);
+    virtual void grayscaleName(const JSObject& thisObject, const JSArgs& args);
 
     // This is called when the DOM has loaded in one of its frames.
     virtual void OnDOMReady(ultralight::View* caller,

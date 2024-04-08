@@ -11,14 +11,16 @@
 #include "AZW3.h"
 #include "PDF.h"
 #pragma once
-void Library::printall()
+std::string Library::printall()
 {
+    std::string allBooks = "Book list: \n";
     std::vector<book>::iterator it;
     for (it = collection.begin(); it != collection.end(); ++it)
     {
+
 		book curr = *it;
-		std::cout << "Title: " << curr.title << std::endl;
-		std::cout << "Author: " << curr.author << std::endl;
+		allBooks += (curr.title + '\n');
+		/*std::cout << "Author: " << curr.author << std::endl;
 		std::cout << "Publisher: " << curr.publisher << std::endl;
 		std::cout << "Contributor: " << curr.contributor << std::endl;
 		std::cout << "Rights: " << curr.rights << std::endl;
@@ -26,8 +28,9 @@ void Library::printall()
 		std::cout << "Date: " << curr.date << std::endl;
 		std::cout << "Language: " << curr.language << std::endl;
 		std::cout << "Description: " << curr.description << std::endl;
-		std::cout << "Rights: " << curr.rights << std::endl;    
+		std::cout << "Rights: " << curr.rights << std::endl;    */
     }
+    return allBooks;
 }
 
 std::string Library::getStringData(std::string name)
