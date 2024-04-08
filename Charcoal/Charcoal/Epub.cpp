@@ -98,47 +98,46 @@ book Epub::add(PWSTR path)
             //adding book to the collection
         }
 
+
     }
     zf.close();
     return curr;
 }
 
-void Epub::grayscaleBook(PWSTR path) {
+void Epub::grayscaleEpub(PWSTR path) {
     std::string npath = wstrtostr(path);
-    libzippp::ZipArchive zipArchive(npath);
-
-    zipArchive.open(libzippp::ZipArchive::Write);
     using namespace libzippp;
-    // Process each entry in the epub archive
+    ZipArchive zipArchive(npath);
+    zipArchive.open(ZipArchive::Write);
     std::vector<ZipEntry> entries = zipArchive.getEntries();
     std::vector<ZipEntry>::iterator it;
+    std::string temp = "C:\\Users\\Younitea\\Documents\\Books\\tst\\OEBPS\\images\\"; //TODO MAKE RELATIVE/through memory, not temp file
     for (it = entries.begin(); it != entries.end(); ++it) {
         ZipEntry entry = *it;
-        if (!entry.isFile()) continue; // Skip directories
         std::string name = entry.getName();
-        int size = entry.getSize();
         // Check if the entry is within the "images" directory
-        if (entry.getName().find("images/") != 0) continue;
+        std::string fileExt = getFileExtension(name);
+        //Only can do png and jpg for the moment
+        if (fileExt == "png" || fileExt == "jpeg" || fileExt == "jpg") {
+            // Read the image file from the epub archive
+            int width, height, channels;
+            unsigned char* image = stbi_load_from_memory((unsigned char*)entry.readAsBinary(), entry.getSize(), &width, &height, &channels, 0);
 
-        // Read the image file from the epub archive
-        unsigned char* data = (unsigned char*)zipArchive.readEntry(name);
-
-        int width, height, channels;
-        unsigned char* imageData = stbi_load_from_memory(data, size, &width, &height, &channels, STBI_rgb_alpha);
-
-        // Grayscale the image
-        grayscaleImage(imageData, width, height);
-
-        // Remove the original image file from the epub archive
-        zipArchive.deleteEntry(entry);
-
-        // Write the modified image back to the epub archive
-        std::vector<unsigned char> modifiedImageData(imageData, imageData + width * height * 3);
-        zipArchive.addData(entry.getName(), modifiedImageData.data(), modifiedImageData.size());
-
-        stbi_image_free(imageData);
+            // Grayscale the image
+            grayscaleImage(image, width, height);
+            
+            std::string base_filename = name.substr(name.find_last_of("/\\") + 1);
+            if(fileExt == "jpeg" || fileExt == "jpg")
+                stbi_write_jpg((temp + base_filename).c_str(), width, height, channels, image, 100);
+            else if(fileExt == "png")
+                stbi_write_png((temp + base_filename).c_str(), width, height, channels, image, (width * channels));
+            // Write the modified image back to the epub archive
+            zipArchive.deleteEntry(name);
+            zipArchive.addFile(name, (temp + base_filename).c_str());
+            stbi_image_free(image);
+        }
     }
-
+    //zipArchive.addEntry("C:/Users/Younitea/Documents/Books/tst/OEBPS/images/");
     // Save changes to the epub file
     zipArchive.close();
 }
