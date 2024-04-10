@@ -1,6 +1,7 @@
 #include <string>
 #include<windows.h>
 #include <vector>
+#include <string>
 #pragma once
 class book {
 public:
@@ -15,7 +16,7 @@ public:
     std::string language;
     std::string description;
 
-    PWSTR path;
+    std::string path;
 
 
 };
@@ -25,10 +26,11 @@ public:
     std::string printall();
     std::string add(PWSTR path);
     std::string getStringData(std::string name);
-    std::string wstrtostr(const std::wstring& wstr);
-    std::string getFileExtension(const std::string& filePath);
-protected:
+    std::string wstrtostr(const std::wstring wstr);
+    std::string getFileExtension(const std::string filePath);
+    void grayscale(std::string path);
     std::vector<book> collection;
+protected:
     void push(book b);
 
 };

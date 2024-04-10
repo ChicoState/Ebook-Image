@@ -4,7 +4,7 @@ class Epub : public Library
 {
 	public:
 		book add(PWSTR path);
-		void grayscaleEpub(PWSTR Path);
+		void grayscaleEpub(std::string Path);
 	private:
 		void grayscaleImage(unsigned char* imageData, int width, int height);
 };

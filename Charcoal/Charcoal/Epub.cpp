@@ -1,7 +1,7 @@
 #define STB_IMAGE_IMPLEMENTATION
 #define STB_IMAGE_WRITE_IMPLEMENTATION
 //only do this once
-
+#include <fstream>
 #include "Epub.h"
 #include <zip.h>
 #include <libzippp/libzippp.h>
@@ -9,6 +9,8 @@
 #include <string>
 #include "stb_image.h"
 #include "stb_image_write.h"
+#include <opencv2/highgui.hpp>
+#include <opencv2/opencv.hpp>
 #define _CRT_SECURE_NO_WARNINGS
 #pragma once
 book Epub::add(PWSTR path)
@@ -101,58 +103,42 @@ book Epub::add(PWSTR path)
 
     }
     zf.close();
+    curr.path = npath;
     return curr;
 }
 
-void Epub::grayscaleEpub(PWSTR path) {
-    std::string npath = wstrtostr(path);
+void Epub::grayscaleEpub(std::string path) {
+    std::string npath = path;
     using namespace libzippp;
     ZipArchive zipArchive(npath);
     zipArchive.open(ZipArchive::Write);
     std::vector<ZipEntry> entries = zipArchive.getEntries();
     std::vector<ZipEntry>::iterator it;
-    std::string temp = "C:\\Users\\Younitea\\Documents\\Books\\tst\\OEBPS\\images\\"; //TODO MAKE RELATIVE/through memory, not temp file
     for (it = entries.begin(); it != entries.end(); ++it) {
         ZipEntry entry = *it;
         std::string name = entry.getName();
         // Check if the entry is within the "images" directory
         std::string fileExt = getFileExtension(name);
         //Only can do png and jpg for the moment
-        if (fileExt == "png" || fileExt == "jpeg" || fileExt == "jpg") {
+        if (fileExt == "png" || fileExt == "jpeg" || fileExt == "jpg") 
+        {
+            std::vector<char> data = entry.readAsBinary();
             // Read the image file from the epub archive
-            int width, height, channels;
-            unsigned char* image = stbi_load_from_memory((unsigned char*)entry.readAsBinary(), entry.getSize(), &width, &height, &channels, 0);
+            cv::Mat raw = cv::Mat(data);
+            cv::Mat image = cv::imdecode(raw, cv::IMREAD_COLOR);
+            if (image.empty()) 
+            {
+                break;
+			}
+            cv::Mat gray;
+            cv::cvtColor(image, gray, cv::COLOR_BGR2GRAY);
 
-            // Grayscale the image
-            grayscaleImage(image, width, height);
-            
-            std::string base_filename = name.substr(name.find_last_of("/\\") + 1);
-            if(fileExt == "jpeg" || fileExt == "jpg")
-                stbi_write_jpg((temp + base_filename).c_str(), width, height, channels, image, 100);
-            else if(fileExt == "png")
-                stbi_write_png((temp + base_filename).c_str(), width, height, channels, image, (width * channels));
-            // Write the modified image back to the epub archive
-            zipArchive.deleteEntry(name);
-            zipArchive.addFile(name, (temp + base_filename).c_str());
-            stbi_image_free(image);
+            // Save the grayscale image
+            std::ofstream of("out");
+            cv::imwrite("temp.jpg", gray);
         }
     }
     //zipArchive.addEntry("C:/Users/Younitea/Documents/Books/tst/OEBPS/images/");
     // Save changes to the epub file
     zipArchive.close();
-}
-
-void Epub::grayscaleImage(unsigned char* imageData, int width, int height) {
-    // Convert RGB image to grayscale
-    for (int i = 0; i < width * height; ++i) {
-        unsigned char gray = static_cast<unsigned char>(
-            0.21f * imageData[3 * i] +
-            0.72f * imageData[3 * i + 1] +
-            0.07f * imageData[3 * i + 2]
-            );
-
-        imageData[3 * i] = gray;
-        imageData[3 * i + 1] = gray;
-        imageData[3 * i + 2] = gray;
-    }
 }

@@ -51,6 +51,7 @@ std::string Library::getStringData(std::string name)
             meta << "Language: " << collection[i].language << std::endl;
             meta << "Description: " << collection[i].description << std::endl;
             meta << "Rights: " << collection[i].rights << std::endl;
+            break;
 		}
 	}
     data = meta.str();
@@ -58,7 +59,7 @@ std::string Library::getStringData(std::string name)
 
 }
 
-std::string Library::wstrtostr(const std::wstring& wstr)
+std::string Library::wstrtostr(const std::wstring wstr)
 {
     std::string strTo;
     char* szTo = new char[wstr.length() + 1];
@@ -69,7 +70,7 @@ std::string Library::wstrtostr(const std::wstring& wstr)
     return strTo;
 }
 
-std::string Library::getFileExtension(const std::string& filePath) 
+std::string Library::getFileExtension(const std::string filePath) 
 {
     size_t pos = filePath.rfind('.');
 
@@ -86,7 +87,6 @@ std::string Library::add(PWSTR path)
     if (f == "epub")
     {
         Epub e;
-        e.grayscaleEpub(path);
         book curr = e.add(path);
         collection.push_back(curr);
         return curr.title;
@@ -105,9 +105,24 @@ std::string Library::add(PWSTR path)
         collection.push_back(curr);
         return curr.title;*/
 	}
-    else
+    return "";
+}
+void Library::grayscale(std::string path)
+{
+    std::string f = getFileExtension(path);
+    if (f == "epub")
     {
-		MessageBoxA(NULL, "File format not supported", "Error", MB_OK);
-	}
-    return NULL;
+        Epub e;
+        e.grayscaleEpub(path);
+    }
+    else if (f == "AZW3" || f == "azw3")
+    {
+        AZW3 a;
+        //a.grayscaleAZW3(path);
+    }
+    else if (f == "pdf" || f == "PDF")
+    {
+        PDF p;
+        //p.grayscalePDF(path);
+    }
 }

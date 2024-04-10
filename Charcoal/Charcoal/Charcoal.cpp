@@ -96,8 +96,8 @@ JSValue Charcoal::printAllBooks(const JSObject& thisObject, const JSArgs& args) 
 
 }
 void Charcoal::grayscaleName(const JSObject& thisObject, const JSArgs& args) { //at the moment just gets metadata, you will put your grayscale hooks here.
-    //std::string added = ebooks.getStringData();
-    //MessageBoxA(NULL, added.c_str(), "Book Data", MB_OK);
+    std::string name = ebooks.collection[0].title;
+    ebooks.grayscale(ebooks.collection[0].path);
 }
 
 
@@ -120,19 +120,32 @@ void Charcoal::OpenFile(const JSObject& thisObject, const JSArgs& args)
                 hr = pItem->GetDisplayName(SIGDN_FILESYSPATH, &pszFilePath);
                 if (SUCCEEDED(hr))
                 {
-                    // Your code here
                     
                     CoTaskMemFree(pszFilePath);
                 }
                 pItem->Release();
             }
         }
+        else
+        {
+            pFileOpen->Release();
+            return;
+        }
         pFileOpen->Release();
     }
     //add selected file to library
     std::string title = ebooks.add(pszFilePath);
-    std::string added = ebooks.getStringData(title);
-    MessageBoxA(NULL, added.c_str(), "Book Added", MB_OK);
+    //if file added, show success message, else show error message
+    if (title == "")
+    {
+        MessageBoxA(NULL, "File format is not recognized", "Error", MB_OK);
+    }
+    else
+    {
+        std::string added = ebooks.getStringData(title);
+        MessageBoxA(NULL, added.c_str(), "Book Added", MB_OK);
+	}
+
     return;
 }
 
