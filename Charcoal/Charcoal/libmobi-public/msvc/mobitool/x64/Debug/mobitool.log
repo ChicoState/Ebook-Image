@@ -1,0 +1,9 @@
+﻿  miniz.c
+  common.c
+  mobitool.c
+  getopt.c
+  Generating Code...
+     Creating library C:\Users\Angel\source\repos\Ebook-Image\Charcoal\Charcoal\libmobi-public\msvc\x64\Debug\mobitool.lib and object C:\Users\Angel\source\repos\Ebook-Image\Charcoal\Charcoal\libmobi-public\msvc\x64\Debug\mobitool.exp
+  mobitool.vcxproj -> C:\Users\Angel\source\repos\Ebook-Image\Charcoal\Charcoal\libmobi-public\msvc\x64\Debug\mobitool.exe
+  'pwsh.exe' is not recognized as an internal or external command,
+  operable program or batch file.
