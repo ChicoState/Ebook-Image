@@ -23,6 +23,7 @@ jobs:
         vcpkg integrate install
         vcpkg install tinyxml2
         vcpkg install libzippp
+        vcpkg install opencv
 
 
     - name: Build Solution
