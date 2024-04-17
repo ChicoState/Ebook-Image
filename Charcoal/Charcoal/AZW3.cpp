@@ -3,15 +3,11 @@
 #include <cstdio>
 #include <iostream>
 #include <fstream>
-#include <opencv2/opencv.hpp>
-#include <opencv2/imgcodecs.hpp>
-#include <opencv2/imgproc.hpp>
 #include <string>
 #include <vector>
 #define _SILENCE_EXPERIMENTAL_FILESYSTEM_DEPRECATION_WARNING
 #include <experimental/filesystem>
 
-using namespace cv;
 using namespace std;
 namespace fs = std::experimental::filesystem;
 
@@ -134,24 +130,6 @@ void extractImages(const MOBIRawml* rawml, const std::string& outputDir, int sca
             case T_BMP: extension = ".bmp"; break;
             default: continue;
             }
-            // Generate filename
-            std::string imageFilename = outputDir + "/image_" + std::to_string(part->uid) + extension;
-
-            Mat img = imdecode(Mat(1, part->size, CV_8UC1, part->data), IMREAD_ANYCOLOR);
-
-            // Convert the image to grayscale and scale it
-            Mat grayImg;
-            cvtColor(img, grayImg, COLOR_BGR2GRAY);
-            Mat resizedImg;
-            Size newSize(img.cols * scaleFactor, img.rows * scaleFactor);
-            resize(grayImg, resizedImg, newSize);
-
-            // Save the grayscale image
-            std::ofstream imgFile(imageFilename, std::ios::binary);
-            vector<uchar> buf;
-            imencode(extension, resizedImg, buf);
-            imgFile.write(reinterpret_cast<char*>(buf.data()), buf.size());
-            imgFile.close();
         }
     }
 }
