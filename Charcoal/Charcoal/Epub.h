@@ -7,5 +7,6 @@ class Epub : public Library
 		void grayscaleEpub(PWSTR Path);
 	private:
 		void grayscaleImage(unsigned char* imageData, int width, int height);
+		void contrastImage(unsigned char* imageData, int width, int height, int value);
 };
 
