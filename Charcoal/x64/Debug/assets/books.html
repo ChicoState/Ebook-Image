@@ -96,6 +96,13 @@
                 top: 49%;
                 box-shadow: 0 8px 24px -6px #1a225a72;
             }
+			
+		input[type=number] {
+		  width: 100%;
+		  padding: 12px 20px;
+		  margin: 8px 0;
+		  box-sizing: border-box;
+		}
     </style>
 
 </head>
@@ -109,8 +116,15 @@
             <button class="button-28" onclick="gscalebutton()">Grayscale</button>
             <script>
                 function gscalebutton() {
-                    nameToGrayscale();
+                    nameToGrayscale(); // C++ Function
                 }
+            </script>
+            <input class="input" id="inputContrastValue">Input</input>
+            <script>
+				function inputContrast() {
+					int contrastValue = document.getElementById("inputContrastValue");
+					nameToContrast(contrastValue); // C++ Function
+				}
             </script>
             <p id="bookString">Your list of books will go here.</p>
             <button class="button-28" onclick="listbooks()">List All Books</button>

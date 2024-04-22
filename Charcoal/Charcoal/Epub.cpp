@@ -11,6 +11,7 @@
 #include "stb_image_write.h"
 #define _CRT_SECURE_NO_WARNINGS
 #pragma once
+
 book Epub::add(PWSTR path)
 {
     book curr;

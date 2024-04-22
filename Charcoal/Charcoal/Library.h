@@ -15,6 +15,8 @@ public:
     std::string language;
     std::string description;
 
+    float contrastValue;
+
     PWSTR path;
 
 

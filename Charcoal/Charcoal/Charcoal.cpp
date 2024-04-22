@@ -100,6 +100,13 @@ void Charcoal::grayscaleName(const JSObject& thisObject, const JSArgs& args) { /
     //MessageBoxA(NULL, added.c_str(), "Book Data", MB_OK);
 }
 
+void Charcoal::contrastName(const JSObject& thisObject, const JSArgs& args, int contrastValue) { //at the moment just gets metadata, you will put your contrast hooks here.
+    //std::string added = ebooks.getStringData();
+    //MessageBoxA(NULL, added.c_str(), "Book Data", MB_OK);
+
+    //int x = document.getElementById("inputContrastValue");
+}
+
 
 void Charcoal::OpenFile(const JSObject& thisObject, const JSArgs& args)
 {
@@ -146,9 +153,8 @@ void Charcoal::OnDOMReady(ultralight::View* caller,
     global["AddBook"] = BindJSCallback(&Charcoal::OpenFile);
     global["listAllBooks"] = BindJSCallback(&Charcoal::printAllBooks);
     global["nameToGrayscale"] = BindJSCallback(&Charcoal::grayscaleName);
-
+    global["nameToContrast"] = BindJSCallback(&Charcoal::contrastName);
 }
-
 
 void Charcoal::Run() {
     app_->Run();
