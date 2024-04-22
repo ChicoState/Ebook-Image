@@ -30,6 +30,9 @@ public:
 protected:
     std::vector<book> collection;
     void push(book b);
+    //Optional paramaters for quality and image resize, 
+    //g for grayscale, c for compress, including a percent (1-100) for x, s for size, including a height then width as x and y
+    void Library::process(std::string path, char flag, std::string destination, int x = -1, int y = -1);
 
 };
 
