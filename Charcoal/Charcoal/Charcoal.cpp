@@ -90,13 +90,13 @@ JSValueRef OnButtonClick(JSContextRef ctx, JSObjectRef function,
     const JSValueRef arguments[], JSValueRef* exception) { //LISTS BOOKS
 
     std::string bookList = ebooks.printall();
-    std::string str = "document.getElementById('result').innerText = '";
+    std::string str = "document.getElementById('bookList').innerHTML += ('";
+    //document.getElementById('theList').innerHTML += ('<li><span>'+ word + '</span></li>');
     str += bookList;
-    str += "'";
-
+    str += "');";
     const char* ct = str.c_str();
-
-    //MessageBoxA(NULL, ct, "Book List2", MB_OK);
+    //ct = "document.getElementById('bookList').innerHTML += ('<li><span>'+ \"word\" + '</span></li><li><span>'+ \"word2\" + '</span></li><li><span>'+ \"word3\" + '</span></li>');";
+    MessageBoxA(NULL, ct, "Book List2", MB_OK);
     
     // Create our list with JavaScript
     JSStringRef script = JSStringCreateWithUTF8CString(ct);

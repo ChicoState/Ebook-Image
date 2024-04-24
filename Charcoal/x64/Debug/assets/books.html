@@ -96,6 +96,13 @@
                 top: 49%;
                 box-shadow: 0 8px 24px -6px #1a225a72;
             }
+        ul {
+            list-style-position: inside;
+        }
+        .list ul li:hover {
+            left: 10px;
+        }
+
     </style>
 
 </head>
@@ -114,12 +121,16 @@
                 }
             </script>
             <button class="button-28" onclick="OnButtonClick();">Update Book List</button>
-            <p id="result">You have no books added. Add one now! </p>
+            <p id="result">Here are your books: </p>
+            <div class="list">
+                <ul id="bookList">
+                </ul>
+            </div>
             <div id="bs"></div>
             <button class="button-28" onclick="rmbooksbutton()">Remove Books</button>
             <script>
                 function rmbooksbutton() {
-                    //add rmbooks function hook here also above make sure to check out overflow-y for p 
+                    //add rmbooks function hook here also above make sure to check out overflow-y for p
                 }
             </script>
         </div>
