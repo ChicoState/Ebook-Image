@@ -32,6 +32,8 @@ public:
         uint64_t frame_id,
         bool is_main_frame,
         const String& url) override;
+
+
     virtual JSValue printAllBooks(const JSObject& thisObject, const JSArgs& args);
     virtual void grayscaleName(const JSObject& thisObject, const JSArgs& args);
 

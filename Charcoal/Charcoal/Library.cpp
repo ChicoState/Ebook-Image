@@ -13,13 +13,13 @@
 #pragma once
 std::string Library::printall()
 {
-    std::string allBooks = "Book list: \n";
+    std::string allBooks = "Book list: ";
     std::vector<book>::iterator it;
     for (it = collection.begin(); it != collection.end(); ++it)
     {
 
 		book curr = *it;
-		allBooks += (curr.title + '\n');
+		allBooks += (curr.title + ", ");
 		/*std::cout << "Author: " << curr.author << std::endl;
 		std::cout << "Publisher: " << curr.publisher << std::endl;
 		std::cout << "Contributor: " << curr.contributor << std::endl;

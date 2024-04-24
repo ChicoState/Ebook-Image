@@ -106,52 +106,20 @@
     <div id="divider"></div>
     <div id="contents">
         <div id="message">
-            
+
             <button class="button-28" onclick="gscalebutton()">Grayscale</button>
             <script>
                 function gscalebutton() {
                     nameToGrayscale();
                 }
             </script>
-
-            <p id="bs">Your list of books will go here.</p>
-            <script>
-                function fetchJSONData() {
-                    fetch("./test.json")
-                        .then(res => res.json())
-                        .then(data => {
-                            // Convert the data object to a string representation
-                            const dataString = JSON.stringify(data, null, 2); // The second argument (null) is for the replacer function, and the third argument (2) is for the indent level
-                            document.getElementById('bs').innerHTML = dataString;
-                        })
-                        .catch(error => console.error("Unable to fetch data:", error));
-                }
-                fetchJSONData();  
-                
-            </script>
-            <button class="button-28" onclick="listbooks()">List All Books</button>
-            <script>
-                //document.getElementById("bs").innerHTML = "New text!";
-                function listbooks() {
-                    //supposed to call the listAllBooks function and get the JSString object, however it doesn't seem to get anything
-
-                    var bookString = listAllBooks();
-
-                    //displays the book list string
-                    //var bookElement = document.getElementById('bs');
-                    //bookElement.innerHTML = bs.toString();
-
-                    var bookElement = document.getElementById('bs');
-                    bookElement.innerHTML = "Hello";
-
-
-                }
-            </script>
-
+            <button class="button-28" onclick="OnButtonClick();">Update Book List</button>
+            <p id="result">You have no books added. Add one now! </p>
+            <div id="bs"></div>
             <button class="button-28" onclick="rmbooksbutton()">Remove Books</button>
             <script>
                 function rmbooksbutton() {
-                    //add rmbooks function hook here
+                    //add rmbooks function hook here also above make sure to check out overflow-y for p 
                 }
             </script>
         </div>

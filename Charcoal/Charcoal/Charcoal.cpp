@@ -83,6 +83,33 @@ Charcoal::Charcoal() {
 Charcoal::~Charcoal() {
 }
 
+
+
+JSValueRef OnButtonClick(JSContextRef ctx, JSObjectRef function,
+    JSObjectRef thisObject, size_t argumentCount,
+    const JSValueRef arguments[], JSValueRef* exception) { //LISTS BOOKS
+
+    std::string bookList = ebooks.printall();
+    std::string str = "document.getElementById('result').innerText = '";
+    str += bookList;
+    str += "'";
+
+    const char* ct = str.c_str();
+
+    //MessageBoxA(NULL, ct, "Book List2", MB_OK);
+    
+    // Create our list with JavaScript
+    JSStringRef script = JSStringCreateWithUTF8CString(ct);
+
+    // Execute it with JSEvaluateScript, ignoring other parameters for now
+    JSEvaluateScript(ctx, script, 0, 0, 0, 0);
+
+    // Release our string (we only Release what we Create)
+    JSStringRelease(script);
+
+    return JSValueMakeNull(ctx);
+}
+
 JSValue Charcoal::printAllBooks(const JSObject& thisObject, const JSArgs& args) {
    
     std::string bookList = ebooks.printall();
@@ -154,6 +181,29 @@ void Charcoal::OnDOMReady(ultralight::View* caller,
     global["listAllBooks"] = BindJSCallback(&Charcoal::printAllBooks);
     global["nameToGrayscale"] = BindJSCallback(&Charcoal::grayscaleName);
     
+    auto scoped_context = context;
+
+    // Typecast to the underlying JSContextRef.
+    JSContextRef ctx = (*scoped_context);
+
+    // Create a JavaScript String containing the name of our callback.
+    JSStringRef name = JSStringCreateWithUTF8CString("OnButtonClick");
+
+    // Create a garbage-collected JavaScript function that is bound to our
+    // native C callback 'OnButtonClick()'.
+    JSObjectRef func = JSObjectMakeFunctionWithCallback(ctx, name, OnButtonClick);
+
+    // Get the global JavaScript object (aka 'window')
+    JSObjectRef globalObj = JSContextGetGlobalObject(ctx);
+
+    // Store our function in the page's global JavaScript object so that it
+    // accessible from the page as 'OnButtonClick()'.
+    JSObjectSetProperty(ctx, globalObj, name, func, 0, 0);
+
+    // Release the JavaScript String we created earlier.
+    JSStringRelease(name);
+
+
 }
 
 
