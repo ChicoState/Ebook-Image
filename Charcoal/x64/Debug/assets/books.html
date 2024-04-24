@@ -69,8 +69,7 @@
         }
 
         h3 {
-            margin-left: 10px;
-            margin-top: 32px;
+            margin:auto
         }
 
         #contents {
@@ -96,7 +95,9 @@
                 top: 49%;
                 box-shadow: 0 8px 24px -6px #1a225a72;
             }
+
         ul {
+            text-align: left;
             list-style-position: inside;
         }
         .list ul li:hover {
@@ -113,7 +114,11 @@
     <div id="divider"></div>
     <div id="contents">
         <div id="message">
-
+            <h3 id="result">BOOKS: </h3>
+            <div class="list">
+                <ul id="bookList">
+                </ul>
+            </div>
             <button class="button-28" onclick="gscalebutton()">Grayscale</button>
             <script>
                 function gscalebutton() {
@@ -121,11 +126,7 @@
                 }
             </script>
             <button class="button-28" onclick="OnButtonClick();">Update Book List</button>
-            <p id="result">Here are your books: </p>
-            <div class="list">
-                <ul id="bookList">
-                </ul>
-            </div>
+
             <div id="bs"></div>
             <button class="button-28" onclick="rmbooksbutton()">Remove Books</button>
             <script>
@@ -133,6 +134,7 @@
                     //add rmbooks function hook here also above make sure to check out overflow-y for p
                 }
             </script>
+
         </div>
     </div>
 </body>
