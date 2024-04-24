@@ -12,8 +12,15 @@
 #include <Appcore/AppCore.h>
 #include <JavaScriptCore/JavaScript.h>
 #include "Library.h"
+#include <iostream>
+#include <JavaScriptCore/JSRetainPtr.h>
+
+
 #define WINDOW_WIDTH  900
 #define WINDOW_HEIGHT 600
+
+
+RefPtr<JSContext> context;
 
 using namespace ultralight;
 Library ebooks;
@@ -77,7 +84,7 @@ Charcoal::~Charcoal() {
 }
 
 JSValue Charcoal::printAllBooks(const JSObject& thisObject, const JSArgs& args) {
-
+   
     std::string bookList = ebooks.printall();
 
     MessageBoxA(NULL, bookList.c_str(), "Book List", MB_OK); //this confirms there is an actual booklist.
@@ -140,13 +147,13 @@ void Charcoal::OnDOMReady(ultralight::View* caller,
     uint64_t frame_id,
     bool is_main_frame,
     const String& url) {
-    RefPtr<JSContext> context = caller->LockJSContext();
+    context = caller->LockJSContext();
     SetJSContext(context->ctx());
     JSObject global = JSGlobalObject();
     global["AddBook"] = BindJSCallback(&Charcoal::OpenFile);
     global["listAllBooks"] = BindJSCallback(&Charcoal::printAllBooks);
     global["nameToGrayscale"] = BindJSCallback(&Charcoal::grayscaleName);
-
+    
 }
 
 
@@ -205,3 +212,41 @@ void Charcoal::OnChangeTitle(ultralight::View* caller,
     ///
     window_->SetTitle(title.utf8().data());
 }
+
+#include <Ultralight/Ultralight.h>
+
+using namespace ultralight;
+
+inline std::string ToUTF8(const String& str) {
+    String8 utf8 = str.utf8();
+    return std::string(utf8.data(), utf8.length());
+}
+
+inline const char* Stringify(MessageSource source) {
+    switch (source) {
+    case kMessageSource_XML: return "XML";
+    case kMessageSource_JS: return "JS";
+    case kMessageSource_Network: return "Network";
+    case kMessageSource_ConsoleAPI: return "ConsoleAPI";
+    case kMessageSource_Storage: return "Storage";
+    case kMessageSource_AppCache: return "AppCache";
+    case kMessageSource_Rendering: return "Rendering";
+    case kMessageSource_CSS: return "CSS";
+    case kMessageSource_Security: return "Security";
+    case kMessageSource_ContentBlocker: return "ContentBlocker";
+    case kMessageSource_Other: return "Other";
+    default: return "";
+    }
+}
+
+inline const char* Stringify(MessageLevel level) {
+    switch (level) {
+    case kMessageLevel_Log: return "Log";
+    case kMessageLevel_Warning: return "Warning";
+    case kMessageLevel_Error: return "Error";
+    case kMessageLevel_Debug: return "Debug";
+    case kMessageLevel_Info: return "Info";
+    default: return "";
+    }
+}
+

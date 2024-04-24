@@ -113,23 +113,19 @@
                     nameToGrayscale();
                 }
             </script>
+
             <p id="bs">Your list of books will go here.</p>
             <script>
-                    function fetchJSONData() {
-                        fetch("./test.json")
-                            .then((res) => {
-                                if (!res.ok) {
-                                    throw new Error
-                                        (`HTTP error! Status: ${res.status}`);
-                                }
-                                return res.json();
-                            })
-                            .then((data) =>
-                                console.log(data))
-                            .catch((error) =>
-                                console.error("Unable to fetch data:", error));
-                        document.getElementById('bs').innerHTML = data;
-                    }
+                function fetchJSONData() {
+                    fetch("./test.json")
+                        .then(res => res.json())
+                        .then(data => {
+                            // Convert the data object to a string representation
+                            const dataString = JSON.stringify(data, null, 2); // The second argument (null) is for the replacer function, and the third argument (2) is for the indent level
+                            document.getElementById('bs').innerHTML = dataString;
+                        })
+                        .catch(error => console.error("Unable to fetch data:", error));
+                }
                 fetchJSONData();  
                 
             </script>
