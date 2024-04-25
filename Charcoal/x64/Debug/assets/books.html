@@ -69,8 +69,7 @@
         }
 
         h3 {
-            margin-left: 10px;
-            margin-top: 32px;
+            margin:auto
         }
 
         #contents {
@@ -96,41 +95,45 @@
                 top: 49%;
                 box-shadow: 0 8px 24px -6px #1a225a72;
             }
+
+        ul {
+            text-align: left;
+            list-style-position: inside;
+        }
+        .list ul li:hover {
+            left: 10px;
+        }
+
     </style>
 
 </head>
-<body>
+<body onload="OnButtonClick()">
     <div class="sidebar">
         <iframe src="sidebar.html" frameborder="0" scrolling="no" style=" border: 0px none; width: 20%; height: 100%; position: fixed; overflow: hidden;"></iframe>
     </div>
     <div id="divider"></div>
     <div id="contents">
         <div id="message">
+            <h3 id="result">BOOKS: </h3>
+            <div class="list">
+                <ul id="bookList">
+                </ul>
+            </div>
             <button class="button-28" onclick="gscalebutton()">Grayscale</button>
             <script>
                 function gscalebutton() {
                     nameToGrayscale();
                 }
             </script>
-            <p id="bookString">Your list of books will go here.</p>
-            <button class="button-28" onclick="listbooks()">List All Books</button>
-            <script>
-                function listbooks() {
-                    //supposed to call the listAllBooks function and get the JSString object, however it doesn't seem to get anything
-                    var bookString = listAllBooks();
-            
-                    //displays the book list string
-                    var bookElement = document.getElementById('bookString');
-                    bookElement.innerHTML = bookString.toString();
-                }
-            </script>
-            
+
+            <div id="bs"></div>
             <button class="button-28" onclick="rmbooksbutton()">Remove Books</button>
             <script>
                 function rmbooksbutton() {
-                    //add rmbooks function hook here
+                    //add rmbooks function hook here also above make sure to check out overflow-y for p
                 }
             </script>
+
         </div>
     </div>
 </body>

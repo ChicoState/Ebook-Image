@@ -12,8 +12,15 @@
 #include <Appcore/AppCore.h>
 #include <JavaScriptCore/JavaScript.h>
 #include "Library.h"
+#include <iostream>
+#include <JavaScriptCore/JSRetainPtr.h>
+
+
 #define WINDOW_WIDTH  900
 #define WINDOW_HEIGHT 600
+
+
+RefPtr<JSContext> context;
 
 using namespace ultralight;
 Library ebooks;
@@ -76,13 +83,40 @@ Charcoal::Charcoal() {
 Charcoal::~Charcoal() {
 }
 
-JSValue Charcoal::printAllBooks(const JSObject& thisObject, const JSArgs& args) {
 
+
+JSValueRef OnButtonClick(JSContextRef ctx, JSObjectRef function,
+    JSObjectRef thisObject, size_t argumentCount,
+    const JSValueRef arguments[], JSValueRef* exception) { //LISTS BOOKS
+
+    std::string bookList = ebooks.printall();
+    std::string str = "document.getElementById('bookList').innerHTML = ('";
+
+    str += bookList;
+    str += "');";
+    const char* ct = str.c_str();
+    
+    //MessageBoxA(NULL, ct, "Book List2", MB_OK);
+    
+    // Create our list with JavaScript
+    JSStringRef script = JSStringCreateWithUTF8CString(ct);
+
+    // Execute it with JSEvaluateScript, ignoring other parameters for now
+    JSEvaluateScript(ctx, script, 0, 0, 0, 0);
+
+    // Release our string (we only Release what we Create)
+    JSStringRelease(script);
+
+    return JSValueMakeNull(ctx);
+}
+
+JSValue Charcoal::printAllBooks(const JSObject& thisObject, const JSArgs& args) {
+   
     std::string bookList = ebooks.printall();
 
     MessageBoxA(NULL, bookList.c_str(), "Book List", MB_OK); //this confirms there is an actual booklist.
 
-    //convert the book list string to a JavaScript string
+    //convert the book list string to a JavaScript string, but does not work. 
 
     JSStringRef jsBookList = JSStringCreateWithUTF8CString(bookList.c_str());
 
@@ -90,12 +124,12 @@ JSValue Charcoal::printAllBooks(const JSObject& thisObject, const JSArgs& args) 
 
     JSStringRelease(jsBookList);
 
-    //return the JSValue object
+    //return the JSValue object, I tried with JSString and the issue persisted. 
 
     return jsValue;
 
 }
-void Charcoal::grayscaleName(const JSObject& thisObject, const JSArgs& args) { //at the moment just gets metadata, you will put your grayscale hooks here.
+void Charcoal::grayscaleName(const JSObject& thisObject, const JSArgs& args) { //at the moment just gets metadata, Thomas will puts grayscale hooks here.
     //std::string added = ebooks.getStringData();
     //MessageBoxA(NULL, added.c_str(), "Book Data", MB_OK);
 }
@@ -140,12 +174,35 @@ void Charcoal::OnDOMReady(ultralight::View* caller,
     uint64_t frame_id,
     bool is_main_frame,
     const String& url) {
-    RefPtr<JSContext> context = caller->LockJSContext();
+    context = caller->LockJSContext();
     SetJSContext(context->ctx());
     JSObject global = JSGlobalObject();
     global["AddBook"] = BindJSCallback(&Charcoal::OpenFile);
     global["listAllBooks"] = BindJSCallback(&Charcoal::printAllBooks);
     global["nameToGrayscale"] = BindJSCallback(&Charcoal::grayscaleName);
+    
+    auto scoped_context = context;
+
+    // Typecast to the underlying JSContextRef.
+    JSContextRef ctx = (*scoped_context);
+
+    // Create a JavaScript String containing the name of our callback.
+    JSStringRef name = JSStringCreateWithUTF8CString("OnButtonClick");
+
+    // Create a garbage-collected JavaScript function that is bound to our
+    // native C callback 'OnButtonClick()'.
+    JSObjectRef func = JSObjectMakeFunctionWithCallback(ctx, name, OnButtonClick);
+
+    // Get the global JavaScript object (aka 'window')
+    JSObjectRef globalObj = JSContextGetGlobalObject(ctx);
+
+    // Store our function in the page's global JavaScript object so that it
+    // accessible from the page as 'OnButtonClick()'.
+    JSObjectSetProperty(ctx, globalObj, name, func, 0, 0);
+
+    // Release the JavaScript String we created earlier.
+    JSStringRelease(name);
+
 
 }
 
@@ -205,3 +262,41 @@ void Charcoal::OnChangeTitle(ultralight::View* caller,
     ///
     window_->SetTitle(title.utf8().data());
 }
+
+#include <Ultralight/Ultralight.h>
+
+using namespace ultralight;
+
+inline std::string ToUTF8(const String& str) {
+    String8 utf8 = str.utf8();
+    return std::string(utf8.data(), utf8.length());
+}
+
+inline const char* Stringify(MessageSource source) {
+    switch (source) {
+    case kMessageSource_XML: return "XML";
+    case kMessageSource_JS: return "JS";
+    case kMessageSource_Network: return "Network";
+    case kMessageSource_ConsoleAPI: return "ConsoleAPI";
+    case kMessageSource_Storage: return "Storage";
+    case kMessageSource_AppCache: return "AppCache";
+    case kMessageSource_Rendering: return "Rendering";
+    case kMessageSource_CSS: return "CSS";
+    case kMessageSource_Security: return "Security";
+    case kMessageSource_ContentBlocker: return "ContentBlocker";
+    case kMessageSource_Other: return "Other";
+    default: return "";
+    }
+}
+
+inline const char* Stringify(MessageLevel level) {
+    switch (level) {
+    case kMessageLevel_Log: return "Log";
+    case kMessageLevel_Warning: return "Warning";
+    case kMessageLevel_Error: return "Error";
+    case kMessageLevel_Debug: return "Debug";
+    case kMessageLevel_Info: return "Info";
+    default: return "";
+    }
+}
+
