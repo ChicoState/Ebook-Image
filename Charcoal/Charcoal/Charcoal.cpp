@@ -110,25 +110,7 @@ JSValueRef OnButtonClick(JSContextRef ctx, JSObjectRef function,
     return JSValueMakeNull(ctx);
 }
 
-JSValue Charcoal::printAllBooks(const JSObject& thisObject, const JSArgs& args) {
-   
-    std::string bookList = ebooks.printall();
-
-    MessageBoxA(NULL, bookList.c_str(), "Book List", MB_OK); //this confirms there is an actual booklist.
-
-    //convert the book list string to a JavaScript string, but does not work. 
-
-    JSStringRef jsBookList = JSStringCreateWithUTF8CString(bookList.c_str());
-
-    JSValue jsValue = JSValue(jsBookList);
-
-    JSStringRelease(jsBookList);
-
-    //return the JSValue object, I tried with JSString and the issue persisted. 
-
-    return jsValue;
-
-}
+s
 void Charcoal::grayscaleName(const JSObject& thisObject, const JSArgs& args) { //at the moment just gets metadata, Thomas will puts grayscale hooks here.
     //std::string added = ebooks.getStringData();
     //MessageBoxA(NULL, added.c_str(), "Book Data", MB_OK);
