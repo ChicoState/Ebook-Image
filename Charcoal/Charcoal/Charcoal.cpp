@@ -96,7 +96,7 @@ JSValueRef OnButtonClick(JSContextRef ctx, JSObjectRef function,
     str += "');";
     const char* ct = str.c_str();
     
-    //MessageBoxA(NULL, ct, "Book List2", MB_OK);
+    //MessageBoxA(NULL, ct, "Book List Raw String", MB_OK);
     
     // Create our list with JavaScript
     JSStringRef script = JSStringCreateWithUTF8CString(ct);
@@ -110,7 +110,6 @@ JSValueRef OnButtonClick(JSContextRef ctx, JSObjectRef function,
     return JSValueMakeNull(ctx);
 }
 
-s
 void Charcoal::grayscaleName(const JSObject& thisObject, const JSArgs& args) { //at the moment just gets metadata, Thomas will puts grayscale hooks here.
     //std::string added = ebooks.getStringData();
     //MessageBoxA(NULL, added.c_str(), "Book Data", MB_OK);
@@ -160,7 +159,6 @@ void Charcoal::OnDOMReady(ultralight::View* caller,
     SetJSContext(context->ctx());
     JSObject global = JSGlobalObject();
     global["AddBook"] = BindJSCallback(&Charcoal::OpenFile);
-    global["listAllBooks"] = BindJSCallback(&Charcoal::printAllBooks);
     global["nameToGrayscale"] = BindJSCallback(&Charcoal::grayscaleName);
     
     auto scoped_context = context;
