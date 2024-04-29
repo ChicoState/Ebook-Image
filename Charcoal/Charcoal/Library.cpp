@@ -50,7 +50,6 @@ std::string Library::getStringData(std::string name)
             meta << "Date: " << collection[i].date << std::endl;
             meta << "Language: " << collection[i].language << std::endl;
             meta << "Description: " << collection[i].description << std::endl;
-            meta << "Rights: " << collection[i].rights << std::endl;
 		}
 	}
     data = meta.str();
