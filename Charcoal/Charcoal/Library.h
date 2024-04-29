@@ -14,6 +14,7 @@ public:
     std::string date;
     std::string language;
     std::string description;
+    int ID;
 
     PWSTR path;
 

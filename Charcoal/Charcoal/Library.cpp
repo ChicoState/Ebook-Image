@@ -79,14 +79,16 @@ std::string Library::getFileExtension(const std::string& filePath)
     // Return an empty string if no '.' found
     return "";
 }
+int ID = 0;
 std::string Library::add(PWSTR path)
 {
     std::string f = getFileExtension(wstrtostr(path));
     if (f == "epub")
     {
         Epub e;
-        e.grayscaleEpub(path);
         book curr = e.add(path);
+        curr.ID = ID;
+        ++ID;
         collection.push_back(curr);
         return curr.title;
 	}
