@@ -11,7 +11,7 @@
 #include "AZW3.h"
 #include "PDF.h"
 #include <filesystem>
-#include <opencv2/core/core.hpp>
+#include <opencv2/opencv.hpp>
 #include <opencv2/highgui/highgui.hpp>
 #pragma once
 std::string Library::printall()
@@ -114,9 +114,10 @@ std::string Library::add(PWSTR path)
 	}
     return NULL;
 }
-void Library::process(std::string path, char flag, std::string dest, int x, int y) {
+void Library::processImage(std::string path, char flag, std::string dest, int x, int y) {
     for (const auto& entry : std::filesystem::directory_iterator(path)) {
-        cv::Mat image = cd::imread(path);
+        std::string file_path = entry.path().string();
+        cv::Mat image = cv::imread(file_path);
         cv::Mat product;
         switch (flag) {
             case 'g':
@@ -133,6 +134,6 @@ void Library::process(std::string path, char flag, std::string dest, int x, int 
                 break;
         }
         if(!product.empty())
-            cv::imwrite(dest, product);
+            cv::imwrite((dest + (file_path.substr(file_path.find_last_of("/\\") + 1))), product);
     }
 }

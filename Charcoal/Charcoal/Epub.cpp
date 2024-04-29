@@ -9,6 +9,7 @@
 #include <string>
 #include "stb_image.h"
 #include "stb_image_write.h"
+#include "filesystem"
 #define _CRT_SECURE_NO_WARNINGS
 #pragma once
 book Epub::add(PWSTR path)
@@ -111,7 +112,7 @@ void Epub::grayscaleEpub(PWSTR path) {
     zipArchive.open(ZipArchive::Write);
     std::vector<ZipEntry> entries = zipArchive.getEntries();
     std::vector<ZipEntry>::iterator it;
-    std::string temp = "C:\\Users\\Younitea\\Documents\\Books\\tst\\OEBPS\\images\\"; //TODO MAKE RELATIVE/through memory, not temp file
+    std::string temp = std::filesystem::temp_directory_path().string(); //TODO MAKE RELATIVE/through memory, not temp file
     for (it = entries.begin(); it != entries.end(); ++it) {
         ZipEntry entry = *it;
         std::string name = entry.getName();
