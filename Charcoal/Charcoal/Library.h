@@ -32,7 +32,11 @@ protected:
     void push(book b);
     //Optional paramaters for quality and image resize, 
     //g for grayscale, c for compress, including a percent (1-100) for x, s for size, including a height then width as x and y
+<<<<<<< HEAD
     void processImage(std::string path, char flag, std::string destination, int x = -1, int y = -1);
+=======
+    void process(std::string path, char flag, std::string destination, int x = -1, int y = -1);
+>>>>>>> c55273caa9a5ccbcff10f78ef38ea2a67352c360
 
 };
 
