@@ -170,35 +170,58 @@
                 top: 49%;
                 box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
             }
+        ul {
+            text-align: center;
+            list-style-type: none; /* Remove bullets */
+            padding: 0; /* Remove padding */
+            margin: 0; /* Remove margins */
+        }
+
+        .list ul li:hover {
+            left: 10px;
+        }
     </style>
 
 </head>
-<body>
-    <div class="intro">
-        <h1 class="logo-header">
-            <span class="logo">Welcome to </span> <span class="logo"> Charcoal!</span>
-        </h1>
-    </div>
-    <script src="app.js"></script>
-
+<body onload="OnButtonClick()">
     <div class="sidebar">
         <iframe src="sidebar.html" frameborder="0" scrolling="no" style=" border: 0px none; width: 20%; height: 100%; position: fixed; overflow: hidden;"></iframe>
     </div>
     <div id="divider"></div>
-    
     <div id="contents">
         <div id="message">
-
-            Please select a service to begin.
-            
-
+            <h2 id="result">
+                BOOKS: 
+            </h2>
+            <div class="list">
+                <ul id="bookList">
+                </ul>
+            </div>
             <button class="button-28" onclick="testbutton()">Add Book</button>
             <script>
                 function testbutton() {
                     AddBook();
+                    OnButtonClick();
                 }
             </script>
 
+            <button class="button-28" onclick="gscalebutton()">Grayscale</button>
+            <script>
+                function gscalebutton() {
+                    nameToGrayscale();
+                }
+            </script>
+
+            <div id="bs"></div>
+            <button class="button-28" onclick="rmbooksbutton()">Remove Books</button>
+            <script>
+                function rmbooksbutton() {
+                    //add rmbooks function hook here
+                    removeBook();
+                    OnButtonClick();
+                }
+            </script>
         </div>
     </div>
+
 </body>

@@ -97,8 +97,10 @@
             }
 
         ul {
-            text-align: left;
-            list-style-position: inside;
+            text-align: center;
+            list-style-type: none; /* Remove bullets */
+            padding: 0; /* Remove padding */
+            margin: 0; /* Remove margins */
         }
         .list ul li:hover {
             left: 10px;
@@ -130,7 +132,9 @@
             <button class="button-28" onclick="rmbooksbutton()">Remove Books</button>
             <script>
                 function rmbooksbutton() {
-                    //add rmbooks function hook here also above make sure to check out overflow-y for p
+                    //add rmbooks function hook here
+                    removeBook();
+                    OnButtonClick();
                 }
             </script>
 
