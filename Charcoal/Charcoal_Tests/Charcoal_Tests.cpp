@@ -57,5 +57,13 @@ namespace CharcoalTests
 			std::string out = l.getStringData("Pride and Prejudice");
 			Assert::AreEqual(out, std::string("Title: Pride and Prejudice\nAuthor: Jane Austen\nPublisher: \nContributor: \nRights: Public domain in the USA.\nFormat: \nDate: 2014-07-04T14:27:21.418689+00:00\nLanguage: en\nDescription: \n"));
 		}
+		TEST_METHOD(bookRemove)
+		{
+			Library l;
+			PWSTR file = L"..\\..\\Charcoal\\libepub-master\\books\\PrideAndPrejudice.epub";
+			l.add(file);
+			int out = l.remove(1);
+			Assert::AreEqual(out, 1);
+		}
 	};
 }

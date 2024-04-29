@@ -110,5 +110,18 @@ std::string Library::add(PWSTR path)
     {
 		MessageBoxA(NULL, "File format not supported", "Error", MB_OK);
 	}
-    return NULL;
+    return "";
+}
+
+int Library::remove(int ID)
+{
+    for (int i = 0; i < collection.size(); i++)
+    {
+        if (collection[i].ID == ID)
+        {
+			collection.erase(collection.begin() + i);
+			return 1;
+		}   
+    }
+    return -1;
 }
