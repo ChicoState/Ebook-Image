@@ -11,9 +11,10 @@
 #include <Ultralight/Ultralight.h>
 #include <Appcore/AppCore.h>
 #include <JavaScriptCore/JavaScript.h>
-#include "Library.h"
+#include <filesystem>
 #include <iostream>
-#include <JavaScriptCore/JSRetainPtr.h>
+#include <string>
+#include "Library.h"
 
 
 #define WINDOW_WIDTH  900
@@ -160,6 +161,7 @@ void Charcoal::OnDOMReady(ultralight::View* caller,
     JSObject global = JSGlobalObject();
     global["AddBook"] = BindJSCallback(&Charcoal::OpenFile);
     global["nameToGrayscale"] = BindJSCallback(&Charcoal::grayscaleName);
+    global["AddBookFolder"] = BindJSCallback(&Charcoal::getFolderPath);
     
     auto scoped_context = context;
 
@@ -242,6 +244,65 @@ void Charcoal::OnChangeTitle(ultralight::View* caller,
     ///
     window_->SetTitle(title.utf8().data());
 }
+
+void iterateFilesInFolder(const std::wstring& folderPath) {
+    PWSTR pszFilePath = NULL;
+    WIN32_FIND_DATA findData;
+    HANDLE hFind = FindFirstFile((folderPath + L"\\*").c_str(), &findData);
+    if (hFind != INVALID_HANDLE_VALUE) {
+        do {
+            if (!(findData.dwFileAttributes & FILE_ATTRIBUTE_DIRECTORY)) {
+                std::wstring concatenatedPath = folderPath + L"\\" + findData.cFileName;
+                pszFilePath = const_cast<PWSTR>(concatenatedPath.c_str());
+                std::string title = ebooks.add(pszFilePath);
+            }
+        } while (FindNextFile(hFind, &findData) != 0);
+        FindClose(hFind);
+    }
+}
+
+void Charcoal::getFolderPath(const JSObject& thisObject, const JSArgs& arg) {
+    // CoInitialize is necessary for using COM interfaces on Windows
+    CoInitialize(nullptr);
+
+    // Open folder selection dialog
+    IFileDialog* pFolderDialog;
+    HRESULT hr = CoCreateInstance(CLSID_FileOpenDialog, nullptr, CLSCTX_INPROC_SERVER, IID_PPV_ARGS(&pFolderDialog));
+    if (SUCCEEDED(hr)) {
+        DWORD dwOptions;
+        pFolderDialog->GetOptions(&dwOptions);
+        pFolderDialog->SetOptions(dwOptions | FOS_PICKFOLDERS);
+
+        // Show the dialog
+        hr = pFolderDialog->Show(nullptr);
+        if (SUCCEEDED(hr)) {
+            IShellItem* pItem;
+            hr = pFolderDialog->GetResult(&pItem);
+            if (SUCCEEDED(hr)) {
+                PWSTR pszFolderPath;
+                hr = pItem->GetDisplayName(SIGDN_FILESYSPATH, &pszFolderPath);
+                if (SUCCEEDED(hr)) {
+                    std::wstring folderPath(pszFolderPath);
+                    CoTaskMemFree(pszFolderPath);
+
+                    // Iterate through the files in the folder
+                    iterateFilesInFolder(folderPath);
+
+                    pItem->Release();
+                    pFolderDialog->Release();
+                    CoUninitialize();
+                    return ;
+                }
+                pItem->Release();
+            }
+        }
+        pFolderDialog->Release();
+    }
+    CoUninitialize();
+    return;
+}
+
+
 
 #include <Ultralight/Ultralight.h>
 

@@ -49,6 +49,12 @@ public:
     virtual void OnChangeTitle(ultralight::View* caller,
         const String& title) override;
 
+    //virtual void openEpubFolder();
+
+    virtual void getFolderPath(const JSObject& thisObject, const JSArgs& arg);
+   
+
+
 protected:
     RefPtr<App> app_;
     RefPtr<Window> window_;
