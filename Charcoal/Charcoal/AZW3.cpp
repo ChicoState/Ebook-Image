@@ -1,4 +1,5 @@
 #include "AZW3.h"
+/*
 #include <mobi.h>
 #include <cstdio>
 #include <iostream>
@@ -157,3 +158,4 @@ bool extractContentFromMobi(const std::string& filePath, const std::string& outp
 
     return true;
 }
+*/
