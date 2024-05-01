@@ -14,6 +14,7 @@ public:
     std::string date;
     std::string language;
     std::string description;
+    int ID;
 
     PWSTR path;
 
@@ -27,6 +28,7 @@ public:
     std::string getStringData(std::string name);
     std::string wstrtostr(const std::wstring& wstr);
     std::string getFileExtension(const std::string& filePath);
+    int remove(int ID);
 protected:
     std::vector<book> collection;
     void push(book b);

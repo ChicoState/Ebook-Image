@@ -135,19 +135,31 @@ void Charcoal::OpenFile(const JSObject& thisObject, const JSArgs& args)
                 hr = pItem->GetDisplayName(SIGDN_FILESYSPATH, &pszFilePath);
                 if (SUCCEEDED(hr))
                 {
-                    // Your code here
                     
                     CoTaskMemFree(pszFilePath);
                 }
                 pItem->Release();
             }
+            else
+            {
+                pFileOpen->Release();
+                return;
+            }
+        }
+        else
+        {
+            pFileOpen->Release();
+            return;
         }
         pFileOpen->Release();
     }
     //add selected file to library
     std::string title = ebooks.add(pszFilePath);
-    std::string added = ebooks.getStringData(title);
-    MessageBoxA(NULL, added.c_str(), "Book Added", MB_OK);
+    if (title != "")
+    {
+        std::string added = ebooks.getStringData(title);
+        MessageBoxA(NULL, added.c_str(), "Book Added", MB_OK);
+    }
     return;
 }
 
