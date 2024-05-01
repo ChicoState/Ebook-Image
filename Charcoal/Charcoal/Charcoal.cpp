@@ -112,7 +112,7 @@ JSValueRef OnButtonClick(JSContextRef ctx, JSObjectRef function,
     const JSValueRef arguments[], JSValueRef* exception) { //LISTS BOOKS
 
     std::string bookList = ebooks.printall();
-    std::string str = "document.getElementById('List2').innerHTML = ('";
+    std::string str = "document.getElementById('list2').innerHTML = ('";
 
     str += bookList;
     str += "');";
@@ -120,7 +120,7 @@ JSValueRef OnButtonClick(JSContextRef ctx, JSObjectRef function,
     //str = "document.getElementById('List2').innerHTML = ('<label><input type=\"checkbox\" name=\"title\" value=\"troll\"/>TROLL</label> ');";
     const char* ct = str.c_str();
     
-    MessageBoxA(NULL, ct, "Book List2", MB_OK);
+    //MessageBoxA(NULL, ct, "Book List2", MB_OK);
     
     // Create our list with JavaScript
     JSStringRef script = JSStringCreateWithUTF8CString(ct);

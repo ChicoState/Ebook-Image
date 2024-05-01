@@ -195,8 +195,8 @@
                 BOOKS:
             </h2>
             <div class="list">
-                <ul id="bookList">
-                </ul>
+                <div id="list2">
+                </div>
             </div>
             <button class="button-28" onclick="testbutton()">Add Book</button>
             <script>
@@ -210,6 +210,7 @@
             <script>
                 function gscalebutton() {
                     nameToGrayscale();
+                    OnButtonClick();
                 }
             </script>
 
@@ -217,8 +218,14 @@
             <button class="button-28" onclick="rmbooksbutton()">Remove Books</button>
             <script>
                 function rmbooksbutton() {
-                    //add rmbooks function hook here
-                    removeBook();
+                    var array = []
+                    var checkboxes = document.querySelectorAll('input[type=checkbox]:checked')
+
+                    for (var i = 0; i < checkboxes.length; i++) {
+                        array.push(checkboxes[i].value)
+                        alert(checkboxes[i].value);
+                    }
+                    deleteBook();
                     OnButtonClick();
                 }
             </script>
