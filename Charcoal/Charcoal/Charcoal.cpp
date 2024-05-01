@@ -83,7 +83,7 @@ Charcoal::~Charcoal() {
 }
 
 void Charcoal::deleteBooks(const JSObject& thisObject, const JSArgs& args) {
-
+    ebooks.remove(0);
 }
 
 JSValue Charcoal::printAllBooks(const JSObject& thisObject, const JSArgs& args) {
@@ -117,7 +117,7 @@ JSValueRef OnButtonClick(JSContextRef ctx, JSObjectRef function,
     str += bookList;
     str += "');";
 
-    //str = "document.getElementById('List2').innerHTML = ('<label><input type=\"checkbox\" name=\"title\" value= \"troll\"/>TROLL</label> ');";
+    //str = "document.getElementById('List2').innerHTML = ('<label><input type=\"checkbox\" name=\"title\" value=\"troll\"/>TROLL</label> ');";
     const char* ct = str.c_str();
     
     MessageBoxA(NULL, ct, "Book List2", MB_OK);
