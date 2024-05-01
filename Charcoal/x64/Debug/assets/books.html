@@ -118,8 +118,11 @@
         <div id="message">
             <h3 id="result">BOOKS: </h3>
             <div class="list">
-                <h1 id="List2"> You piece of shit
-                </h1>
+                <div id="List2">
+                    <label><input type="checkbox" name="title" value="troll" />TROLL_1</label>
+                    <label><input type="checkbox" name="title" value="troll2" />TROLL_2</label>
+                </div>
+                
                 <ul id="bookList">
                 </ul>
             </div>
@@ -134,7 +137,7 @@
             <button class="button-28" onclick="rmbooksbutton()">Remove Books</button>
             <script>
                 function rmbooksbutton() {
-                    OnButtonClick();
+                    
                     var array = []
                     var checkboxes = document.querySelectorAll('input[type=checkbox]:checked')
 
@@ -143,6 +146,7 @@
                         alert(checkboxes[i].value);
                     }
                     deleteBook();
+                    OnButtonClick();
                 }
             </script>
 

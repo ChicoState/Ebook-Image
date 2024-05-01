@@ -19,7 +19,7 @@ std::string Library::printall()
     {
 
 		book curr = *it;
-		allBooks += ("<label><input type=\"checkbox\" name=\"title\" value= \"" + curr.title + "\"/>" + curr.title + "</label> ");
+		allBooks += ("<label><input type=\"checkbox\" name=\"title\" value= \"" + curr.ID + "\"/>" + curr.title + "</label> ");
 		/*std::cout << "Author: " << curr.author << std::endl;
 		std::cout << "Publisher: " << curr.publisher << std::endl;
 		std::cout << "Contributor: " << curr.contributor << std::endl;
