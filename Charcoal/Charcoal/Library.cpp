@@ -19,7 +19,7 @@ std::string Library::printall()
     {
 
 		book curr = *it;
-		allBooks += ("<li><span>' + \"" + curr.title + "\"+ '</span></li>");
+		allBooks += ("<label><input type=\"checkbox\" name=\"title\" value= \"" + curr.title + "\"/>" + curr.title + "</label> ");
 		/*std::cout << "Author: " << curr.author << std::endl;
 		std::cout << "Publisher: " << curr.publisher << std::endl;
 		std::cout << "Contributor: " << curr.contributor << std::endl;
@@ -32,6 +32,7 @@ std::string Library::printall()
     }
     return allBooks;
 }
+
 
 std::string Library::getStringData(std::string name)
 {
@@ -90,6 +91,7 @@ std::string Library::add(PWSTR path)
         curr.ID = ID;
         ++ID;
         collection.push_back(curr);
+        titles.push_back(curr.title);
         return curr.title;
 	}
     else if (f == "AZW3" || f == "azw3")
@@ -113,7 +115,15 @@ std::string Library::add(PWSTR path)
     return "";
 }
 
-int Library::remove(int ID)
+std::vector<std::string> Library::getBookTitles() {
+    std::vector<std::string> titles;
+    for (const book& b : collection) {
+        titles.push_back(b.title);
+    }
+    return titles;
+}
+
+int Library::remove(int ID) // this actually removes the book from the library. 
 {
     for (int i = 0; i < collection.size(); i++)
     {

@@ -15,7 +15,6 @@
 #include <iostream>
 #include <JavaScriptCore/JSRetainPtr.h>
 
-
 #define WINDOW_WIDTH  900
 #define WINDOW_HEIGHT 600
 
@@ -83,6 +82,29 @@ Charcoal::Charcoal() {
 Charcoal::~Charcoal() {
 }
 
+void Charcoal::deleteBooks(const JSObject& thisObject, const JSArgs& args) {
+
+}
+
+JSValue Charcoal::printAllBooks(const JSObject& thisObject, const JSArgs& args) {
+   
+    std::string bookList = ebooks.printall();
+
+    MessageBoxA(NULL, bookList.c_str(), "Book List", MB_OK); //this confirms there is an actual booklist.
+
+    //convert the book list string to a JavaScript string, but does not work. 
+
+    JSStringRef jsBookList = JSStringCreateWithUTF8CString(bookList.c_str());
+
+    JSValue jsValue = JSValue(jsBookList);
+
+    JSStringRelease(jsBookList);
+
+    //return the JSValue object, I tried with JSString and the issue persisted. 
+
+    return jsValue;
+
+}
 
 
 JSValueRef OnButtonClick(JSContextRef ctx, JSObjectRef function,
@@ -90,13 +112,13 @@ JSValueRef OnButtonClick(JSContextRef ctx, JSObjectRef function,
     const JSValueRef arguments[], JSValueRef* exception) { //LISTS BOOKS
 
     std::string bookList = ebooks.printall();
-    std::string str = "document.getElementById('bookList').innerHTML = ('";
+    std::string str = "document.getElementById('List2').innerHTML = (";
 
     str += bookList;
-    str += "');";
+    str += ");";
     const char* ct = str.c_str();
     
-    //MessageBoxA(NULL, ct, "Book List Raw String", MB_OK);
+    MessageBoxA(NULL, ct, "Book List2", MB_OK);
     
     // Create our list with JavaScript
     JSStringRef script = JSStringCreateWithUTF8CString(ct);
@@ -106,6 +128,8 @@ JSValueRef OnButtonClick(JSContextRef ctx, JSObjectRef function,
 
     // Release our string (we only Release what we Create)
     JSStringRelease(script);
+
+
 
     return JSValueMakeNull(ctx);
 }
@@ -172,6 +196,7 @@ void Charcoal::OnDOMReady(ultralight::View* caller,
     JSObject global = JSGlobalObject();
     global["AddBook"] = BindJSCallback(&Charcoal::OpenFile);
     global["nameToGrayscale"] = BindJSCallback(&Charcoal::grayscaleName);
+    global["deleteBook"] = BindJSCallback(&Charcoal::deleteBooks);
     
     auto scoped_context = context;
 

@@ -33,7 +33,8 @@ public:
         bool is_main_frame,
         const String& url) override;
 
-
+    virtual void deleteBooks(const JSObject& thisObject, const JSArgs& args);
+    virtual JSValue printAllBooks(const JSObject& thisObject, const JSArgs& args);
     virtual void grayscaleName(const JSObject& thisObject, const JSArgs& args);
 
     // This is called when the DOM has loaded in one of its frames.
