@@ -10,6 +10,7 @@
 #include "stb_image.h"
 #include "stb_image_write.h"
 #include "filesystem"
+#include <vector>
 #define _CRT_SECURE_NO_WARNINGS
 #pragma once
 book Epub::add(PWSTR path)
@@ -112,7 +113,9 @@ void Epub::grayscaleEpub(PWSTR path) {
     zipArchive.open(ZipArchive::Write);
     std::vector<ZipEntry> entries = zipArchive.getEntries();
     std::vector<ZipEntry>::iterator it;
-    std::string temp = std::filesystem::temp_directory_path().string(); //TODO MAKE RELATIVE/through memory, not temp file
+    std::filesystem::path path_path = std::filesystem::temp_directory_path();
+    std::string temp = path_path.string();
+    std::vector<std::string> file_clean;
     for (it = entries.begin(); it != entries.end(); ++it) {
         ZipEntry entry = *it;
         std::string name = entry.getName();
@@ -135,12 +138,15 @@ void Epub::grayscaleEpub(PWSTR path) {
             // Write the modified image back to the epub archive
             zipArchive.deleteEntry(name);
             zipArchive.addFile(name, (temp + base_filename).c_str());
+            file_clean.push_back(temp + base_filename);
             stbi_image_free(image);
         }
     }
-    //zipArchive.addEntry("C:/Users/Younitea/Documents/Books/tst/OEBPS/images/");
-    // Save changes to the epub file
     zipArchive.close();
+    for (size_t i = 0; i < file_clean.size(); i++) {
+        std::string file_name = file_clean.at(i);
+        std::filesystem::remove(file_name);
+    }
 }
 
 void Epub::grayscaleImage(unsigned char* imageData, int width, int height) {
