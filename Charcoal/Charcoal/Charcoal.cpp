@@ -154,12 +154,21 @@ void Charcoal::OpenFile(const JSObject& thisObject, const JSArgs& args)
                 hr = pItem->GetDisplayName(SIGDN_FILESYSPATH, &pszFilePath);
                 if (SUCCEEDED(hr))
                 {
-                    // Your code here
                     
                     CoTaskMemFree(pszFilePath);
                 }
                 pItem->Release();
             }
+            else
+            {
+                pFileOpen->Release();
+                return;
+            }
+        }
+        else
+        {
+            pFileOpen->Release();
+            return;
         }
         pFileOpen->Release();
     }
