@@ -176,10 +176,19 @@
             padding: 0; /* Remove padding */
             margin: 0; /* Remove margins */
         }
-
+        .form-control {
+            font-family: system-ui, sans-serif;
+            font-size: 2rem;
+            font-weight: bold;
+            line-height: 1.1;
+            display: grid;
+            grid-template-columns: 1em auto;
+            gap: 0.5em;
+        }
         .list ul li:hover {
             left: 10px;
         }
+
     </style>
 
 </head>
@@ -200,8 +209,8 @@
                 BOOKS:
             </h2>
             <div class="list">
-                <ul id="bookList">
-                </ul>
+                <div id="list2">
+                </div>
             </div>
             <button class="button-28" onclick="testbutton()">Add Book</button>
             <script>
@@ -222,8 +231,14 @@
             <button class="button-28" onclick="rmbooksbutton()">Remove Books</button>
             <script>
                 function rmbooksbutton() {
-                    //add rmbooks function hook here
-                    removeBook();
+                    var array = []
+                    var checkboxes = document.querySelectorAll('input[type=checkbox]:checked')
+
+                    for (var i = 0; i < checkboxes.length; i++) {
+                        array.push(checkboxes[i].value)
+                        alert(checkboxes[i].value);
+                    }
+                    deleteBook();
                     OnButtonClick();
                 }
             </script>
