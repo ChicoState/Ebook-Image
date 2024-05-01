@@ -50,7 +50,6 @@ std::string Library::getStringData(std::string name)
             meta << "Date: " << collection[i].date << std::endl;
             meta << "Language: " << collection[i].language << std::endl;
             meta << "Description: " << collection[i].description << std::endl;
-            meta << "Rights: " << collection[i].rights << std::endl;
 		}
 	}
     data = meta.str();
@@ -80,14 +79,16 @@ std::string Library::getFileExtension(const std::string& filePath)
     // Return an empty string if no '.' found
     return "";
 }
+int ID = 0;
 std::string Library::add(PWSTR path)
 {
     std::string f = getFileExtension(wstrtostr(path));
     if (f == "epub")
     {
         Epub e;
-        e.grayscaleEpub(path);
         book curr = e.add(path);
+        curr.ID = ID;
+        ++ID;
         collection.push_back(curr);
         return curr.title;
 	}
@@ -109,5 +110,18 @@ std::string Library::add(PWSTR path)
     {
 		MessageBoxA(NULL, "File format not supported", "Error", MB_OK);
 	}
-    return NULL;
+    return "";
+}
+
+int Library::remove(int ID)
+{
+    for (int i = 0; i < collection.size(); i++)
+    {
+        if (collection[i].ID == ID)
+        {
+			collection.erase(collection.begin() + i);
+			return 1;
+		}   
+    }
+    return -1;
 }
