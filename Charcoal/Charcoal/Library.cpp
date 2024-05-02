@@ -19,7 +19,7 @@ std::string Library::printall()
     {
 
 		book curr = *it;
-		allBooks += ("<label><input type=\"checkbox\" name=\"title\" value= \"" + std::to_string(curr.ID) + "\"/>" + curr.title + "</label> ");
+		allBooks += ("<div class=\"form-control\"> <input type=\"checkbox\" name=\"title\" id= \"" + std::to_string(curr.ID) + "\"  value= \"" + curr.title + "\"/> <label for=\"" + std::to_string(curr.ID) + "\">" + curr.title + "</label> </div>");
 		/*std::cout << "Author: " << curr.author << std::endl;
 		std::cout << "Publisher: " << curr.publisher << std::endl;
 		std::cout << "Contributor: " << curr.contributor << std::endl;
