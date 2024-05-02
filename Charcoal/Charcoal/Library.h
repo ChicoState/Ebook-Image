@@ -4,7 +4,7 @@
 #pragma once
 class book {
 public:
-    int id;
+    int ID;
     std::string title;
     std::string author;
     std::string publisher;
@@ -14,7 +14,6 @@ public:
     std::string date;
     std::string language;
     std::string description;
-    int ID;
 
     PWSTR path;
 
@@ -29,8 +28,10 @@ public:
     std::string wstrtostr(const std::wstring& wstr);
     std::string getFileExtension(const std::string& filePath);
     int remove(int ID);
+    std::vector<std::string> getBookTitles();
 protected:
     std::vector<book> collection;
+    std::vector<std::string> titles;
     void push(book b);
 
 };
