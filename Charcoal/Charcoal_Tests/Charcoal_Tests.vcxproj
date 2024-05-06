@@ -20,7 +20,7 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
-    <ProjectGuid>{1A0A592A-F3A1-4678-98D9-3B56CF63E46A}</ProjectGuid>
+    <ProjectGuid>{9B370A39-132B-404D-BAED-970B9F52AFE3}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>CharcoalTests</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
