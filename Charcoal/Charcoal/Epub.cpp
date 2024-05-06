@@ -153,18 +153,3 @@ void Epub::grayscaleEpub(PWSTR path) {
         std::filesystem::remove(file_name);
     }
 }
-
-void Epub::grayscaleImage(unsigned char* imageData, int width, int height) {
-    // Convert RGB image to grayscale
-    for (int i = 0; i < width * height; ++i) {
-        unsigned char gray = static_cast<unsigned char>(
-            0.21f * imageData[3 * i] +
-            0.72f * imageData[3 * i + 1] +
-            0.07f * imageData[3 * i + 2]
-            );
-
-        imageData[3 * i] = gray;
-        imageData[3 * i + 1] = gray;
-        imageData[3 * i + 2] = gray;
-    }
-}
