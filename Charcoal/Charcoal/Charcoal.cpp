@@ -82,8 +82,21 @@ Charcoal::Charcoal() {
 Charcoal::~Charcoal() {
 }
 
-void Charcoal::deleteBooks(const JSObject& thisObject, const JSArgs& args) {
-    ebooks.remove(0);
+
+
+void Charcoal::deleteBooks(const JSObject& thisobjecet, const JSArgs& args)
+{
+	MessageBoxA(NULL, "Delete Books Hook", "Delete Books Hook", MB_OK);
+	// Get the first argument
+	JSValueRef arg = args[0];
+	JSContextRef ctx = JSGlobalContextCreate(NULL);
+	// Convert it to a number
+	int ID = JSValueToNumber(ctx, arg, 0);
+
+	// Call the deleteBooks method
+	ebooks.remove(ID);
+
+    return;
 }
 
 JSValue Charcoal::printAllBooks(const JSObject& thisObject, const JSArgs& args) {
@@ -198,7 +211,7 @@ void Charcoal::OnDOMReady(ultralight::View* caller,
     JSObject global = JSGlobalObject();
     global["AddBook"] = BindJSCallback(&Charcoal::OpenFile);
     global["nameToGrayscale"] = BindJSCallback(&Charcoal::grayscaleName);
-    global["deleteBook"] = BindJSCallback(&Charcoal::deleteBooks);
+	global["deleteBook"] = BindJSCallback(&Charcoal::deleteBooks);
     
     auto scoped_context = context;
 
@@ -206,21 +219,24 @@ void Charcoal::OnDOMReady(ultralight::View* caller,
     JSContextRef ctx = (*scoped_context);
 
     // Create a JavaScript String containing the name of our callback.
-    JSStringRef name = JSStringCreateWithUTF8CString("OnButtonClick");
+    JSStringRef buttonname = JSStringCreateWithUTF8CString("OnButtonClick");
+
 
     // Create a garbage-collected JavaScript function that is bound to our
     // native C callback 'OnButtonClick()'.
-    JSObjectRef func = JSObjectMakeFunctionWithCallback(ctx, name, OnButtonClick);
+    JSObjectRef buttonfunc = JSObjectMakeFunctionWithCallback(ctx, buttonname, OnButtonClick);
+
 
     // Get the global JavaScript object (aka 'window')
     JSObjectRef globalObj = JSContextGetGlobalObject(ctx);
 
     // Store our function in the page's global JavaScript object so that it
     // accessible from the page as 'OnButtonClick()'.
-    JSObjectSetProperty(ctx, globalObj, name, func, 0, 0);
+    JSObjectSetProperty(ctx, globalObj, buttonname, buttonfunc, 0, 0);
+
 
     // Release the JavaScript String we created earlier.
-    JSStringRelease(name);
+    JSStringRelease(buttonname);
 
 
 }
