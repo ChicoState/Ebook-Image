@@ -1,4 +1,4 @@
-#define STB_IMAGE_IMPLEMENTATION
+    #define STB_IMAGE_IMPLEMENTATION
 #define STB_IMAGE_WRITE_IMPLEMENTATION
 //only do this once
 
@@ -11,6 +11,8 @@
 #include "stb_image_write.h"
 #include "filesystem"
 #include <vector>
+#include <opencv2/imgcodecs.hpp>
+#include <opencv2/imgproc/imgproc.hpp>
 #define _CRT_SECURE_NO_WARNINGS
 #pragma once
 book Epub::add(PWSTR path)
@@ -126,9 +128,9 @@ void Epub::grayscaleEpub(PWSTR path) {
             // Read the image file from the epub archive
             int width, height, channels;
             unsigned char* image = stbi_load_from_memory((unsigned char*)entry.readAsBinary(), entry.getSize(), &width, &height, &channels, 0);
-
+            
             // Grayscale the image
-            grayscaleImage(image, width, height);
+            //grayscaleImage(image, width, height);
             
             std::string base_filename = name.substr(name.find_last_of("/\\") + 1);
             if(fileExt == "jpeg" || fileExt == "jpg")
@@ -136,6 +138,9 @@ void Epub::grayscaleEpub(PWSTR path) {
             else if(fileExt == "png")
                 stbi_write_png((temp + base_filename).c_str(), width, height, channels, image, (width * channels));
             // Write the modified image back to the epub archive
+            cv::Mat read_image = cv::imread((temp + base_filename));
+            cv::cvtColor(read_image, read_image, cv::COLOR_BGR2GRAY);
+            cv::imwrite((temp + base_filename), read_image);
             zipArchive.deleteEntry(name);
             zipArchive.addFile(name, (temp + base_filename).c_str());
             file_clean.push_back(temp + base_filename);
