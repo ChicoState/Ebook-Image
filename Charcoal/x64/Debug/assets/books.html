@@ -105,7 +105,85 @@
         .list ul li:hover {
             left: 10px;
         }
+        .form-control {
+            font-family: system-ui, sans-serif;
+            font-size: 2rem;
+            font-weight: bold;
+            line-height: 1.1;
+            display: grid;
+            grid-template-columns: 1em auto;
+            gap: 0.5em;
+        }
 
+        .list ul li:hover {
+            left: 10px;
+        }
+
+        .form-control {
+            display: grid;
+            grid-template-columns: 1.5em auto;
+            gap: .2em;
+            font-family: system-ui, sans-serif;
+            font-size: 1.2rem;
+            cursor: pointer;
+        }
+
+            .form-control input[type="checkbox"] {
+                appearance: none;
+                width: 1em;
+                height: 1em;
+                border: 2px solid #000000; /* Black border */
+                border-radius: 20%; /* Rounded checkbox */
+                background-color: #fff; /* White background */
+                transition: all 0.2s ease-in-out; /* Transition for hover effect */
+            }
+
+                .form-control input[type="checkbox"]:checked {
+                    background-color: #28282d; /* Checkbox color on check */
+                    border-color: #28282d; /* Border color changes on check */
+                }
+
+                .form-control input[type="checkbox"]:hover {
+                    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.2); /* Adds a subtle hover shadow */
+                }
+
+                .form-control input[type="checkbox"]:focus {
+                    outline: none;
+                }
+
+        .strike {
+            position: relative;
+        }
+
+            .strike::after {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 0;
+                width: 100%;
+                height: 2px;
+                background-color: #5b5b5b;
+                animation: strikethrough 0.5s ease-in-out;
+            }
+
+        @keyframes strikethrough {
+            0% {
+                width: 0;
+            }
+
+            100% {
+                width: 100%;
+            }
+        }
+
+        .list {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            text-align: center;
+            padding: 0;
+        }
     </style>
 
 </head>
