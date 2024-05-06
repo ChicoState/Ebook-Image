@@ -278,6 +278,7 @@
             </h2>
             <div class="list">
                 <div id="list2">
+                    <!-- <div class="form-control"> <input type="checkbox" name="title" id="1" value=1 /> <label for=\"" + std::to_string(curr.ID) + "\">" + curr.title + "</label> </div> -->
                 </div>
             </div>
             <button class="button-28" onclick="testbutton()">Add Book</button>
@@ -301,12 +302,13 @@
                 function rmbooksbutton() {
                     var array = []
                     var checkboxes = document.querySelectorAll('input[type=checkbox]:checked')
-
                     for (var i = 0; i < checkboxes.length; i++) {
-                        array.push(checkboxes[i].value)
-                        alert(checkboxes[i].value);
+                        array.push(checkboxes[i].id)
+                        alert(checkboxes[i].id);
+                        var toDelete = parseInt(checkboxes[i].id); //sets string ID to int so it can be passed back.
+                        deleteBook(toDelete);
                     }
-                    deleteBook();
+                    
                     OnButtonClick();
                 }
             </script>

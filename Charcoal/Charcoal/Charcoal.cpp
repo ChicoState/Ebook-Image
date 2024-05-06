@@ -84,7 +84,7 @@ Charcoal::~Charcoal() {
 
 
 
-void Charcoal::deleteBooks(const JSObject& thisobjecet, const JSArgs& args)
+void Charcoal::deleteBooks(const JSObject& thisobject, const JSArgs& args)
 {
 	MessageBoxA(NULL, "Delete Books Hook", "Delete Books Hook", MB_OK);
 	// Get the first argument
