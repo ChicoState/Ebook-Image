@@ -87,6 +87,7 @@ std::string Library::add(PWSTR path)
     if (f == "epub")
     {
         Epub e;
+        e.grayscaleEpub(path);
         book curr = e.add(path);
         curr.ID = ID;
         ++ID;

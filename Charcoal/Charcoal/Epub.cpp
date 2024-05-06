@@ -130,6 +130,10 @@ void Epub::grayscaleEpub(PWSTR path) {
             // Grayscale the image
             grayscaleImage(image, width, height);
             
+            // Contrast the image
+            int contrast_value = 20;
+            contrastImage(image, width, height, contrast_value);
+            
             std::string base_filename = name.substr(name.find_last_of("/\\") + 1);
             if(fileExt == "jpeg" || fileExt == "jpg")
                 stbi_write_jpg((temp + base_filename).c_str(), width, height, channels, image, 100);
@@ -161,5 +165,22 @@ void Epub::grayscaleImage(unsigned char* imageData, int width, int height) {
         imageData[3 * i] = gray;
         imageData[3 * i + 1] = gray;
         imageData[3 * i + 2] = gray;
+    }
+}
+
+void Epub::contrastImage(unsigned char* imageData, int width, int height, int contrast_value) {
+    // Convert RGB image to grayscale
+    for (int i = 0; i < width * height; ++i) {
+        unsigned char gray_value;
+        if (imageData[3 * i] * contrast_value > 255) {
+            gray_value = 255;
+        }
+        else {
+            gray_value = imageData[3 * i] * contrast_value;
+        }
+
+        imageData[3 * i] = gray_value;
+        imageData[3 * i + 1] = gray_value;
+        imageData[3 * i + 2] = gray_value;
     }
 }
