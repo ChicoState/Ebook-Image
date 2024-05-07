@@ -1,0 +1,8 @@
+﻿  common.c
+  mobidrm.c
+  getopt.c
+  Generating Code...
+     Creating library C:\Users\Angel\source\repos\Ebook-Image\Charcoal\Charcoal\libmobi-public\msvc\x64\Debug\mobidrm.lib and object C:\Users\Angel\source\repos\Ebook-Image\Charcoal\Charcoal\libmobi-public\msvc\x64\Debug\mobidrm.exp
+  mobidrm.vcxproj -> C:\Users\Angel\source\repos\Ebook-Image\Charcoal\Charcoal\libmobi-public\msvc\x64\Debug\mobidrm.exe
+  'pwsh.exe' is not recognized as an internal or external command,
+  operable program or batch file.

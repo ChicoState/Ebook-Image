@@ -1,0 +1,8 @@
+﻿  common.c
+  mobimeta.c
+  getopt.c
+  Generating Code...
+     Creating library C:\Users\Angel\source\repos\Ebook-Image\Charcoal\Charcoal\libmobi-public\msvc\x64\Debug\mobimeta.lib and object C:\Users\Angel\source\repos\Ebook-Image\Charcoal\Charcoal\libmobi-public\msvc\x64\Debug\mobimeta.exp
+  mobimeta.vcxproj -> C:\Users\Angel\source\repos\Ebook-Image\Charcoal\Charcoal\libmobi-public\msvc\x64\Debug\mobimeta.exe
+  'pwsh.exe' is not recognized as an internal or external command,
+  operable program or batch file.
