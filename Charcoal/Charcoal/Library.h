@@ -15,7 +15,7 @@ public:
     std::string language;
     std::string description;
 
-    PWSTR path;
+    std::string path;
 
 
 };
@@ -29,10 +29,10 @@ public:
     std::string getFileExtension(const std::string& filePath);
     int remove(int ID);
     std::vector<std::string> getBookTitles();
+    int grayscale(int ID);
 protected:
     std::vector<book> collection;
     std::vector<std::string> titles;
-    void push(book b);
 
 };
 

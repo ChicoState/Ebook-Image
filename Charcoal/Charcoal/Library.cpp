@@ -87,8 +87,10 @@ std::string Library::add(PWSTR path)
     if (f == "epub")
     {
         Epub e;
-        book curr = e.add(path);
+        std::string npath = wstrtostr(path);
+        book curr = e.add(npath);
         curr.ID = ID;
+        curr.path = npath;
         ++ID;
         collection.push_back(curr);
         titles.push_back(curr.title);
@@ -132,6 +134,37 @@ int Library::remove(int ID) // this actually removes the book from the library.
 			collection.erase(collection.begin() + i);
 			return 1;
 		}   
+    }
+    return -1;
+}
+
+int Library::grayscale(int ID) 
+{
+    for (int i = 0; i < collection.size(); i++)
+    {
+        if (collection[i].ID == ID)
+        {
+            std::string path = collection[i].path;
+            std::string f = getFileExtension((path));
+            if (f == "epub")
+            {
+                Epub e;
+                e.grayscaleEpub(path);
+                return 1;
+            }
+            else if (f == "AZW3" || f == "azw3")
+            {
+
+            }
+            else if (f == "pdf" || f == "PDF")
+            {
+
+            }
+            else
+            {
+
+            }
+        }
     }
     return -1;
 }
