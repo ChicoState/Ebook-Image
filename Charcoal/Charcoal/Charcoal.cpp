@@ -100,7 +100,7 @@ void Charcoal::deleteBooks(const JSObject& thisobject, const JSArgs& args)
 }
 
 void Charcoal::grayscaleName(const JSObject& thisobject, const JSArgs& args) {
-    MessageBoxA(NULL, "Grayscale Books Hook", "Grayscale Books Hook", MB_OK);
+    MessageBoxA(NULL, "Started Grayscaling book", "Started Grayscaling book", MB_OK);
     // Get the first argument
     JSValueRef arg = args[0];
     JSContextRef ctx = JSGlobalContextCreate(NULL);
@@ -109,7 +109,7 @@ void Charcoal::grayscaleName(const JSObject& thisobject, const JSArgs& args) {
 
     // Call the grayscale method
     ebooks.grayscale(ID);
-
+    MessageBoxA(NULL, "Finished Grayscaling book", "Finished Grayscaling book", MB_OK);
     return;
 }
 

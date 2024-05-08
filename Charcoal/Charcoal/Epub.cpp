@@ -109,7 +109,6 @@ book Epub::add(std::string npath)
 }
 
 void Epub::grayscaleEpub(std::string path) {
-    //std::string npath = wstrtostr(path);
     using namespace libzippp;
     ZipArchive zipArchive(path);
     zipArchive.open(ZipArchive::Write);

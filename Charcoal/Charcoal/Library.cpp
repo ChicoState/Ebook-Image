@@ -83,14 +83,16 @@ std::string Library::getFileExtension(const std::string& filePath)
 int ID = 0;
 std::string Library::add(PWSTR path)
 {
-    std::string f = getFileExtension(wstrtostr(path));
+    std::string npath = wstrtostr(path);
+    std::string f = getFileExtension(npath);
     if (f == "epub")
     {
         Epub e;
-        std::string npath = wstrtostr(path);
+        
         book curr = e.add(npath);
         curr.ID = ID;
         curr.path = npath;
+        
         ++ID;
         collection.push_back(curr);
         titles.push_back(curr.title);
@@ -125,11 +127,11 @@ std::vector<std::string> Library::getBookTitles() {
     return titles;
 }
 
-int Library::remove(int ID) // this actually removes the book from the library. 
+int Library::remove(int book_ID) // this actually removes the book from the library. 
 {
     for (int i = 0; i < collection.size(); i++)
     {
-        if (collection[i].ID == ID)
+        if (collection[i].ID == book_ID)
         {
 			collection.erase(collection.begin() + i);
 			return 1;
@@ -138,11 +140,11 @@ int Library::remove(int ID) // this actually removes the book from the library.
     return -1;
 }
 
-int Library::grayscale(int ID) 
+int Library::grayscale(int book_ID) 
 {
     for (int i = 0; i < collection.size(); i++)
     {
-        if (collection[i].ID == ID)
+        if (collection[i].ID == book_ID)
         {
             std::string path = collection[i].path;
             std::string f = getFileExtension((path));
