@@ -1,5 +1,8 @@
 #include "AZW3.h"
+<<<<<<< HEAD
 /*
+=======
+>>>>>>> ce8f777 (fixed the features for metadata reading for Mobi and AZW3)
 #include <mobi.h>
 #include <cstdio>
 #include <iostream>
@@ -50,10 +53,15 @@ MOBIData* initAndLoadMobi(const std::string& filePath) {
 }
 
 book azw3::add(PWSTR path) {
+<<<<<<< HEAD
     // Convert PWSTR to std::wstring
     std::wstring ws(path);
     // Now convert std::wstring to std::string
     std::string filePath = std::wstring_convert<std::codecvt_utf8<wchar_t>>().to_bytes(ws);
+=======
+    wstring ws(path);
+    string filePath = wstring_to_utf8(ws);
+>>>>>>> ce8f777 (fixed the features for metadata reading for Mobi and AZW3)
 
     // Initialize and load MOBI file
     MOBIData* mobiData = initAndLoadMobi(filePath);
@@ -82,7 +90,11 @@ book azw3::add(PWSTR path) {
 
 book mobi::add(PWSTR path) {
     std::wstring ws(path);
+<<<<<<< HEAD
     std::string filePath = std::wstring_convert<std::codecvt_utf8<wchar_t>>().to_bytes(ws);
+=======
+    std::string filePath = wstring_to_utf8(ws);
+>>>>>>> ce8f777 (fixed the features for metadata reading for Mobi and AZW3)
 
     // Initialize and load MOBI file
     MOBIData* mobiData = initAndLoadMobi(filePath);
@@ -157,5 +169,9 @@ bool extractContentFromMobi(const std::string& filePath, const std::string& outp
     mobi_free(mobiData);
 
     return true;
+<<<<<<< HEAD
 }
 */
+=======
+}
+>>>>>>> ce8f777 (fixed the features for metadata reading for Mobi and AZW3)
