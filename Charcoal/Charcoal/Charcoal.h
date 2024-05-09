@@ -36,6 +36,7 @@ public:
     virtual void deleteBooks(const JSObject& thisObject, const JSArgs& args);
     virtual JSValue printAllBooks(const JSObject& thisObject, const JSArgs& args);
     virtual void grayscaleName(const JSObject& thisObject, const JSArgs& args);
+    virtual void contrastValue(const JSObject& thisObject, const JSArgs& args);
 
     // This is called when the DOM has loaded in one of its frames.
     virtual void OnDOMReady(ultralight::View* caller,

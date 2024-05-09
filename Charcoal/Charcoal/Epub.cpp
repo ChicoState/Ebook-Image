@@ -131,7 +131,7 @@ void Epub::grayscaleEpub(PWSTR path) {
             grayscaleImage(image, width, height);
             
             // Contrast the image
-            int contrast_value = 20;
+            int contrast_value = 1;
             contrastImage(image, width, height, contrast_value);
             
             std::string base_filename = name.substr(name.find_last_of("/\\") + 1);

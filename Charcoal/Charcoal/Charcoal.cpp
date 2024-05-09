@@ -78,7 +78,6 @@ Charcoal::Charcoal() {
     overlay_->view()->set_view_listener(this);
 }
 
-
 Charcoal::~Charcoal() {
 }
 
@@ -142,6 +141,19 @@ void Charcoal::grayscaleName(const JSObject& thisObject, const JSArgs& args) { /
 }
 
 
+void Charcoal::contrastValue(const JSObject& thisObject, const JSArgs& args) {
+    MessageBoxA(NULL, "Window for Contrast", "Book Data", MB_OK);   
+
+    /*
+    std::string text = "something";
+    wchar_t wtext[20];
+    mbstowcs(wtext, text.c_str(), text.length());//includes null
+    LPWSTR ptr = wtext;
+    GetWindowText(NULL, ptr, 3);
+    */
+}
+
+
 void Charcoal::OpenFile(const JSObject& thisObject, const JSArgs& args)
 {
     //dialog box for file select
@@ -199,6 +211,7 @@ void Charcoal::OnDOMReady(ultralight::View* caller,
     global["AddBook"] = BindJSCallback(&Charcoal::OpenFile);
     global["nameToGrayscale"] = BindJSCallback(&Charcoal::grayscaleName);
     global["deleteBook"] = BindJSCallback(&Charcoal::deleteBooks);
+    global["contrastValue"] = BindJSCallback(&Charcoal::contrastValue);
     
     auto scoped_context = context;
 
