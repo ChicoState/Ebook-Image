@@ -5,6 +5,12 @@
 #include <fstream>
 #include <string>
 #include <vector>
+#include "stb_image.h"
+#include "stb_image_write.h"
+#include <opencv2/core.hpp>
+#include <opencv2/imgproc.hpp>
+#include <opencv2/imgcodecs.hpp>
+
 #define _SILENCE_EXPERIMENTAL_FILESYSTEM_DEPRECATION_WARNING
 #include <experimental/filesystem>
 
@@ -138,6 +144,30 @@ void extractImages(const MOBIRawml* rawml, const std::string& outputDir, int sca
             case T_GIF: extension = ".gif"; break;
             case T_BMP: extension = ".bmp"; break;
             default: continue;
+            }
+
+            int width, height, channels;
+            unsigned char* imgData = stbi_load_from_memory(part->data, part->size, &width, &height, &channels, 0);
+            if (imgData) {
+                // Convert the image to grayscale using OpenCV
+                cv::Mat colorImg(height, width, channels == 4 ? CV_8UC4 : channels == 3 ? CV_8UC3 : CV_8UC1, imgData);
+                cv::Mat grayImg;
+                cv::cvtColor(colorImg, grayImg, cv::COLOR_BGR2GRAY);
+
+                // Optionally resize the image according to scaleFactor
+                if (scaleFactor != 1) {
+                    cv::resize(grayImg, grayImg, cv::Size(), scaleFactor, scaleFactor, cv::INTER_LINEAR);
+                }
+
+                // Save the grayscale image
+                std::string filename = outputDir + "/image_" + std::to_string(part->uid) + extension;
+                cv::imwrite(filename, grayImg);
+
+                // Free the image data allocated by stb_image
+                stbi_image_free(imgData);
+            }
+            else {
+                std::cerr << "Failed to load image for grayscaling from memory." << std::endl;
             }
         }
     }
