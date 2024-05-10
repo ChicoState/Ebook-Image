@@ -96,11 +96,18 @@ std::string Library::add(PWSTR path)
 	}
     else if (f == "AZW3" || f == "azw3")
     {
-       /* AZW3 a;
+        azw3 a;
         book curr = a.add(path);
         collection.push_back(curr);
-        return curr.title;*/
+        return curr.title;
 	}
+    else if (f == "MOBI" || f == "mobi")
+    {
+        mobi m;
+        book curr = m.add(path);
+        collection.push_back(curr);
+        return curr.title;
+    }
     else if (f == "pdf" || f == "PDF")
     {
         /*PDF p;
