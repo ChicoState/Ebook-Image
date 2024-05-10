@@ -15,10 +15,9 @@
 #include <opencv2/imgproc/imgproc.hpp>
 #define _CRT_SECURE_NO_WARNINGS
 #pragma once
-book Epub::add(PWSTR path)
+book Epub::add(std::string npath)
 {
     book curr;
-    std::string npath = wstrtostr(path);
     using namespace libzippp;
     ZipArchive zf(npath);
     zf.open(ZipArchive::ReadOnly);
@@ -98,6 +97,7 @@ book Epub::add(PWSTR path)
                 }
                 meta = meta->NextSiblingElement();
             }
+            
             collection.push_back(curr);
             //adding book to the collection
         }
@@ -108,10 +108,9 @@ book Epub::add(PWSTR path)
     return curr;
 }
 
-void Epub::grayscaleEpub(PWSTR path) {
-    std::string npath = wstrtostr(path);
+void Epub::grayscaleEpub(std::string path) {
     using namespace libzippp;
-    ZipArchive zipArchive(npath);
+    ZipArchive zipArchive(path);
     zipArchive.open(ZipArchive::Write);
     std::vector<ZipEntry> entries = zipArchive.getEntries();
     std::vector<ZipEntry>::iterator it;
@@ -128,9 +127,7 @@ void Epub::grayscaleEpub(PWSTR path) {
             // Read the image file from the epub archive
             int width, height, channels;
             unsigned char* image = stbi_load_from_memory((unsigned char*)entry.readAsBinary(), entry.getSize(), &width, &height, &channels, 0);
-            
-            // Grayscale the image
-            //grayscaleImage(image, width, height);
+           
             
             std::string base_filename = name.substr(name.find_last_of("/\\") + 1);
             if(fileExt == "jpeg" || fileExt == "jpg")

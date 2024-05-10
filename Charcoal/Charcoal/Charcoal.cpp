@@ -102,6 +102,21 @@ void Charcoal::deleteBooks(const JSObject& thisobject, const JSArgs& args)
     return;
 }
 
+void Charcoal::grayscaleName(const JSObject& thisobject, const JSArgs& args) {
+    MessageBoxA(NULL, "Started Grayscaling book", "Started Grayscaling book", MB_OK);
+    // Get the first argument
+    JSValueRef arg = args[0];
+    JSContextRef ctx = JSGlobalContextCreate(NULL);
+    // Convert it to a number
+    int ID = JSValueToNumber(ctx, arg, 0);
+
+    // Call the grayscale method
+    ebooks.grayscale(ID);
+    MessageBoxA(NULL, "Finished Grayscaling book", "Finished Grayscaling book", MB_OK);
+    return;
+}
+
+
 JSValue Charcoal::printAllBooks(const JSObject& thisObject, const JSArgs& args) {
    
     std::string bookList = ebooks.printall();
@@ -152,10 +167,7 @@ JSValueRef OnButtonClick(JSContextRef ctx, JSObjectRef function,
     return JSValueMakeNull(ctx);
 }
 
-void Charcoal::grayscaleName(const JSObject& thisObject, const JSArgs& args) { //at the moment just gets metadata, Thomas will puts grayscale hooks here.
-    //std::string added = ebooks.getStringData();
-    //MessageBoxA(NULL, added.c_str(), "Book Data", MB_OK);
-}
+
 
 
 void Charcoal::OpenFile(const JSObject& thisObject, const JSArgs& args)
@@ -213,7 +225,7 @@ void Charcoal::OnDOMReady(ultralight::View* caller,
     SetJSContext(context->ctx());
     JSObject global = JSGlobalObject();
     global["AddBook"] = BindJSCallback(&Charcoal::OpenFile);
-    global["nameToGrayscale"] = BindJSCallback(&Charcoal::grayscaleName);
+    global["grayscaleName"] = BindJSCallback(&Charcoal::grayscaleName);
 	global["deleteBook"] = BindJSCallback(&Charcoal::deleteBooks);
     global["AddBookFolder"] = BindJSCallback(&Charcoal::getFolderPath);
     
