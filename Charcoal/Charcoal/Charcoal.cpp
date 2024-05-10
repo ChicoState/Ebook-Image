@@ -142,15 +142,8 @@ void Charcoal::grayscaleName(const JSObject& thisObject, const JSArgs& args) { /
 
 
 void Charcoal::contrastValue(const JSObject& thisObject, const JSArgs& args) {
-    MessageBoxA(NULL, "Window for Contrast", "Book Data", MB_OK);   
-
-    /*
-    std::string text = "something";
-    wchar_t wtext[20];
-    mbstowcs(wtext, text.c_str(), text.length());//includes null
-    LPWSTR ptr = wtext;
-    GetWindowText(NULL, ptr, 3);
-    */
+    MessageBoxA(NULL, "Please sit tight, contrasting your book.", "Book Contrasting", MB_OK);   
+    
 }
 
 
