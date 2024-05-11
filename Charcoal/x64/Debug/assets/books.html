@@ -98,13 +98,11 @@
 
         ul {
             text-align: center;
-            list-style-type: none; /* Remove bullets */
-            padding: 0; /* Remove padding */
-            margin: 0; /* Remove margins */
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
         }
-        .list ul li:hover {
-            left: 10px;
-        }
+
         .form-control {
             font-family: system-ui, sans-serif;
             font-size: 2rem;
@@ -202,7 +200,16 @@
             <button class="button-28" onclick="gscalebutton()">Grayscale</button>
             <script>
                 function gscalebutton() {
-                    nameToGrayscale();
+                    var array = []
+                    var checkboxes = document.querySelectorAll('input[type=checkbox]:checked')
+                    for (var i = 0; i < checkboxes.length; i++) {
+                        array.push(checkboxes[i].id)
+                        alert(checkboxes[i].id);
+                        var toGray = parseInt(checkboxes[i].id); //sets string ID to int so it can be passed back.
+                        grayscaleName(toGray);
+                    }
+
+                    OnButtonClick();
                 }
             </script>
 
@@ -210,15 +217,15 @@
             <button class="button-28" onclick="rmbooksbutton()">Remove Books</button>
             <script>
                 function rmbooksbutton() {
-                    
                     var array = []
                     var checkboxes = document.querySelectorAll('input[type=checkbox]:checked')
-
                     for (var i = 0; i < checkboxes.length; i++) {
-                        array.push(checkboxes[i].value)
-                        alert(checkboxes[i].value);
+                        array.push(checkboxes[i].id)
+                        alert(checkboxes[i].id);
+                        var toDelete = parseInt(checkboxes[i].id); //sets string ID to int so it can be passed back.
+                        deleteBook(toDelete);
                     }
-                    deleteBook();
+
                     OnButtonClick();
                 }
             </script>
