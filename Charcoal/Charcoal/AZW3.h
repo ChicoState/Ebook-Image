@@ -9,13 +9,15 @@ std::string wstring_to_utf8(const std::wstring& wstr);
 class mobi : public Library
 {
     public:
-        book add(PWSTR path);
+        book add(std::string path);
+        void grayscaleMOBI(const std::string& filePath);
 };
 
 class azw3 : public Library
 {
-public:
-    book add(PWSTR path);
+    public:
+        book add(std::string path);
+        void grayscaleAZW3(const std::string& filePath);
 };
 
 //Utility functions that are used across different files
