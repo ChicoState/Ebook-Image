@@ -89,7 +89,7 @@ Charcoal::~Charcoal() {
 
 void Charcoal::deleteBooks(const JSObject& thisobject, const JSArgs& args)
 {
-	MessageBoxA(NULL, "Delete Books Hook", "Delete Books Hook", MB_OK);
+	MessageBoxA(NULL, "Deleted a Book", "Deleted a Book", MB_OK);
 	// Get the first argument
 	JSValueRef arg = args[0];
 	JSContextRef ctx = JSGlobalContextCreate(NULL);
@@ -117,21 +117,17 @@ void Charcoal::grayscaleName(const JSObject& thisobject, const JSArgs& args) {
 }
 
 
-JSValue Charcoal::printAllBooks(const JSObject& thisObject, const JSArgs& args) {
+JSValue Charcoal::printAllBooks(const JSObject& thisObject, const JSArgs& args) { //debug function only, do not use as is currently
    
     std::string bookList = ebooks.printall();
 
     MessageBoxA(NULL, bookList.c_str(), "Book List", MB_OK); //this confirms there is an actual booklist.
-
-    //convert the book list string to a JavaScript string, but does not work. 
 
     JSStringRef jsBookList = JSStringCreateWithUTF8CString(bookList.c_str());
 
     JSValue jsValue = JSValue(jsBookList);
 
     JSStringRelease(jsBookList);
-
-    //return the JSValue object, I tried with JSString and the issue persisted. 
 
     return jsValue;
 
