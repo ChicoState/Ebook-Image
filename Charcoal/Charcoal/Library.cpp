@@ -101,15 +101,27 @@ std::string Library::add(PWSTR path)
     else if (f == "AZW3" || f == "azw3")
     {
         azw3 a;
-        book curr = a.add(path);
+
+        book curr = a.add(npath);
+        curr.ID = ID;
+        curr.path = npath;
+        
+        ++ID;
         collection.push_back(curr);
+        titles.push_back(curr.title);
         return curr.title;
 	}
     else if (f == "MOBI" || f == "mobi")
     {
         mobi m;
-        book curr = m.add(path);
+
+        book curr = m.add(npath);
+        curr.ID = ID;
+        curr.path = npath;
+
+        ++ID;
         collection.push_back(curr);
+        titles.push_back(curr.title);
         return curr.title;
     }
     else if (f == "pdf" || f == "PDF")
@@ -163,7 +175,15 @@ int Library::grayscale(int book_ID)
             }
             else if (f == "AZW3" || f == "azw3")
             {
-
+                azw3 a;
+                a.grayscaleAZW3(path);
+                return 1;
+            }
+            else if (f == "MOBI" || f == "mobi")
+            {
+                mobi m;
+                m.grayscaleMOBI(path);
+                return 1;
             }
             else if (f == "pdf" || f == "PDF")
             {
