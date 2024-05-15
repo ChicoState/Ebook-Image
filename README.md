@@ -1,18 +1,19 @@
 [![Charcoal Build](https://github.com/ChicoState/Ebook-Image/actions/workflows/CI.yml/badge.svg)](https://github.com/ChicoState/Ebook-Image/actions/workflows/CI.yml)
 # Ebook-Image
 
-## Testing
+## Charcoal
+Charcoal is a suite of applications designed for the grayscaling of ebooks quickly and easily.  Currently it includes two products, a standalone C++ application and a plugin for Calibre
 
-To test using Calibre:
-- Open in directory with the change with the plugin
-- run the following commands
-```
-calibre-customize -b .
-calibre-debug -g .
-```
+## Charcoal C++
+Developed using the Ultralight framework, this lightweight application allows for the grayscaling of ebooks individually or en masse through our add folder feature.
+## Charcoal Calibre
+An easy to use plugin for the ebook management app Calibre, this plugin allows you to grayscale books through the main menu and the book editor.
 
 ## Resources
 Documentation
+- Ultralight
+	- https://ultralig.ht/
+   	- https://docs.ultralig.ht/docs/get-started
 - Calibre
 	- API Documentation for Plugins: https://manual.calibre-ebook.com/plugins.html
 	- API Documentation for the E-Book Editing Tools: https://manual.calibre-ebook.com/polish.html
